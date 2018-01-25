@@ -6,3 +6,5 @@ https://projects.invisionapp.com/d/main#/console/13038296/273823217/preview
 
 Written specs:  
 https://dynalist.io/d/AC1WqM5Cn_u0OWe8ZQcGcWVB#z=jN3OzpBdwAjU6ThJK_NCNEhK
+
+Any questions on design or Invision prototype, contact sharon@data.world
