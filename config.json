@@ -1,0 +1,27 @@
+{
+  "locals": {
+    "url": "http://localhost:8080",
+    "name": "Data Dot World - Manifesto Site",
+    "owner": "datadotworld",
+    "description": "The site for the data practices manifesto"
+  },
+  "plugins": [
+    "wintersmith-nunjucks",
+    "wintersmith-sassy"
+  ],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "nunjucks": {
+    "autoescape": true
+  },
+  "sass": {
+    "includePaths": ["./styles"]
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  }
+}
