@@ -106,3 +106,45 @@
     font-weight: 900;
     font-style: italic;
 }
+
+@font-face {
+    font-family: 'Publico Text';
+    src: url('fonts/PublicoText-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Publico Text Roman';
+    src: url('fonts/PublicoText-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Publico Text Roman';
+    src: url('fonts/PublicoText-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Publico Text Roman';
+    src: url('fonts/PublicoText-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Publico Text';
+    src: url('fonts/PublicoText-SemiboldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Publico Text Roman';
+    src: url('fonts/PublicoText-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}

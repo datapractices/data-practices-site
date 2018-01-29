@@ -1,0 +1,76 @@
+
+.fluid-container {
+    width: 100%;
+    width: 100vw;
+    margin: 0 auto;
+}
+
+.product-landing {
+    display: flex;
+    width: 100%;
+}
+
+.navigation {
+    position: fixed;
+    width: 35%;
+    flex: 0 0 35%;
+    height: 100vw;
+    overflow: auto;
+    > .inner-container {
+        height: 100%;
+        text-align: right;
+        padding: $px158 $px104 $px50;
+    }
+}
+
+.product-content {
+    width: 65%;
+    flex: 0 0 65%;
+    margin-left: 35%;
+}
+
+
+.branding-image {
+    width: $px140;
+    height: $px140;
+    display: inline-block;
+    background: #fff;
+    border-radius: 50%;
+}
+
+
+.item-image {
+    height: $px72;
+    width: $px72;
+}
+
+.nav-title {
+    margin: $px47 0 $px35;
+}
+
+.nav-anchor {
+    font-family: 'Graphik';
+    font-size: $px14;
+    font-weight: 600;
+    line-height: $px14;
+    text-align: right;
+    color: $ethics-color;
+    padding: $px10 $px1;
+    &.active {
+        color: $white;
+    }
+    &:hover, &:focus, &:active {
+        text-decoration: none;
+        opacity: 0.8;
+        color: $white;
+    }
+}
+
+.navigation-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    > li {
+        margin: $px32 0;
+    }
+}

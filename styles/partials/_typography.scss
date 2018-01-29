@@ -1,0 +1,26 @@
+.heading {
+    font-family: 'Publico Text';
+	color: $text-dark;
+    font-weight: 600;
+    &.-large {
+        font-size: $px32;
+        line-height: $px44;
+    }
+
+    &.-graphik {
+        font-family: 'Graphik';
+        &.-large {
+            line-height: $px42;
+        }
+    }
+    &.-white {
+        color: #FFF;
+    }
+}
+
+
+p {
+    font-family: 'Publico Text';
+    font-size: $px18;
+    color: $text-dark;
+}
