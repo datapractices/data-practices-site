@@ -28,10 +28,14 @@ input {
         height: $px24;
         width: $px24;
         border-radius: $px3;
+        background: transparent;
+        border: $px2 solid $ethics-color;
+
         @include phone-styles {
             height: $medium-px24;
             width: $medium-px24;
             border-radius: $medium-px3;
+            border: $medium-px2 solid $ethics-color;
         }
     }
     &:after {
@@ -45,12 +49,12 @@ input {
 }
 
 .custom-checkbox {
-    padding: $px3 $px35;
-    margin-bottom: $px5;
+    padding: $px5 $px35 0;
+    margin-bottom: $px15;
     cursor: pointer;
     @include phone-styles {
-        padding: $medium-px3 $medium-px35;
-        margin-bottom: $medium-px5;
+        padding: $medium-px5 $medium-px35 0;
+        margin-bottom: $medium-px15;
     }
     .custom-control-input:checked ~ .custom-control-label::before {
         background-color: $ethics-color;
@@ -58,9 +62,11 @@ input {
 }
 
 .custom-checkbox-wrap {
-    margin-bottom: $px20;
+    margin-bottom: $px30;
+    margin-top: $px30;
     @include phone-styles {
-        margin-bottom: $medium-px20;
+        margin-bottom: $medium-px30;
+        margin-top: $medium-px30;
     }
 }
 .form-control {
@@ -75,8 +81,8 @@ input {
     }
 }
 .form-group {
-    margin-bottom: $px16;
+    margin-bottom: $px20;
     @include phone-styles {
-        margin-bottom: $medium-px16;
+        margin-bottom: $medium-px20;
     }
 }

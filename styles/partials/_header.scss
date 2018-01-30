@@ -44,6 +44,10 @@
     letter-spacing: $px0point7;
     color: #ffffff;
     padding: $px26 $px32;
+    &:hover, &:focus {
+        color: #ffffff;
+        text-decoration: none;
+    }
     > img {
         margin-right: $px12;
         width: $px30;

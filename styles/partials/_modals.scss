@@ -1,6 +1,6 @@
 .modal-backdrop.show {
     opacity: 1;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
 }
 .modal-content {
     border-radius: $px2;
@@ -13,23 +13,26 @@
 	}
 }
 .modal-body {
-	padding: $px60 $px50;
+	padding: $px80;
 	h1 {
 		color: #323D48;
 		font-size: $px32;
-		margin-bottom: $px16;
+		margin-bottom: $px30;
 	}
 	@include phone-styles {
-		padding: $medium-px20 $medium-px40;
+		padding: $medium-px40;
 
 		h1 {
 			font-size: $medium-px32;
-			margin-bottom: $medium-px16;
+			margin-bottom: $medium-px30;
 		}
 	}
 	.btn-primary {
 		background-color: $ethics-color;
-		min-width: $px240;
+		min-width: $px200;
+		@include phone-styles {
+			min-width: $medium-px200;
+		}
 	}
 }
 button.close {
@@ -39,11 +42,13 @@ button.close {
     background: #ccc;
     border-radius: 50%;
     display: block;
-    padding: $px3 0;
-    font-size: $px24;
+    padding: 0;
+    font-size: $px30;
+    line-height: $px30;
     position: absolute;
     right: $px25;
     top: $px25;
+    font-weight: normal;
     &:hover {
 		color: #fff;
     }
@@ -51,10 +56,15 @@ button.close {
 		width: $medium-px24;
     	height: $medium-px24;
     	padding: $medium-px3 0;
-    	font-size: $medium-px20;
+    	font-size: $medium-px30;
     	right: $medium-px25;
     	top: $medium-px25;
 	}
 }
 
-
+.modal-dialog {
+	max-width: $px580;
+	@include phone-styles {
+		max-width: 90vw;
+	}
+}
