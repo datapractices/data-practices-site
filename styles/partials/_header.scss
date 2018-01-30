@@ -86,6 +86,11 @@
     @include phone-styles {
         font-size: 0;
         padding: $medium-px15;
+        > img {
+            width: $medium-px26;
+            height: $medium-px26;
+            margin: 0;
+        }
     }
 }
 
