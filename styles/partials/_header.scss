@@ -33,10 +33,11 @@
             border-radius: $medium-px32;
             padding-top: $medium-px9;
             padding-bottom: $medium-px9;
+            color: #ffffff !important;
         }
     }
     @include phone-styles {
-        padding: $medium-px15;
+        padding: $medium-px12 $medium-px15;
     }
 }
 
@@ -98,6 +99,9 @@
     background: rgba(#ffffff, 0.9);
     .btn {
         color: $manifesto-color;
+    }
+    @include phone-styles {
+        background: none;
     }
 }
 
