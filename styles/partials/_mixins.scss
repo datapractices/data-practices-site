@@ -1,5 +1,11 @@
 @mixin phone-styles {
-    @media screen and (max-width: #{$phone-width}) {
+    @media screen and (max-width: #{$medium-width}) {
+        @content;
+    }
+}
+
+@mixin phone-landscape-styles {
+    @media screen and (max-width: #{$medium-width}) and (orientation: landscape) {
         @content;
     }
 }

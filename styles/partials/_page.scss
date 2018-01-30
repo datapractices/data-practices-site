@@ -1,14 +1,9 @@
 .homepage-wrap {
     display: flex;
     min-height: 100vh;
-}
-
-.ethics-col {
-    background: $ethics-color;
-}
-
-.manifesto-col {
-    background: $manifesto-color;
+    @include phone-styles {
+        flex-direction: column;
+    }
 }
 
 .home-col {
@@ -17,7 +12,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 $px95;
+    padding: $px92 $px95 0;
     color: #ffffff;
     text-align: center;
     > img {
@@ -41,4 +36,39 @@
         width: $px220;
         margin-top: $px43;
     }
+    @include phone-styles {
+        padding: 0 $medium-px20;
+        > img {
+            width: $medium-px64;
+            height: $medium-px64;
+        }
+        > h1 {
+            font-size: $medium-px24;
+            line-height: $medium-px31;
+            margin-top: $medium-px16;
+        }
+        > p {
+            font-size: $medium-px13;
+            line-height: $medium-px18;
+            margin: $medium-px12 0 0;
+        }
+        > .btn {
+            width: $medium-px150;
+        }
+    }
+    @include phone-landscape-styles {
+        display: block;
+        padding: $medium-px20;
+    }
+}
+
+.ethics-col {
+    background: $ethics-color;
+    @include phone-styles {
+        padding-top: $medium-px62;
+    }
+}
+
+.manifesto-col {
+    background: $manifesto-color;
 }

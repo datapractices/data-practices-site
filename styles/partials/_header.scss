@@ -3,4 +3,52 @@
     top: 0;
     left: 0;
     right: 0;
+    padding: $px26 $px32;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include phone-styles {
+        padding: $medium-px15;
+    }
+}
+
+.header-action-wrap {
+    flex-basis: 65vw;
+    display: flex;
+    justify-content: flex-end;
+    > .btn {
+        width: $px180;
+        height: $px40;
+        border-radius: $px40;
+        padding-top: $px14;
+        padding-bottom: $px14;
+        @include phone-styles {
+            width: $medium-px100;
+            height: $medium-px32;
+            border-radius: $medium-px32;
+            padding-top: $medium-px9;
+            padding-bottom: $medium-px9;
+        }
+    }
+}
+
+.header-logo {
+    font-size: $px13;
+    font-weight: 600;
+    line-height: $px14;
+    letter-spacing: $px0point7;
+    color: #ffffff;
+    > img {
+        margin-right: $px12;
+        width: $px30;
+        height: $px26;
+    }
+    @include phone-styles {
+        font-size: 0;
+        > img {
+            width: $medium-px30;
+            height: $medium-px26;
+            margin: 0;
+        }
+    }
 }

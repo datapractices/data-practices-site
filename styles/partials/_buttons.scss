@@ -9,12 +9,24 @@
     height: $px48;
     border-radius: $px48;
     padding: $px18 $px25;
+    @include phone-styles {
+        font-size: $medium-px11;
+        line-height: $medium-px14;
+        height: $medium-px36;
+        border-radius: $medium-px36;
+        padding: $medium-px11 $medium-px20;
+    }
     &:hover, &:focus {
         opacity: 0.8;
     }
     &.white-btn {
         background: #ffffff;
         color: #323D48;
+        &.outline-btn {
+            background: transparent;
+            border: $px2 solid #ffffff;
+            color: #ffffff;
+        }
     }
     &.-white-ouline-btn {
         border: $px2 solid $white;
