@@ -18,4 +18,16 @@
             color: $white;
         }
     }
+    .content-header {
+        &:after {
+            border-color: $manifesto-color;
+            background-color: $manifesto-color;
+        }
+    }
+    .bottom-floating-actions {
+        .btn.-sign {
+            background-color: $manifesto-color;
+            color: $white;
+        }
+    }
 }

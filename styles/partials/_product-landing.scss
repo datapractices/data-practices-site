@@ -20,6 +20,7 @@
     position: relative;
     @include phone-styles {
         display: block;
+        padding-bottom: $medium-px50;
     }
 }
 
@@ -120,7 +121,7 @@
 
 .branding-container {
     @extend .clearfix;
-    margin: $medium-px23;
+    padding: $medium-px23;
     > .branding-image, > .nav-title {
         float: left;
     }
@@ -196,7 +197,7 @@
         position: absolute;
         width: $px28;
         height: $px2;
-        border: $px2 solid $manifesto-color;
+        border: $px2 solid transparent;
         bottom: 0;
     }
     @include phone-styles {
@@ -204,6 +205,7 @@
         &:after {
             width: $medium-px22;
             border-width: $medium-px2;
+            height: $medium-px1_5;
         }
     }
 }
@@ -325,3 +327,66 @@
         min-width: $px200;
     }
 }
+
+.bottom-floating-actions {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    width: 100vw;
+    box-shadow: 0 -$medium-px8 $medium-px25 $medium-px5 rgba(0,0,0,0.10);
+    display: none;
+    @include phone-styles {
+        display: block;
+    }
+    > .btn {
+        width: 100%;
+        border-radius: 0;
+        height: $medium-px50;
+        line-height: $medium-px27;
+    }
+}
+
+.product-footer {
+    background-color: $footer-background;
+    margin-top: $px24;
+    > .inner-container {
+        padding: $px57 $px105;
+    }
+    .footer-brand {
+        margin-top: $px35;
+        margin-bottom: $px15;
+    }
+}
+
+.footer-brand {
+    > .logo {
+        display: inline-block;
+        img {
+            max-width: 100%;
+        }
+        @include phone-styles {
+            width: $medium-px140;
+        }
+    }
+}
+
+.made-with-love {
+    > p, a {
+        font-size: $px16;
+        line-height: $px22;
+        font-family: 'Graphik';
+        @include phone-styles {
+            font-size: $medium-px10_5;
+            line-height: $medium-px14;
+        }
+    }
+    > p {
+        color: $white;
+    }
+    a {
+        color: $manifesto-color;
+    }
+}
+
