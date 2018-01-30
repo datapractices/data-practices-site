@@ -1,10 +1,13 @@
 <!DOCTYPE>
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="shortcut icon" href="{{ contents.images['favicon.ico'].url }}">
         <link rel="stylesheet" href="{{ contents['main.scss'].url }}">
         <title>{{ page.title }}</title>
     </head>
     <body>
+        {% include 'includes/header.html' %}
         {% block body_content %}
         {% endblock %}
 

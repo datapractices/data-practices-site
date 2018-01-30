@@ -1,0 +1,19 @@
+.btn {
+    transition: all 0.25s ease;
+    font-size: $px11;
+    font-weight: 600;
+    line-height: $px12;
+    text-transform: uppercase;
+    letter-spacing: $px0point7;
+    text-align: center;
+    height: $px48;
+    border-radius: $px48;
+    padding: $px18 $px25;
+    &:hover, &:focus {
+        opacity: 0.8;
+    }
+    &.white-btn {
+        background: #ffffff;
+        color: #323D48;
+    }
+}

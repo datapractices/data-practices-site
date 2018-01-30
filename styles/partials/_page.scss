@@ -1,0 +1,44 @@
+.homepage-wrap {
+    display: flex;
+    min-height: 100vh;
+}
+
+.ethics-col {
+    background: $ethics-color;
+}
+
+.manifesto-col {
+    background: $manifesto-color;
+}
+
+.home-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 $px95;
+    color: #ffffff;
+    text-align: center;
+    > img {
+        width: $px140;
+        height: $px140;
+    }
+    > h1 {
+        font-size: $px32;
+        line-height: $px42;
+        font-weight: 600;
+        margin-top: $px30;
+    }
+    > p {
+        font-size: $px18;
+        line-height: $px28;
+        font-weight: 600;
+        color: inherit;
+        margin: $px18 $px28 0;
+    }
+    > .btn {
+        width: $px220;
+        margin-top: $px43;
+    }
+}

@@ -1,0 +1,18 @@
+<header class="page-header">
+    {% if page.enableBackButton %}
+        <a href="#" class="back-link">Back</a>
+    {% else %}
+        <a href="{{ contents.index.url }}">
+            <img
+                srcset="{{ contents.images['header-logo.png'].url }} 1x, {{ contents.images['header-logo-2x.png'].url }} 2x"
+                src="{{ contents.images['header-logo.png'].url }}"
+                alt="DATAPRACTICES.ORG" />
+            DATAPRACTICES.ORG
+        </a>
+    {% endif %}
+    {% if not disableSubscribe %}
+        <div class="header-action-wrap">
+            <button class="btn outline-button white-btn">Subscribe</button>
+        </div>
+    {% endif %}
+</header>

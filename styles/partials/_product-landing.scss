@@ -5,6 +5,15 @@
     margin: 0 auto;
 }
 
+.ethics-background {
+    background-color: $ethics-color;
+}
+
+.manifesto-background {
+    background-color: $manifesto-color;
+}
+
+
 .product-landing {
     display: flex;
     width: 100%;
@@ -72,5 +81,65 @@
     margin: 0;
     > li {
         margin: $px32 0;
+    }
+}
+
+.content-header {
+    position: relative;
+    padding: $px119 $px225 $px37 $px104;
+    &:after {
+        content: ' ';
+        position: absolute;
+        width: $px28;
+        height: $px2;
+        border: $px2 solid $manifesto-color;
+        bottom: 0;
+    }
+}
+
+.feature-section {
+    padding: $px89 $px170 $px89 $px105;
+    > p {
+        margin-bottom: $px29;
+    }
+}
+
+.image-content-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.image-content-item {
+    margin: $px46 0 $px50;
+    display: flex;
+}
+.item-content {
+    width: calc(100% - $px72);
+    padding-left: $px24;
+    > h5 {
+        margin-bottom: $px8;
+    }
+    > p {
+        margin: $px9 0;
+    }
+}
+
+.ordered-list {
+    margin: $px34 0 0;
+    list-style-position: outside;
+    padding: 0 0 0 $px15;
+    font-size: $px18;
+    > li {
+        padding: 0 0 0 $px10;
+        margin: $px34 0 $px52;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &.-light {
+        p, li {
+            color: $white;
+        }
     }
 }
