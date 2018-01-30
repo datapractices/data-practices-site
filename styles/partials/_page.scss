@@ -1,5 +1,5 @@
 .homepage-wrap {
-    display: flex;
+    @include flexbox();
     min-height: 100vh;
     @include phone-styles {
         display: block;
@@ -7,11 +7,11 @@
 }
 
 .home-col {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flex(1);
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
     padding: $px92 $px95 0;
     color: #ffffff;
     text-align: center;

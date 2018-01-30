@@ -1,0 +1,82 @@
+input {
+    border: $px1 solid #AEB9C7;
+    border-radius: $px2;
+    height: $px44;
+    font-size: $px16;
+    line-height: $px18;
+    @include phone-styles {
+        border: $medium-px2 solid #AEB9C7;
+        border-radius: $medium-px2;
+        height: $medium-px45;
+        font-size: $medium-px16;
+        line-height: $medium-px18;
+    }
+}
+.custom-control-description {
+    color: #323D48;
+    font-weight: 500;
+    font-size: $px16;
+    line-height: $px22;
+    @include phone-styles {
+        font-size: $medium-px16;
+        line-height: $medium-px22;
+    }
+}
+
+.custom-control-label {
+    &:before {
+        height: $px24;
+        width: $px24;
+        border-radius: $px3;
+        @include phone-styles {
+            height: $medium-px24;
+            width: $medium-px24;
+            border-radius: $medium-px3;
+        }
+    }
+    &:after {
+        height: $px24;
+        width: $px24;
+        @include phone-styles {
+            height: $medium-px24;
+            width: $medium-px24;
+        }
+    }
+}
+
+.custom-checkbox {
+    padding: $px3 $px35;
+    margin-bottom: $px5;
+    cursor: pointer;
+    @include phone-styles {
+        padding: $medium-px3 $medium-px35;
+        margin-bottom: $medium-px5;
+    }
+    .custom-control-input:checked ~ .custom-control-label::before {
+        background-color: $ethics-color;
+    }
+}
+
+.custom-checkbox-wrap {
+    margin-bottom: $px20;
+    @include phone-styles {
+        margin-bottom: $medium-px20;
+    }
+}
+.form-control {
+    color: #323D48;
+    font-size: $px16;
+    line-height: $px18;
+    @include phone-styles {
+        padding: 0 $medium-px15;
+        font-size: $medium-px16;
+        line-height: $medium-px18;
+        padding: 0 $medium-px15;
+    }
+}
+.form-group {
+    margin-bottom: $px16;
+    @include phone-styles {
+        margin-bottom: $medium-px16;
+    }
+}

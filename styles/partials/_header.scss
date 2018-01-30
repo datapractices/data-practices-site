@@ -5,21 +5,17 @@
     left: 0;
     right: 0;
     z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 2;
-    //@include phone-styles {
-    //    padding: $medium-px15;
-    //}
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(space-between);
 }
 
 .header-action-wrap {
+    @include flex-basis(65%);
+    @include flexbox();
+    @include justify-content(flex-end);
     transition: all 0.25s ease;
-    flex-basis: 65%;
-    display: flex;
     padding: $px26 $px32;
-    justify-content: flex-end;
     > .btn {
         color: #ffffff;
         width: $px180;
@@ -71,8 +67,8 @@
     line-height: $px14;
     color: #ffffff;
     text-transform: uppercase;
-    display: flex;
-    align-items: center;
+    @include flexbox();
+    @include align-items(center);
     padding: $px26 $px32;
     > img {
         width: $px26;
