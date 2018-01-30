@@ -1,0 +1,51 @@
+.ethics-color {
+  .navigation {
+    background-color: $ethics-color;
+  }
+  .-alternate-background {
+    background: $manifesto-color;
+    color: $white;
+  }
+  .section-action {
+    .btn.-filled {
+      background: $ethics-color;
+      color: $white;
+    }
+  }
+  .navigation-buttons-wrap {
+    .btn.-sign {
+      background: $manifesto-color;
+      color: $white;
+    }
+  }
+  .content-header {
+    &:after {
+      border-color: $ethics-color;
+      background-color: $ethics-color;
+    }
+  }
+  .bottom-floating-actions {
+    .btn.-sign {
+      background-color: $ethics-color;
+      color: $white;
+    }
+  }
+  .nav-anchor {
+    color: $manifesto-color;
+    &.active {
+      color: $white;
+    }
+    &:hover {
+      text-decoration: none;
+      opacity: 0.8;
+      color: $white;
+    }
+    &:active, &:focus {
+      color: $manifesto-color;
+      opacity: 1;
+      &.active {
+        color: $white;
+      }
+    }
+  }
+}

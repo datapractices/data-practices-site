@@ -30,4 +30,22 @@
             color: $white;
         }
     }
+    .nav-anchor {
+        color: $ethics-color;
+        &.active {
+            color: $white;
+        }
+        &:hover {
+            text-decoration: none;
+            opacity: 0.8;
+            color: $white;
+        }
+        &:active, &:focus {
+            color: $ethics-color;
+            opacity: 1;
+            &.active {
+                color: $white;
+            }
+        }
+    }
 }
