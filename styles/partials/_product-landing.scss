@@ -17,6 +17,7 @@
 .product-landing {
     display: flex;
     width: 100%;
+    position: relative;
 }
 
 .navigation {
@@ -29,6 +30,18 @@
         height: 100%;
         text-align: right;
         padding: $px158 $px104 $px50;
+    }
+}
+
+.navigation-buttons-wrap {
+    margin: $px15 0;
+    padding: $px3 0;
+    .btn {
+        min-width: $px200;
+        margin-bottom: $px20;
+        &.-download {
+
+        }
     }
 }
 
@@ -54,7 +67,7 @@
 }
 
 .nav-title {
-    margin: $px47 0 $px35;
+    margin: $px47 0 10px;
 }
 
 .nav-anchor {
@@ -65,6 +78,7 @@
     text-align: right;
     color: $ethics-color;
     padding: $px10 $px1;
+    margin: $px14 0;
     &.active {
         color: $white;
     }
@@ -78,7 +92,8 @@
 .navigation-links {
     list-style: none;
     padding: 0;
-    margin: 0;
+    display: block;
+    margin: $px25 0 $px27;
     > li {
         margin: $px32 0;
     }
@@ -98,9 +113,19 @@
 }
 
 .feature-section {
-    padding: $px89 $px170 $px89 $px105;
+    padding: $px89 $px195 $px89 $px105;
     > p {
         margin-bottom: $px29;
+    }
+    &.-less-padding {
+        padding: $px69 $px170 $px69 $px105;
+    }
+    &.-medium-padding {
+        padding-top: $px75;
+        padding-bottom: $px75;
+    }
+    &.-no-right-padding {
+        padding-right: $px10;
     }
 }
 
@@ -126,7 +151,7 @@
 }
 
 .ordered-list {
-    margin: $px34 0 0;
+    margin: $px34 0 $px16;
     list-style-position: outside;
     padding: 0 0 0 $px15;
     font-size: $px18;
@@ -141,5 +166,39 @@
         p, li {
             color: $white;
         }
+    }
+    &.-two-columns {
+        padding: $px5 0 $px5 $px25;
+        > li {
+            float: left;
+            width: 50%;
+        }
+    }
+    &.-condensed {
+        > li {
+            margin: 0;
+        }
+    }
+}
+
+.two-columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: $px60;
+    column-gap: $px60;
+    -moz-column-gap: $px60;
+}
+
+.unordered-list {
+    padding: 0;
+    list-style: none;
+    margin: $px45 0 $px10;
+}
+
+.section-action {
+    margin: $px32 0 $px5;
+    > .btn {
+        min-width: $px200;
     }
 }

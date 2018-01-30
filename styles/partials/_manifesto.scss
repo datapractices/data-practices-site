@@ -6,4 +6,16 @@
         background: $ethics-color;
         color: $white;
     }
+    .section-action {
+        .btn.-filled {
+            background: $manifesto-color;
+            color: $white;
+        }
+    }
+    .navigation-buttons-wrap {
+        .btn.-sign {
+            background: $ethics-color;
+            color: $white;
+        }
+    }
 }
