@@ -1,4 +1,6 @@
 {
     "template": "manifesto-landing.html",
-    "title": "Manifesto Landing Page"
+    "title": "Manifesto Landing Page",
+    "enableBackButton": true,
+    "rootClass": "manifesto-page"
 }

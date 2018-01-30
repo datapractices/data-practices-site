@@ -1,6 +1,12 @@
-<header class="page-header">
-    {% if page.enableBackButton %}
-        <a href="#" class="back-link">Back</a>
+<header class="page-header {{ 'js-header-translucent' if not page.metadata.enableBackButton }}">
+    {% if page.metadata.enableBackButton %}
+        <a href="#" class="back-link">
+            <img
+                srcset="{{ contents.images['back@1x.png'].url }} 1x, {{ contents.images['back@2x.png'].url }} 2x, {{ contents.images['back@3x.png'].url }} 3x"
+                src="{{ contents.images['back@1x.png'].url }}"
+                alt="Go Back" />
+            Back
+        </a>
     {% else %}
         <a class="header-logo" href="{{ contents.index.url }}">
             <img
@@ -11,8 +17,8 @@
         </a>
     {% endif %}
     {% if not disableSubscribe %}
-        <div class="header-action-wrap">
-            <button class="btn outline-btn white-btn">Subscribe</button>
+        <div class="header-action-wrap {{ 'js-header-translucent' if page.metadata.enableBackButton }}">
+            <button class="btn outline-btn">Subscribe</button>
         </div>
     {% endif %}
 </header>
