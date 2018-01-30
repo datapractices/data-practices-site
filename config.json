@@ -9,11 +9,6 @@
     "wintersmith-nunjucks",
     "wintersmith-sassy"
   ],
-  "require": {
-    "moment": "moment",
-    "_": "underscore",
-    "typogr": "typogr"
-  },
   "nunjucks": {
     "autoescape": true
   },

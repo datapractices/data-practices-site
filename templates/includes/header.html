@@ -1,6 +1,6 @@
 <header class="page-header {{ 'js-header-translucent' if not page.metadata.enableBackButton }}">
     {% if page.metadata.enableBackButton %}
-        <a href="#" class="back-link">
+        <a href="{{ contents.index.url }}" class="back-link">
             <img
                 srcset="{{ contents.images['back@1x.png'].url }} 1x, {{ contents.images['back@2x.png'].url }} 2x, {{ contents.images['back@3x.png'].url }} 3x"
                 src="{{ contents.images['back@1x.png'].url }}"

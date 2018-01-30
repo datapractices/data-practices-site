@@ -12,7 +12,7 @@
 
 .header-action-wrap {
     transition: all 0.25s ease;
-    flex-basis: 65vw;
+    flex-basis: 65%;
     display: flex;
     padding: $px26 $px32;
     justify-content: flex-end;
@@ -87,6 +87,9 @@
 
 .translucent {
     background: rgba(#ffffff, 0.9);
+    .btn {
+        color: $manifesto-color;
+    }
 }
 
 .manifesto-page {
