@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 2;
     @include phone-styles {
         padding: $medium-px15;
     }

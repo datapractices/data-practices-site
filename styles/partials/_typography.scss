@@ -6,6 +6,10 @@
     &.-large {
         font-size: $px32;
         line-height: $px44;
+        @include phone-styles {
+            font-size: $medium-px24;
+            line-height: $medium-px33;
+        }
     }
     &.-small {
         font-size: $px14;
@@ -16,9 +20,17 @@
         font-family: 'Graphik';
         &.-large {
             line-height: $px42;
+            @include phone-styles {
+                font-size: $medium-px32;
+                line-height: $medium-px38;
+            }
         }
         &.-small {
             letter-spacing: $px1;
+            @include phone-styles {
+                font-size: $medium-px10_5;
+                line-height: $medium-px14;
+            }
         }
     }
     &.-white {
@@ -27,7 +39,6 @@
     &.-capital {
         text-transform: uppercase;
     }
-
 }
 
 
@@ -37,4 +48,9 @@ p {
     color: $text-dark;
     line-height: $px28;
     margin: 0 0 $px8;
+    @include phone-styles {
+        font-size: $medium-px12;
+        font-weight: 500;
+        line-height: $medium-px16;
+    }
 }

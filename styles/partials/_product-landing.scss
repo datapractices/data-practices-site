@@ -18,6 +18,9 @@
     display: flex;
     width: 100%;
     position: relative;
+    @include phone-styles {
+        display: block;
+    }
 }
 
 .navigation {
@@ -31,6 +34,21 @@
         text-align: right;
         padding: $px158 $px104 $px50;
     }
+    @include phone-styles {
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        height: unset;
+        > .inner-container {
+            padding: $medium-px48 $medium-px25 0;
+        }
+        .branding-image {
+            display: none;
+        }
+        .nav-title {
+            display: none;
+        }
+    }
 }
 
 .navigation-buttons-wrap {
@@ -39,9 +57,9 @@
     .btn {
         min-width: $px200;
         margin-bottom: $px20;
-        &.-download {
-
-        }
+    }
+    @include phone-styles {
+        display: none;
     }
 }
 
@@ -49,6 +67,20 @@
     width: 65%;
     flex: 0 0 65%;
     margin-left: 35%;
+    @include phone-styles {
+        //position: relative;
+        width: 100%;
+        flex: 0 0 100%;
+        margin: 0;
+
+        > .inner-container {
+            padding-top: $medium-px91;
+        }
+    }
+
+    .nav-title {
+        color: $text-dark;
+    }
 }
 
 
@@ -58,16 +90,47 @@
     display: inline-block;
     background: #fff;
     border-radius: 50%;
+    img {
+        max-width: 100%;
+    }
+    @include phone-styles {
+        width: $medium-px80;
+        height: $medium-px80;
+    }
 }
 
 
 .item-image {
     height: $px72;
     width: $px72;
+    float: left;
+    img {
+        max-width: 100%;
+    }
+    @include phone-styles {
+        height: $medium-px55;
+        width: $medium-px55;
+        margin: $medium-px8 0 0;
+    }
 }
 
 .nav-title {
-    margin: $px47 0 10px;
+    margin: $px47 0 $px10;
+}
+
+.branding-container {
+    @extend .clearfix;
+    margin: $medium-px23;
+    > .branding-image, > .nav-title {
+        float: left;
+    }
+    > .branding-image {
+        margin: $medium-px8 0 0 0;
+    }
+    > .nav-title {
+        width: calc(100% - #{$medium-px80});
+        padding-left: $medium-px18;
+    }
 }
 
 .nav-anchor {
@@ -87,6 +150,17 @@
         opacity: 0.8;
         color: $white;
     }
+    @include phone-styles {
+        float: left;
+        font-size: $medium-px11;
+        line-height: $medium-px14;
+        margin: 0 $medium-px11;
+        padding: $medium-px10 0;
+        border-bottom: $medium-px3 solid transparent;
+        &.active {
+            border-bottom: $medium-px3 solid $white;
+        }
+    }
 }
 
 .navigation-links {
@@ -94,8 +168,12 @@
     padding: 0;
     display: block;
     margin: $px25 0 $px27;
+    @extend .clearfix;
     > li {
         margin: $px32 0;
+    }
+    @include phone-styles {
+        margin: $medium-px7 0 0;
     }
 }
 
@@ -109,6 +187,13 @@
         height: $px2;
         border: $px2 solid $manifesto-color;
         bottom: 0;
+    }
+    @include phone-styles {
+        padding: $medium-px10 $medium-px22 $medium-px28;
+        &:after {
+            width: $medium-px22;
+            border-width: $medium-px2;
+        }
     }
 }
 
@@ -127,6 +212,13 @@
     &.-no-right-padding {
         padding-right: $px10;
     }
+    @include phone-styles {
+        padding: $medium-px65 $medium-px23;
+        > .heading.-large {
+            font-size: $medium-px14;
+            line-height: $medium-px27;
+        }
+    }
 }
 
 .image-content-list {
@@ -137,16 +229,29 @@
 
 .image-content-item {
     margin: $px46 0 $px50;
-    display: flex;
+    // display: flex;
+    @extend .clearfix;
+    @include phone-styles {
+        margin: $medium-px26 0;
+    }
 }
 .item-content {
-    width: calc(100% - $px72);
+    width: calc(100% - #{$px72});
+    float: left;
     padding-left: $px24;
-    > h5 {
+    > h5.heading {
         margin-bottom: $px8;
+        @include phone-styles {
+            font-size: $medium-px14;
+            line-height: $medium-px27;
+        }
     }
     > p {
         margin: $px9 0;
+    }
+    @include phone-styles {
+        width: calc(100% - #{$medium-px55});
+        padding-left: $medium-px22;
     }
 }
 
@@ -155,6 +260,10 @@
     list-style-position: outside;
     padding: 0 0 0 $px15;
     font-size: $px18;
+    @include phone-styles {
+        font-size: $medium-px12;
+        padding-left: $medium-px12;
+    }
     > li {
         padding: 0 0 0 $px10;
         margin: $px34 0 $px52;
@@ -172,6 +281,9 @@
         > li {
             float: left;
             width: 50%;
+        }
+        @include phone-styles {
+            padding-left: $medium-px12;
         }
     }
     &.-condensed {
