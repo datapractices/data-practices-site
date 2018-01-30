@@ -325,6 +325,9 @@
     margin: $px32 0 $px5;
     > .btn {
         min-width: $px200;
+        @include phone-styles {
+            min-width: $medium-px140;
+        }
     }
 }
 
