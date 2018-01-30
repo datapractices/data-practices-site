@@ -74,3 +74,36 @@
 .manifesto-col {
     background: $manifesto-color;
 }
+
+.floating-social-btns {
+    position: fixed;
+    bottom: $px20;
+    right: $px20;
+    @include phone-styles {
+        display: none;
+    }
+}
+
+.social-btns {
+    &.-vertical {
+        width: 26px;
+        > .social-link {
+            display: block;
+            margin: $px15 0 0;
+        }
+    }
+}
+
+.social-link {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    > img {
+        max-width: 100%;
+    }
+    &:hover, &:focus, &:active {
+        opacity: 0.8;
+    }
+}

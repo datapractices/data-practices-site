@@ -1,8 +1,6 @@
 $(document).ready(function() {
-    // $('body').scrollspy({ target: '#navigation' });
 
     $(window).on('resize', function () {
-        console.log('resize called');
         var win = $(this);
         var offsetHeight = $('.navigation').height();
         console.log('resize called', offsetHeight);
@@ -15,14 +13,12 @@ $(document).ready(function() {
     });
     var offsetHeight = $('.navigation').height();
     if($(window).width() < 768) {
-        console.log('offset ', offsetHeight);
         $('body').scrollspy({
             target: '#navigation',
             offset: offsetHeight
         });
     } else {
         offsetHeight = $('.page-header').height();
-        console.log('offset ', offsetHeight);
         $('body').scrollspy({
             target: '#navigation',
             offset: offsetHeight

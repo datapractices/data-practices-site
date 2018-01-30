@@ -33,7 +33,7 @@
     > .inner-container {
         height: 100%;
         text-align: right;
-        padding: $px158 $px104 $px50;
+        padding: 13vh $px104 $px50;
     }
     @include phone-styles {
         position: fixed;
@@ -117,7 +117,7 @@
 }
 
 .nav-title {
-    margin: $px47 0 $px10;
+    margin: 2vh 0 0.5vh;
 }
 
 .branding-container {
@@ -147,7 +147,7 @@
     text-align: right;
     color: $ethics-color;
     padding: $px10 $px1;
-    margin: $px14 0;
+    margin: $px4 0;
     &.active {
         color: $white;
     }
@@ -180,7 +180,7 @@
     list-style: none;
     padding: 0;
     display: block;
-    margin: $px25 0 $px27;
+    margin: 3vh 0;
     @extend .clearfix;
     > li {
         margin: $px32 0;
