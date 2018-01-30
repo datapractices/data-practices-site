@@ -1,0 +1,60 @@
+.modal-backdrop.show {
+    opacity: 1;
+    background: #fff;
+}
+.modal-content {
+    border-radius: $px2;
+    background-color: #fff;
+    border: none;
+	box-shadow: 0 $px2 100px 0 rgba(140,156,175,0.4);
+	@include phone-styles {
+		box-shadow: 0 $medium-px2 100px 0 rgba(140,156,175,0.4);
+    	border-radius: $medium-px2;
+	}
+}
+.modal-body {
+	padding: $px60 $px50;
+	h1 {
+		color: #323D48;
+		font-size: $px32;
+		margin-bottom: $px16;
+	}
+	@include phone-styles {
+		padding: $medium-px20 $medium-px40;
+
+		h1 {
+			font-size: $medium-px32;
+			margin-bottom: $medium-px16;
+		}
+	}
+	.btn-primary {
+		background-color: $ethics-color;
+		min-width: $px240;
+	}
+}
+button.close {
+	color: #fff;
+    width: $px32;
+    height: $px32;
+    background: #ccc;
+    border-radius: 50%;
+    display: block;
+    padding: $px3 0;
+    font-size: $px24;
+    position: absolute;
+    right: $px25;
+    top: $px25;
+    &:hover {
+		color: #fff;
+    }
+	@include phone-styles {
+		width: $medium-px24;
+    	height: $medium-px24;
+    	padding: $medium-px3 0;
+    	font-size: $medium-px20;
+    	right: $medium-px25;
+    	top: $medium-px25;
+	}
+}
+
+
