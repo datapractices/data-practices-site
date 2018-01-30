@@ -131,6 +131,10 @@
         width: calc(100% - #{$medium-px80});
         padding-left: $medium-px18;
     }
+    display: none;
+    @include phone-styles {
+        display: block;
+    }
 }
 
 .nav-anchor {
@@ -145,10 +149,17 @@
     &.active {
         color: $white;
     }
-    &:hover, &:focus, &:active {
+    &:hover {
         text-decoration: none;
         opacity: 0.8;
         color: $white;
+    }
+    &:active, &:focus {
+        color: $ethics-color;
+        opacity: 1;
+        &.active {
+            color: $white;
+        }
     }
     @include phone-styles {
         float: left;

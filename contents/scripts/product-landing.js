@@ -15,13 +15,26 @@ $(document).ready(function() {
     });
     var offsetHeight = $('.navigation').height();
     if($(window).width() < 768) {
+        console.log('offset ', offsetHeight);
         $('body').scrollspy({
             target: '#navigation',
             offset: offsetHeight
         });
     } else {
+        offsetHeight = $('.page-header').height();
+        console.log('offset ', offsetHeight);
         $('body').scrollspy({
-            target: '#navigation'
+            target: '#navigation',
+            offset: offsetHeight
         });
     }
+
+
+    $('.navigation-links > a').on('click', function () {
+        var scrollPos = $('body > .fluid-container').find($(this).attr('href')).offset().top - (offsetHeight - 1);
+        $('body,html').animate({
+            scrollTop: scrollPos
+        });
+        return false;
+    });
 });
