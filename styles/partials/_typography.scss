@@ -2,9 +2,14 @@
     font-family: 'Publico Text';
 	color: $text-dark;
     font-weight: 600;
+    margin: 0;
     &.-large {
         font-size: $px32;
         line-height: $px44;
+    }
+    &.-small {
+        font-size: $px14;
+        line-height: $px15;
     }
 
     &.-graphik {
@@ -12,10 +17,17 @@
         &.-large {
             line-height: $px42;
         }
+        &.-small {
+            letter-spacing: $px1;
+        }
     }
     &.-white {
         color: #FFF;
     }
+    &.-capital {
+        text-transform: uppercase;
+    }
+
 }
 
 
@@ -23,4 +35,6 @@ p {
     font-family: 'Publico Text';
     font-size: $px18;
     color: $text-dark;
+    line-height: $px28;
+    margin: 0 0 $px10;
 }

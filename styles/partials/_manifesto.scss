@@ -2,4 +2,8 @@
     .navigation {
         background-color: $manifesto-color;
     }
+    .-alternate-background {
+        background: $ethics-color;
+        color: $white;
+    }
 }
