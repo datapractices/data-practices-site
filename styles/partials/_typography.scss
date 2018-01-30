@@ -53,4 +53,13 @@ p {
         font-weight: 500;
         line-height: $medium-px16;
     }
+    &.-graphik {
+        font-family: 'Graphik';
+        font-size: $px16;
+        line-height: $px28;
+        @include phone-styles {
+            font-size: $medium-px12;
+            line-height: $medium-px16;
+        }
+    }
 }

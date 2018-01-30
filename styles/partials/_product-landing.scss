@@ -28,7 +28,7 @@
     position: fixed;
     width: 35%;
     @include flex(0 0 35%);
-    height: 100vw;
+    height: 100vh;
     overflow: auto;
     > .inner-container {
         height: 100%;
@@ -39,9 +39,10 @@
         position: fixed;
         width: 100%;
         z-index: 1;
-        height: unset;
+        height: auto;
         > .inner-container {
-            padding: $medium-px48 $medium-px25 0;
+            padding: $medium-px48 $medium-px10 0;
+            text-align: center;
         }
         .branding-image {
             display: none;
@@ -89,7 +90,7 @@
     width: $px140;
     height: $px140;
     display: inline-block;
-    background: #fff;
+    //background: #fff;
     border-radius: 50%;
     img {
         max-width: 100%;
@@ -164,7 +165,7 @@
     }
     @include phone-styles {
         float: left;
-        font-size: $medium-px11;
+        font-size: $medium-px10;
         line-height: $medium-px14;
         margin: 0 $medium-px11;
         padding: $medium-px10 0;
@@ -186,12 +187,13 @@
     }
     @include phone-styles {
         margin: $medium-px7 0 0;
+        display: inline-block;
     }
 }
 
 .content-header {
     position: relative;
-    padding: $px119 $px225 $px37 $px104;
+    padding: $px119 $px200 $px37 $px104;
     &:after {
         content: ' ';
         position: absolute;
@@ -214,6 +216,22 @@
     padding: $px89 $px195 $px89 $px105;
     > p {
         margin-bottom: $px29;
+        &:not(.heading) {
+            margin: $px12 0 $px28;
+            b {
+                display: block;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &.-graphik:not(.heading) {
+            margin: $px3 0;
+            padding: $px5 0 0;
+            @include phone-styles {
+                margin: $medium-px5 0;
+            }
+        }
     }
     &.-less-padding {
         padding: $px69 $px170 $px69 $px105;
@@ -225,11 +243,26 @@
     &.-no-right-padding {
         padding-right: $px10;
     }
+    &.-grey-background {
+        background-color: rgba(174,185,199, 0.2);
+    }
     @include phone-styles {
         padding: $medium-px65 $medium-px23;
         > .heading.-large {
             font-size: $medium-px14;
             line-height: $medium-px27;
+        }
+    }
+    .line-break {
+        height: $px33;
+        display: block;
+    }
+}
+
+.ethics-page {
+    .feature-section {
+        > p.heading {
+            margin-bottom: $px41;
         }
     }
 }
