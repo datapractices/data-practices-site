@@ -3,3 +3,9 @@
         @content;
     }
 }
+
+@mixin phone-landscape-styles {
+    @media screen and (max-width: #{$medium-width}) and (orientation: landscape) {
+        @content;
+    }
+}
