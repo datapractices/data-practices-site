@@ -28,10 +28,14 @@ input {
         height: $px24;
         width: $px24;
         border-radius: $px3;
+        background: transparent;
+        border: $px2 solid $ethics-color;
+
         @include phone-styles {
             height: $medium-px24;
             width: $medium-px24;
             border-radius: $medium-px3;
+            border: $medium-px2 solid $ethics-color;
         }
     }
     &:after {
