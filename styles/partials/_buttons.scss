@@ -22,11 +22,10 @@
     &.white-btn {
         background: #ffffff;
         color: #323D48;
-        &.outline-btn {
-            background: transparent;
-            border: $px2 solid #ffffff;
-            color: #ffffff;
-        }
+    }
+    &.outline-btn {
+        background: transparent;
+        border: $px2 solid currentColor;
     }
     &.-white-ouline-btn {
         border: $px2 solid $white;

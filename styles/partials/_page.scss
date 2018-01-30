@@ -2,7 +2,7 @@
     display: flex;
     min-height: 100vh;
     @include phone-styles {
-        flex-direction: column;
+        display: block;
     }
 }
 
@@ -37,7 +37,8 @@
         margin-top: $px43;
     }
     @include phone-styles {
-        padding: 0 $medium-px20;
+        min-height: 50vh;
+        padding: $medium-px20;
         > img {
             width: $medium-px64;
             height: $medium-px64;

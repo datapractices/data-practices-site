@@ -1,9 +1,10 @@
 .page-header {
+    transition: all 0.25s ease;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    padding: $px26 $px32;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,10 +15,13 @@
 }
 
 .header-action-wrap {
-    flex-basis: 65vw;
+    transition: all 0.25s ease;
+    flex-basis: 65%;
     display: flex;
+    padding: $px26 $px32;
     justify-content: flex-end;
     > .btn {
+        color: #ffffff;
         width: $px180;
         height: $px40;
         border-radius: $px40;
@@ -31,6 +35,9 @@
             padding-bottom: $medium-px9;
         }
     }
+    @include phone-styles {
+        padding: $medium-px15;
+    }
 }
 
 .header-logo {
@@ -39,6 +46,7 @@
     line-height: $px14;
     letter-spacing: $px0point7;
     color: #ffffff;
+    padding: $px26 $px32;
     > img {
         margin-right: $px12;
         width: $px30;
@@ -46,10 +54,56 @@
     }
     @include phone-styles {
         font-size: 0;
+        padding: $medium-px15;
         > img {
             width: $medium-px30;
             height: $medium-px26;
             margin: 0;
         }
+    }
+}
+
+.back-link {
+    transition: all 0.25s ease;
+    font-size: $px13;
+    font-weight: 600;
+    line-height: $px14;
+    color: #ffffff;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    padding: $px26 $px32;
+    > img {
+        width: $px26;
+        height: $px26;
+        margin-right: $px12;
+    }
+    &:hover, &:focus {
+        opacity: 0.8;
+        text-decoration: none;
+        color: #ffffff;
+    }
+    @include phone-styles {
+        font-size: 0;
+        padding: $medium-px15;
+    }
+}
+
+.translucent {
+    background: rgba(#ffffff, 0.9);
+    .btn {
+        color: $manifesto-color;
+    }
+}
+
+.manifesto-page {
+    .header-action-wrap > .btn {
+        color: $manifesto-color;
+    }
+}
+
+.ethics-page {
+    .header-action-wrap > .btn {
+        color: $ethics-color;
     }
 }
