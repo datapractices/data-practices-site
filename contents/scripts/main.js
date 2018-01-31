@@ -16,8 +16,7 @@ $(document).ready(function() {
     clipboard.on('success', function(e) {
         e.clearSelection();
         $(e.trigger).tooltip({
-            title: 'Link Copied',
-            trigger: 'focus'
+            title: 'Link Copied'
         }).tooltip('show').on('hidden.bs.tooltip', function() {
             $(this).tooltip('dispose');
         });
