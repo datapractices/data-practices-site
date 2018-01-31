@@ -9,7 +9,7 @@
         <priority>1.00</priority>
     </url>
     <url>
-        <loc>http://localhost:8080/ethics</loc>
+        <loc>http://localhost:8080/code-of-ethics</loc>
         <priority>1.00</priority>
     </url>
     <url>
