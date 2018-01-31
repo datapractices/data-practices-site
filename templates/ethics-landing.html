@@ -21,7 +21,7 @@
                 <a href="#signatories" class="nav-anchor nav-link">SIGNATORIES</a>
             </nav>
             <div class="navigation-buttons-wrap">
-                <a href="#" class="btn -sign">SIGN</a>
+                <button class="btn -sign" data-toggle="modal" data-target="#signInDataScience">SIGN</button>
                 <a href="#" class="btn -download -white-ouline-btn">DOWNLOAD (PDF)</a>
             </div>
         </div>
@@ -275,7 +275,7 @@
                 <p class="heading -small -capital -graphik -white">be part of this</p>
                 <h3 class="heading -large -white">Do you believe in the Data Scientist Code of Ethics? Become a signatory.</h3>
                 <div class="section-action">
-                    <a href="#" class="btn white-btn">SIGN</a>
+                    <button class="btn white-btn" data-toggle="modal" data-target="#signInDataScience">SIGN</button>
                 </div>
             </div>
             <div class="feature-section -less-padding -no-right-padding" id="signatories">
@@ -299,7 +299,7 @@
                     <li><p>Monica Rogati</p></li>
                 </ol>
                 <div class="section-action">
-                    <a href="#" class="btn -filled">SIGN</a>
+                    <button class="btn -filled" data-toggle="modal" data-target="#signInDataScience">SIGN</button>
                 </div>
             </div>
         </div>
@@ -323,7 +323,7 @@
         </div>
     </div>
     <div class="bottom-floating-actions">
-        <a href="#" class="btn -full-width -sign">Sign</a>
+        <button class="btn -full-width -sign" data-toggle="modal" data-target="#signInDataScience">Sign</button>
     </div>
     <div class="floating-social-btns">
         <div class="social-btns -vertical">
@@ -358,4 +358,6 @@
         </div>
     </div>
 </div>
+    <!-- Sign In Data Science for updates Modal -->
+    {% include "modals/sign-in-data-science.html" %}
 {% endblock %}

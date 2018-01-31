@@ -6,6 +6,11 @@ $(document).ready(function() {
             $('.js-header-translucent').removeClass('translucent')
         }
     });
+    $('.js-modal-submit').on('click', function(){
+        $this = $(this);
+        $this.closest('.js-modal-wrapper').find('.js-modal-success').show();
+        $this.closest('.js-modal-form').hide();
+    });
 });
 
 function alignItems(elements) {

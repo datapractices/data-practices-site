@@ -1,4 +1,5 @@
 {
     "template": "manifesto-modals.html",
-    "title": "Manifesto Modals List Page"
+    "title": "Manifesto Modals List Page",
+    "form_trigger": true
 }

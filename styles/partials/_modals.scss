@@ -63,8 +63,11 @@ button.close {
     right: $px25;
     top: $px25;
     font-weight: normal;
-    &:hover {
-		color: #fff;
+    &.close {
+	    &:hover, &:focus {
+			color: #fff;
+			outline: none;
+	    }
     }
 	@include phone-styles {
 		width: $medium-px24;
