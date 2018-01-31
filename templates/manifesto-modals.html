@@ -1,45 +1,92 @@
 {% extends 'base.html' %}
 
 {% block body_content %}
-    <div class="fluid-container product-landing manifesto-color">
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-          Subscribe for Updates modal
-        </button>
+<div class="fluid-container product-landing ethics-color">
+	<div class="product-content">
+		<div class="inner-container">
+			<!-- Button trigger modal -->
+			<div class="form-group">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+					Subscribe for Updates modal
+				</button>
+			</div>
+			<div class="form-group">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#subscribeSuccesModal">
+					Subscribe Success
+				</button>
+			</div>
 
-        <!-- Subscribe for updates Modal -->
-        <div class="modal fade dw-modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-                <h1>Demo Base</h1>
-                <form action="/action_page.php">
-                  <div class="form-group">
-                    <input type="email" class="form-control" id="email" placeholder="Full name (required)">
-                  </div>
-                  <div class="form-group">
-                    <input type="email" class="form-control" id="email" placeholder="Email address (required)">
-                  </div>
-                  <div class="custom-checkbox-wrap">
-                    <label class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-description">Updates for Data Scientist Code of Ethics</span>
-                    </label>
-                    <label class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-description">Updates for Manifesto for Data Practices</span>
-                    </label>
-                  </div>
-                  <button type="button" class="btn btn-primary">Subscribe</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
+			<!-- Subscribe for updates Modal -->
+			<div class="modal fade dw-modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h1>Demo Base</h1>
+							<form action="/action_page.php">
+								<div class="form-group">
+									<input type="email" class="form-control" id="email" placeholder="Full name (required)">
+								</div>
+								<div class="form-group">
+									<input type="email" class="form-control" id="email" placeholder="Email address (required)">
+								</div>
+								<div class="custom-checkbox-wrap">
+									<label class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input">
+										<span class="custom-control-label"></span>
+										<span class="custom-control-description">Updates for Data Scientist Code of Ethics</span>
+									</label>
+									<label class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input">
+										<span class="custom-control-label"></span>
+										<span class="custom-control-description">Updates for Manifesto for Data Practices</span>
+									</label>
+								</div>
+								<button type="button" class="btn btn-primary">Subscribe</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Subscribe for updates Modal -->
+			<div class="modal fade dw-modal" id="subscribeSuccesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h1>You’re subscribed.</h1>
+							<p>Share and invite others</p>
+							<div class="social-icon-wrap">
+								<a href="#">
+									<img src="{{ contents.images['social-link@1x.png'].url }}" alt="data.world"
+	                                 srcset="{{ contents.images['social-link@1x.png'].url }} 1x, {{ contents.images['social-link@2x.png'].url }} 2x, {{ contents.images['social-link@3x.png'].url }} 3x" />
+								</a>
+								<a href="#">
+									<img src="{{ contents.images['social-facebook@1x.png'].url }}" alt="data.world"
+	                                 srcset="{{ contents.images['social-facebook@1x.png'].url }} 1x, {{ contents.images['social-facebook@2x.png'].url }} 2x, {{ contents.images['social-facebook@3x.png'].url }} 3x" />
+								</a>
+								<a href="#">
+									<img src="{{ contents.images['social-twitter@1x.png'].url }}" alt="data.world"
+	                                 srcset="{{ contents.images['social-twitter@1x.png'].url }} 1x, {{ contents.images['social-twitter@2x.png'].url }} 2x, {{ contents.images['social-twitter@3x.png'].url }} 3x" />
+								</a>
+								<a href="#">
+									<img src="{{ contents.images['social-linkedin@1x.png'].url }}" alt="data.world"
+	                                 srcset="{{ contents.images['social-linkedin@1x.png'].url }} 1x, {{ contents.images['social-linkedin@2x.png'].url }} 2x, {{ contents.images['social-linkedin@3x.png'].url }} 3x" />
+								</a>
+							</div>
+							<div class="dw-btn-wrap">
+								<button type="button" class="btn btn-primary">Done</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 {% endblock %}

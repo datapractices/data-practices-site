@@ -34,7 +34,21 @@
 			min-width: $medium-px200;
 		}
 	}
+	p {
+		color: #323D48;
+		font-weight: 500;
+		font-size: $px16;
+		line-height: $px28;
+		margin-bottom: $px15;
+
+		@include phone-styles {
+			font-size: $medium-px16;
+			line-height: $medium-px28;
+			margin-bottom: $medium-px15;
+		}
+	}
 }
+
 button.close {
 	color: #fff;
     width: $px32;
@@ -66,5 +80,19 @@ button.close {
 	max-width: $px580;
 	@include phone-styles {
 		max-width: 90vw;
+	}
+}
+.dw-btn-wrap {
+	margin-top: $px30;
+	@include phone-styles {
+		margin-top: $medium-px30;
+	}
+}
+.social-icon-wrap {
+	a {
+		margin-right: $px20;
+		@include phone-styles {
+			margin-right: $medium-px20;
+		}
 	}
 }
