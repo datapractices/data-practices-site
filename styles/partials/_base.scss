@@ -2,3 +2,16 @@ html, body {
     font-family: 'Graphik', Helvetica, Arial, sans-serif;
     font-size: $px10;
 }
+
+.show-medium {
+    display: none !important;
+}
+
+@include phone-styles {
+    .hide-medium {
+        display: none !important;
+    }
+    .show-medium {
+        display: initial !important;
+    }
+}
