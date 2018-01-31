@@ -19,7 +19,7 @@
                     <a href="#signatories" class="nav-anchor nav-link">SIGNATORIES</a>
                 </nav>
                 <div class="navigation-buttons-wrap">
-                    <a href="#" class="btn -sign">SIGN</a>
+                    <button class="btn -sign" data-toggle="modal" data-target="#signInManifesto">SIGN</button>
                     <a href="#" class="btn -download -white-ouline-btn">DOWNLOAD (PDF)</a>
                 </div>
             </div>
@@ -176,7 +176,7 @@
                     <p class="heading -small -capital -graphik -white">be part of this</p>
                     <h3 class="heading -large -white">If you believe in the values and principles of the Manifesto, add your name.</h3>
                     <div class="section-action">
-                        <a href="#" class="btn white-btn">SIGN</a>
+                        <button class="btn white-btn" data-toggle="modal" data-target="#signInManifesto">SIGN</button>
                     </div>
                 </div>
                 <div class="feature-section -less-padding -no-right-padding" id="signatories">
@@ -200,7 +200,7 @@
                         <li><p>Monica Rogati</p></li>
                     </ol>
                     <div class="section-action">
-                        <a href="#" class="btn -filled">SIGN</a>
+                        <button class="btn -filled" data-toggle="modal" data-target="#signInManifesto">SIGN</button>
                     </div>
                 </div>
             </div>
@@ -224,7 +224,7 @@
             </div>
         </div>
         <div class="bottom-floating-actions">
-            <a href="#" class="btn -full-width -sign">Sign</a>
+            <button class="btn -full-width -sign" data-toggle="modal" data-target="#signInManifesto">Sign</button>
         </div>
         <div class="floating-social-btns">
             <div class="social-btns -vertical">
@@ -259,4 +259,6 @@
             </div>
         </div>
     </div>
+    <!-- Sign In Manifesto Modal -->
+    {% include "modals/sign-in-manifesto.html" %}
 {% endblock %}
