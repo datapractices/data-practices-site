@@ -1,45 +1,290 @@
 {% extends 'base.html' %}
 
 {% block body_content %}
-    <div class="fluid-container product-landing manifesto-color">
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-          Subscribe for Updates modal
-        </button>
+<div class="fluid-container product-landing ethics-color">
+	<div class="product-content">
+		<div class="inner-container">
+			<!-- Button trigger modal -->
+			<div class="form-group">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#subscribeModal">
+					Subscribe for Updates modal
+				</button>
+			</div>
+			<div class="form-group">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#subscribeSuccessModal">
+					Subscribe Success
+				</button>
+			</div>
+			<div class="form-group">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signInDataScience">
+					Sign In Data Science
+				</button>
+			</div>
+			<div class="form-group">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signInDataScienceSuccessModal">
+					Sign In Data Science Success
+				</button>
+			</div>
+			<div class="form-group">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signInManifesto">
+					Sign In Manifesto
+				</button>
+			</div>
+			<div class="form-group">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signInManifestoSuccessModal">
+					Sign In Manifesto Success
+				</button>
+			</div>
 
-        <!-- Subscribe for updates Modal -->
-        <div class="modal fade dw-modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-                <h1>Demo Base</h1>
-                <form action="/action_page.php">
-                  <div class="form-group">
-                    <input type="email" class="form-control" id="email" placeholder="Full name (required)">
-                  </div>
-                  <div class="form-group">
-                    <input type="email" class="form-control" id="email" placeholder="Email address (required)">
-                  </div>
-                  <div class="custom-checkbox-wrap">
-                    <label class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-description">Updates for Data Scientist Code of Ethics</span>
-                    </label>
-                    <label class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input">
-                      <span class="custom-control-label"></span>
-                      <span class="custom-control-description">Updates for Manifesto for Data Practices</span>
-                    </label>
-                  </div>
-                  <button type="button" class="btn btn-primary">Subscribe</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
+			<!-- Subscribe for updates Modal -->
+			<div class="modal fade dw-modal" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h1>Subscribe for updates</h1>
+							<form action="/action_page.php">
+								<div class="form-group">
+									<input type="email" class="form-control" id="email" placeholder="Full name (required)">
+								</div>
+								<div class="form-group">
+									<input type="email" class="form-control" id="email" placeholder="Email address (required)">
+								</div>
+								<div class="custom-checkbox-wrap">
+									<label class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input">
+										<span class="custom-control-label"></span>
+										<span class="custom-control-description">Updates for Data Scientist Code of Ethics</span>
+									</label>
+									<label class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input">
+										<span class="custom-control-label"></span>
+										<span class="custom-control-description">Updates for Manifesto for Data Practices</span>
+									</label>
+								</div>
+								<button type="button" class="btn btn-primary">Subscribe</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Subscribe success for updates Modal -->
+			<div class="modal fade dw-modal" id="subscribeSuccessModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h1>You’re subscribed.</h1>
+							<p>Share and invite others</p>
+							<div class="social-icon-wrap">
+								<a href="#">
+									<img src="{{ contents.images['social-link@1x.png'].url }}" alt="data.world"
+	                                 srcset="{{ contents.images['social-link@1x.png'].url }} 1x, {{ contents.images['social-link@2x.png'].url }} 2x, {{ contents.images['social-link@3x.png'].url }} 3x" />
+								</a>
+								<a href="#">
+									<img src="{{ contents.images['social-facebook@1x.png'].url }}" alt="data.world"
+	                                 srcset="{{ contents.images['social-facebook@1x.png'].url }} 1x, {{ contents.images['social-facebook@2x.png'].url }} 2x, {{ contents.images['social-facebook@3x.png'].url }} 3x" />
+								</a>
+								<a href="#">
+									<img src="{{ contents.images['social-twitter@1x.png'].url }}" alt="data.world"
+	                                 srcset="{{ contents.images['social-twitter@1x.png'].url }} 1x, {{ contents.images['social-twitter@2x.png'].url }} 2x, {{ contents.images['social-twitter@3x.png'].url }} 3x" />
+								</a>
+								<a href="#">
+									<img src="{{ contents.images['social-linkedin@1x.png'].url }}" alt="data.world"
+	                                 srcset="{{ contents.images['social-linkedin@1x.png'].url }} 1x, {{ contents.images['social-linkedin@2x.png'].url }} 2x, {{ contents.images['social-linkedin@3x.png'].url }} 3x" />
+								</a>
+							</div>
+							<div class="dw-btn-wrap">
+								<button type="button" class="btn btn-primary">Done</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Sign In Data Science for updates Modal -->
+			<div class="modal fade dw-modal" id="signInDataScience" tabindex="-1" role="dialog" aria-labelledby="signInDataScience" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h1>Sign the Data Scientist Code of Ethics</h1>
+							<form action="/action_page.php">
+								<div class="form-group">
+									<input type="email" class="form-control" id="email" placeholder="Full name (required)">
+								</div>
+								<div class="form-group">
+									<input type="email" class="form-control" id="email" placeholder="Email address (required)">
+								</div>
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<!-- <span class="input-group-text" id="basic-addon3">https://example.com/users/</span> -->
+										<select id="lunch" class="form-control" title="Please select a lunch ...">
+											<option>twitter.com/</option>
+											<option>linkedin.com/in/</option>
+											<option>github.com/</option>
+										</select>
+									</div>
+									<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="handle (optional)">
+								</div>
+								<p>Your name will appear on this site as: </p>
+								<div class="custom-checkbox-wrap">
+									<label class="custom-control custom-radio">
+										<input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+										<span class="custom-control-label"></span>
+										<span class="custom-control-description">Practitioner</span>
+									</label>
+									<label class="custom-control custom-radio">
+										<input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+										<label class="custom-control-label" for="customRadio2">Contributor (tool builder, supporter)</label>
+									</label>
+									<label class="custom-control custom-radio">
+										<input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+										<label class="custom-control-label" for="customRadio3">Partner (co-creator of Code of Ethics)</label>
+									</label>
+									<label class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input">
+										<span class="custom-control-label"></span>
+										<span class="custom-control-description">Subscribe for updates</span>
+									</label>
+								</div>
+								<button type="button" class="btn btn-primary">Done</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Welcome after sign in data science success Modal -->
+			<div class="modal fade dw-modal" id="signInDataScienceSuccessModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h1>You’re a part of <br/> data science history.</h1>
+							<p>Share and invite others</p>
+							<div class="social-icon-wrap">
+								<a href="#">
+									<img src="{{ contents.images['social-link@1x.png'].url }}" alt="data.world"
+	                                 srcset="{{ contents.images['social-link@1x.png'].url }} 1x, {{ contents.images['social-link@2x.png'].url }} 2x, {{ contents.images['social-link@3x.png'].url }} 3x" />
+								</a>
+								<a href="#">
+									<img src="{{ contents.images['social-facebook@1x.png'].url }}" alt="data.world"
+	                                 srcset="{{ contents.images['social-facebook@1x.png'].url }} 1x, {{ contents.images['social-facebook@2x.png'].url }} 2x, {{ contents.images['social-facebook@3x.png'].url }} 3x" />
+								</a>
+								<a href="#">
+									<img src="{{ contents.images['social-twitter@1x.png'].url }}" alt="data.world"
+	                                 srcset="{{ contents.images['social-twitter@1x.png'].url }} 1x, {{ contents.images['social-twitter@2x.png'].url }} 2x, {{ contents.images['social-twitter@3x.png'].url }} 3x" />
+								</a>
+								<a href="#">
+									<img src="{{ contents.images['social-linkedin@1x.png'].url }}" alt="data.world"
+	                                 srcset="{{ contents.images['social-linkedin@1x.png'].url }} 1x, {{ contents.images['social-linkedin@2x.png'].url }} 2x, {{ contents.images['social-linkedin@3x.png'].url }} 3x" />
+								</a>
+							</div>
+							<div class="dw-wownload-btn">
+								<a href="#">Download the latest (PDF)</a>
+							</div>
+							<div class="dw-btn-wrap">
+								<button type="button" class="btn btn-primary">Done</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Sign In Manifesto Modal -->
+			<div class="modal fade dw-modal" id="signInManifesto" tabindex="-1" role="dialog" aria-labelledby="signInManifesto" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h1>Sign the Manifesto<br/> for Data Practices</h1>
+							<p>Your name will appear on this site.</p>
+							<form action="/action_page.php">
+								<div class="form-group">
+									<input type="email" class="form-control" id="email" placeholder="Full name (required)">
+								</div>
+								<div class="form-group">
+									<input type="email" class="form-control" id="email" placeholder="Email address (required)">
+								</div>
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<!-- <span class="input-group-text" id="basic-addon3">https://example.com/users/</span> -->
+										<select id="lunch" class="form-control" title="Please select a lunch ...">
+											<option>twitter.com/</option>
+											<option>linkedin.com/in/</option>
+											<option>github.com/</option>
+										</select>
+									</div>
+									<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="handle (optional)">
+								</div>
+								<div class="custom-checkbox-wrap">
+									<label class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input">
+										<span class="custom-control-label"></span>
+										<span class="custom-control-description">Subscribe for updates</span>
+									</label>
+								</div>
+								<button type="button" class="btn btn-primary">Done</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Welcome after sign in manifesto  success  Modal -->
+			<div class="modal fade dw-modal" id="signInManifestoSuccessModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h1>You just helped make<br/> data teamwork better<br/> for everyone.</h1>
+							<p>We personally review all submissions to prevent spam and abuse. You will get an email when your name is added. In the meantime, you can help the Manifesto take root by inviting others to sign it.</p>
+							<p>Share and invite others</p>
+							<div class="social-icon-wrap">
+								<a href="#">
+									<img src="{{ contents.images['social-link@1x.png'].url }}" alt="data.world"
+	                                 srcset="{{ contents.images['social-link@1x.png'].url }} 1x, {{ contents.images['social-link@2x.png'].url }} 2x, {{ contents.images['social-link@3x.png'].url }} 3x" />
+								</a>
+								<a href="#">
+									<img src="{{ contents.images['social-facebook@1x.png'].url }}" alt="data.world"
+	                                 srcset="{{ contents.images['social-facebook@1x.png'].url }} 1x, {{ contents.images['social-facebook@2x.png'].url }} 2x, {{ contents.images['social-facebook@3x.png'].url }} 3x" />
+								</a>
+								<a href="#">
+									<img src="{{ contents.images['social-twitter@1x.png'].url }}" alt="data.world"
+	                                 srcset="{{ contents.images['social-twitter@1x.png'].url }} 1x, {{ contents.images['social-twitter@2x.png'].url }} 2x, {{ contents.images['social-twitter@3x.png'].url }} 3x" />
+								</a>
+								<a href="#">
+									<img src="{{ contents.images['social-linkedin@1x.png'].url }}" alt="data.world"
+	                                 srcset="{{ contents.images['social-linkedin@1x.png'].url }} 1x, {{ contents.images['social-linkedin@2x.png'].url }} 2x, {{ contents.images['social-linkedin@3x.png'].url }} 3x" />
+								</a>
+							</div>
+							<div class="dw-wownload-btn">
+								<a href="#">Download the latest (PDF)</a>
+							</div>
+							<div class="dw-btn-wrap">
+								<button type="button" class="btn btn-primary">Done</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 {% endblock %}
