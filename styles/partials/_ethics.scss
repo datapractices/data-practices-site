@@ -1,9 +1,11 @@
+$aqua-light: rgba(0, 184, 217, 0.5);
+
 .ethics-color {
   .navigation {
     background-color: $ethics-color;
   }
   .-alternate-background {
-    background: $manifesto-color;
+    background: $aqua-light;
     color: $white;
   }
   .section-action {
