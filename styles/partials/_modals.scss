@@ -82,7 +82,8 @@ button.close {
 .modal-dialog {
 	max-width: $px580;
 	@include phone-styles {
-		max-width: 90vw;
+		max-width: 100vw;
+		margin: 0 auto;
 	}
 }
 .dw-btn-wrap {
@@ -132,4 +133,23 @@ button.close {
 			line-height: $medium-px22;
 		}
 	}
+}
+.dw-data-sc-text {
+	margin-bottom: 0;
+    margin-top: $px30;
+	@include phone-styles {
+    	margin-top: $medium-px30;
+	}
+}
+.dw-space-above {
+	margin-top: $px30;
+	@include phone-styles {
+    	margin-top: $medium-px30;
+	}
+}
+.dw-manifesto-head-text {
+	margin-top: $px10;
+	@include phone-styles {
+    	margin-top: $medium-px10;
+	}	
 }

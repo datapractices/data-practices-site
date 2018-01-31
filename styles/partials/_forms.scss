@@ -118,12 +118,15 @@ input {
 select.form-control {
     border: $px1 solid $border-color;
     border-radius: $px2 0 0 $px2;
-    background-color: $field-bg-color;
+    background-color: transparent;
     color: $text-dark;
     font-size: $px16;
     width: $px160;
     height: $px45 !important;
     line-height: $px18;
+    z-index: 1;
+
+
     @include phone-styles {
         border: $medium-px2 solid $border-color;
         border-radius: $medium-px2 0 0 $medium-px2;
@@ -134,9 +137,54 @@ select.form-control {
     }
     &:hover, &:focus {
         cursor: pointer;
-        background-color: $field-bg-color;
+        background-color: transparent;
     }
     option {
         background-color: $white;
+    }
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.dw-select-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: $field-bg-color;
+    border: $px1 solid $border-color;
+    border-radius: $px2 0 0 $px2;
+    height: $px45 !important;
+    width: $px160;
+    z-index: 0;
+
+    @include phone-styles {
+        border: $medium-px2 solid $border-color;
+        border-radius: $medium-px2 0 0 $medium-px2;
+        height: $medium-px45 !important;
+        width: $medium-px160;
+    }
+    > span {
+        position: absolute;
+        right: $px10;
+        top: $px5;
+        font-size: $px35;
+        line-height: 1;
+        transform: rotate(90deg);
+        color: #8C9CAF;
+        z-index: 0;
+        @include phone-styles {
+            right: $medium-px10;
+            top: $medium-px5;
+            font-size: $medium-px35;
+        }
     }
 }
