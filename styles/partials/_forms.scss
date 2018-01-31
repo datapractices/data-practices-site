@@ -12,7 +12,7 @@ input {
         line-height: $medium-px18;
     }
 }
-.custom-control-description {
+.custom-control-description, .custom-control-label {
     color: #323D48;
     font-weight: 500;
     font-size: $px16;
@@ -48,7 +48,7 @@ input {
     }
 }
 
-.custom-checkbox {
+.custom-checkbox, .custom-radio {
     padding: $px5 $px35 0;
     margin-bottom: $px15;
     cursor: pointer;
@@ -56,8 +56,37 @@ input {
         padding: $medium-px5 $medium-px35 0;
         margin-bottom: $medium-px15;
     }
+}
+
+.custom-checkbox {
     .custom-control-input:checked ~ .custom-control-label::before {
         background-color: $ethics-color;
+    }
+}
+
+.custom-radio {
+    .custom-control-label::after {
+        position: absolute;
+        height: $px12;
+        width: $px12;
+        top: $px9;
+        left: $px6;
+        bottom: 0;
+        right: 0;
+        border-radius: 50%;
+	    @include phone-styles {
+			height: $medium-px12;
+			width: $medium-px12;
+			top: $medium-px9;
+			left: $medium-px6;
+	    }
+    }
+    .custom-control-input:checked ~ .custom-control-label::before {
+        background-color: transparent;
+    }
+    .custom-control-input:checked ~ .custom-control-label::after {
+        background-color: $ethics-color;
+        background-image: none;
     }
 }
 
@@ -84,5 +113,30 @@ input {
     margin-bottom: $px20;
     @include phone-styles {
         margin-bottom: $medium-px20;
+    }
+}
+select.form-control {
+    border: $px1 solid #AEB9C7;
+    border-radius: $px2 0 0 $px2;
+    background-color: #E9EDF1;
+    color: #323D48;
+    font-size: $px16;
+    width: $px160;
+    height: $px45 !important;
+    line-height: $px18;
+    @include phone-styles {
+        border: $medium-px2 solid #AEB9C7;
+        border-radius: $medium-px2 0 0 $medium-px2;
+        font-size: $medium-px16;
+        width: $medium-px160;
+        height: $medium-px45 !important;
+        line-height: $medium-px18;
+    }
+    &:hover, &:focus {
+        cursor: pointer;
+        background-color: #E9EDF1;
+    }
+    option {
+        background-color: #FFF;
     }
 }

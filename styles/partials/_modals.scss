@@ -88,11 +88,45 @@ button.close {
 		margin-top: $medium-px30;
 	}
 }
+
 .social-icon-wrap {
 	a {
 		margin-right: $px20;
+		width: $px26;
+		height: $px26;
+		display: inline-block;
+
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+
 		@include phone-styles {
 			margin-right: $medium-px20;
+			width: $medium-px26;
+			height: $medium-px26;
+		}
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.dw-wownload-btn {
+	margin: $px30 0;
+	@include phone-styles {
+		margin: $medium-px30 0;
+	}
+	a {
+		color: #00B8D9;
+		font-weight: 500;
+		font-size: $px16;
+		line-height: $px22;
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+		@include phone-styles {
+			font-size: $medium-px16;
+			line-height: $medium-px22;
 		}
 	}
 }
