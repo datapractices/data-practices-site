@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block page_script %}
+    <script src="{{ contents.scripts['product-landing.js'].url }}"></script>
+{% endblock %}
+
 {% block body_content %}
 <div class="fluid-container product-landing ethics-color">
     <div class="navigation" id="navigation">

@@ -1,5 +1,13 @@
 {% extends 'base.html' %}
 
+{% block page_script %}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            alignItems('.js-align-paragraph, .js-align-heading');
+        });
+    </script>
+{% endblock %}
+
 {% block body_content %}
     <div class="homepage-wrap">
         <div class="home-col ethics-col">
@@ -7,8 +15,8 @@
                 srcset="{{ contents.images['ethics@1x.png'].url }} 1x, {{ contents.images['ethics@2x.png'].url }} 2x"
                 src="{{ contents.images['ethics@1x.png'].url }}"
                 alt="Data Scientist Code of Ethics">
-            <h1>Data Scientist Code of Ethics</h1>
-            <p>This code aims to define values and priorities for overall ethical behavior, in order to guide a data scientist in being a thoughtful, responsible agent of change. </p>
+            <h1 class="js-align-heading">Data Scientist Code of Ethics</h1>
+            <p class="js-align-paragraph">This code aims to define values and priorities for overall ethical behavior, in order to guide a data scientist in being a thoughtful, responsible agent of change. </p>
             <a href="{{ contents['ethics.json'].url }}" class="btn white-btn">Read and Sign</a>
         </div>
         <div class="home-col manifesto-col">
@@ -16,8 +24,8 @@
                 srcset="{{ contents.images['manifesto@1x.png'].url }} 1x, {{ contents.images['manifesto@2x.png'].url }} 2x"
                 src="{{ contents.images['ethics@1x.png'].url }}"
                 alt="Manifesto for Data Practices">
-            <h1>Manifesto for Data Practices</h1>
-            <p>These values and principles, taken together, describe the most effective, ethical, and modern approach to data teamwork.</p>
+            <h1 class="js-align-heading">Manifesto for Data Practices</h1>
+            <p class="js-align-paragraph">These values and principles, taken together, describe the most effective, ethical, and modern approach to data teamwork.</p>
             <a href="{{ contents['manifesto.json'].url }}" class="btn white-btn">Read and Sign</a>
         </div>
     </div>

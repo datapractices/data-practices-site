@@ -3,7 +3,6 @@ $(document).ready(function() {
     $(window).on('resize', function () {
         var win = $(this);
         var offsetHeight = $('.navigation').height();
-        console.log('resize called', offsetHeight);
         if (win.width() < 768) {
             $('body').scrollspy({
                 target: '#navigation',

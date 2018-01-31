@@ -11,8 +11,7 @@
     @include flexbox();
     @include flex-direction(column);
     @include align-items(center);
-    @include justify-content(center);
-    padding: $px92 $px95 0;
+    padding: $px223 $px95 $px95;
     color: #ffffff;
     text-align: center;
     > img {
@@ -38,6 +37,7 @@
         margin-top: $px43;
     }
     @include phone-styles {
+        @include justify-content(center);
         min-height: 50vh;
         padding: $medium-px20;
         > img {
