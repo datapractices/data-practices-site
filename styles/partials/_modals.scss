@@ -70,12 +70,12 @@ button.close {
 	    }
     }
 	@include phone-styles {
-		width: $medium-px24;
-    	height: $medium-px24;
+		width: $medium-px35;
+    	height: $medium-px35;
     	padding: $medium-px3 0;
-    	font-size: $medium-px30;
-    	right: $medium-px25;
-    	top: $medium-px25;
+    	font-size: $medium-px40;
+    	right: $medium-px15;
+    	top: $medium-px15;
 	}
 }
 
