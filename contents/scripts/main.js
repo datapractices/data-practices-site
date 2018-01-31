@@ -11,6 +11,17 @@ $(document).ready(function() {
         $this.closest('.js-modal-wrapper').find('.js-modal-success').show();
         $this.closest('.js-modal-form').hide();
     });
+
+    var clipboard = new Clipboard('.js-copy');
+    clipboard.on('success', function(e) {
+        e.clearSelection();
+        $(e.trigger).tooltip({
+            title: 'Link Copied',
+            trigger: 'focus'
+        }).tooltip('show').on('hidden.bs.tooltip', function() {
+            $(this).tooltip('dispose');
+        });
+    });
 });
 
 function alignItems(elements) {

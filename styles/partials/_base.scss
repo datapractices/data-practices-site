@@ -3,6 +3,22 @@ html, body {
     font-size: $px10;
 }
 
+.tooltip {
+    .arrow {
+        display: none;
+    }
+    .tooltip-inner {
+        font-size: $px14;
+        line-height: $px18;
+        padding: $px7 $px12;
+        @include phone-styles {
+            font-size: $medium-px14;
+            line-height: $medium-px18;
+            padding: $medium-px7 $medium-px12;
+        }
+    }
+}
+
 .show-medium {
     display: none !important;
 }

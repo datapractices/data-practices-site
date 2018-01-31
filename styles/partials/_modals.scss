@@ -99,7 +99,8 @@ button.close {
 		width: $px26;
 		height: $px26;
 		display: inline-block;
-
+        cursor: pointer;
+        outline: none;
 		&:hover, &:focus {
 			text-decoration: none;
 		}
