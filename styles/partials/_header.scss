@@ -15,7 +15,7 @@
     @include flexbox();
     @include justify-content(flex-end);
     transition: all 0.25s ease;
-    padding: $px26 $px32;
+    padding: $px26 0;
     > .btn {
         color: #ffffff;
         width: $px180;
@@ -23,17 +23,19 @@
         border-radius: $px40;
         padding-top: $px14;
         padding-bottom: $px14;
-        @include phone-styles {
+        margin-right: $px32;
+    }
+    @include phone-styles {
+        padding: $medium-px12 0;
+        > .btn {
             width: $medium-px100;
             height: $medium-px32;
             border-radius: $medium-px32;
             padding-top: $medium-px9;
             padding-bottom: $medium-px9;
             color: #ffffff !important;
+            margin-right: $medium-px15;
         }
-    }
-    @include phone-styles {
-        padding: $medium-px12 $medium-px15;
     }
 }
 
@@ -97,7 +99,7 @@
 
 .translucent {
     background: rgba(#ffffff, 0.9);
-    .btn {
+    .btn, .header-logo, .back-link {
         color: $manifesto-color;
     }
     @include phone-styles {

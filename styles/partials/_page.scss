@@ -29,8 +29,9 @@
         line-height: $px28;
         font-weight: 600;
         color: inherit;
-        margin: $px18 $px28 0;
+        padding: $px18 $px28 0;
         font-family: 'Publico Text';
+        width: 100%
     }
     > .btn {
         width: $px220;
@@ -105,5 +106,61 @@
     }
     &:hover, &:focus, &:active {
         opacity: 0.8;
+    }
+}
+
+.ethics-bg {
+    background: $ethics-color;
+}
+
+.manifesto-bg {
+    background: $manifesto-color;
+}
+
+.centered-content-wrap {
+    max-width: $px576;
+    margin: $px117 auto 0;
+    background: #ffffff;
+    padding: $px50 $px80;
+    border-radius: $px2;
+    box-shadow: 0 $px2 $px100 0 rgba(140, 156, 175, 0.4);
+    > img {
+        width: $px140;
+        height: $px140;
+        margin-bottom: $px42;
+    }
+    .share-and-download {
+        margin-top: $px16;
+    }
+    .dw-wownload-btn {
+        margin-bottom: 0;
+    }
+    @include phone-styles {
+        margin-top: $medium-px62;
+        max-width: $medium-px343;
+        padding: $medium-px36 $medium-px32;
+        > img {
+            width: $medium-px80;
+            height: $medium-px80;
+            margin-bottom: $medium-px32;
+        }
+        .share-and-download {
+            margin-top: $medium-px23;
+        }
+    }
+}
+
+.share-and-download {
+    > p {
+        color: #323D48;
+        font-weight: 500;
+        font-size: $px16;
+        line-height: $px28;
+        margin-bottom: $px15;
+        @include phone-styles {
+            font-size: $medium-px16;
+            line-height: $medium-px28;
+            margin-bottom: $medium-px15;
+        }
     }
 }

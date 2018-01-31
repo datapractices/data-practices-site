@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block page_script %}
+    <script type="text/javascript">
+        document.getElementById("snum").innerText = Number(getQueryParameter("snum")) || 1;
+    </script>
+{% endblock %}
+
+{% block body_content %}
+    <div class="centered-content-wrap">
+        <img
+            srcset="{{ contents.images[page.metadata.productImage + '@1x.png'].url }} 1x, {{ contents.images[page.metadata.productImage + '@2x.png'].url }} 2x"
+            src="{{ contents.images[page.metadata.productImage + '@1x.png'].url }}" alt="{{ page.metadata.product }}">
+        <h1 class="heading -large">Congratulations! You are signatory #<span id="snum"></span> on the {{ page.metadata.product }}.</h1>
+        <div class="share-and-download">
+            <p>Share and invite others</p>
+            <div class="social-icon-wrap">
+                <a href="#">
+                    <img src="{{ contents.images['social-link@1x.png'].url }}" alt="data.world"
+                     srcset="{{ contents.images['social-link@1x.png'].url }} 1x, {{ contents.images['social-link@2x.png'].url }} 2x, {{ contents.images['social-link@3x.png'].url }} 3x" />
+                </a>
+                <a href="#">
+                    <img src="{{ contents.images['social-facebook@1x.png'].url }}" alt="data.world"
+                     srcset="{{ contents.images['social-facebook@1x.png'].url }} 1x, {{ contents.images['social-facebook@2x.png'].url }} 2x, {{ contents.images['social-facebook@3x.png'].url }} 3x" />
+                </a>
+                <a href="#">
+                    <img src="{{ contents.images['social-twitter@1x.png'].url }}" alt="data.world"
+                     srcset="{{ contents.images['social-twitter@1x.png'].url }} 1x, {{ contents.images['social-twitter@2x.png'].url }} 2x, {{ contents.images['social-twitter@3x.png'].url }} 3x" />
+                </a>
+                <a href="#">
+                    <img src="{{ contents.images['social-linkedin@1x.png'].url }}" alt="data.world"
+                     srcset="{{ contents.images['social-linkedin@1x.png'].url }} 1x, {{ contents.images['social-linkedin@2x.png'].url }} 2x, {{ contents.images['social-linkedin@3x.png'].url }} 3x" />
+                </a>
+            </div>
+            <div class="dw-wownload-btn">
+                <a href="#">Download the latest (PDF)</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
