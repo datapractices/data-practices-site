@@ -4,7 +4,7 @@
 }
 .modal-content {
     border-radius: $px2;
-    background-color: #fff;
+    background-color: $white;
     border: none;
 	box-shadow: 0 $px2 100px 0 rgba(140,156,175,0.4);
 	@include phone-styles {
@@ -15,7 +15,7 @@
 .modal-body {
 	padding: $px80;
 	h1 {
-		color: #323D48;
+		color: $text-dark;
 		font-size: $px32;
 		margin-bottom: $px30;
 	}
@@ -35,7 +35,7 @@
 		}
 	}
 	p {
-		color: #323D48;
+		color: $text-dark;
 		font-weight: 500;
 		font-size: $px16;
 		line-height: $px28;
@@ -50,10 +50,10 @@
 }
 
 button.close {
-	color: #fff;
+	color: $white;
     width: $px32;
     height: $px32;
-    background: #ccc;
+    background: $text-gray-ccc;
     border-radius: 50%;
     display: block;
     padding: 0;
@@ -65,7 +65,7 @@ button.close {
     font-weight: normal;
     &.close {
 	    &:hover, &:focus {
-			color: #fff;
+			color: $white;
 			outline: none;
 	    }
     }
@@ -120,7 +120,7 @@ button.close {
 		margin: $medium-px30 0;
 	}
 	a {
-		color: #00B8D9;
+		color: $manifesto-color;
 		font-weight: 500;
 		font-size: $px16;
 		line-height: $px22;

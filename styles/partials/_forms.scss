@@ -1,11 +1,11 @@
 input {
-    border: $px1 solid #AEB9C7;
+    border: $px1 solid $border-color;
     border-radius: $px2;
     height: $px44;
     font-size: $px16;
     line-height: $px18;
     @include phone-styles {
-        border: $medium-px2 solid #AEB9C7;
+        border: $medium-px2 solid $border-color;
         border-radius: $medium-px2;
         height: $medium-px45;
         font-size: $medium-px16;
@@ -13,7 +13,7 @@ input {
     }
 }
 .custom-control-description, .custom-control-label {
-    color: #323D48;
+    color: $text-dark;
     font-weight: 500;
     font-size: $px16;
     line-height: $px22;
@@ -99,7 +99,7 @@ input {
     }
 }
 .form-control {
-    color: #323D48;
+    color: $text-dark;
     font-size: $px16;
     line-height: $px18;
     @include phone-styles {
@@ -116,16 +116,16 @@ input {
     }
 }
 select.form-control {
-    border: $px1 solid #AEB9C7;
+    border: $px1 solid $border-color;
     border-radius: $px2 0 0 $px2;
-    background-color: #E9EDF1;
-    color: #323D48;
+    background-color: $field-bg-color;
+    color: $text-dark;
     font-size: $px16;
     width: $px160;
     height: $px45 !important;
     line-height: $px18;
     @include phone-styles {
-        border: $medium-px2 solid #AEB9C7;
+        border: $medium-px2 solid $border-color;
         border-radius: $medium-px2 0 0 $medium-px2;
         font-size: $medium-px16;
         width: $medium-px160;
@@ -134,9 +134,9 @@ select.form-control {
     }
     &:hover, &:focus {
         cursor: pointer;
-        background-color: #E9EDF1;
+        background-color: $field-bg-color;
     }
     option {
-        background-color: #FFF;
+        background-color: $white;
     }
 }
