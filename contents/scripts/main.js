@@ -6,12 +6,53 @@ $(document).ready(function() {
             $('.js-header-translucent').removeClass('translucent')
         }
     });
-    $('.js-modal-submit').on('click', function(){
-        $this = $(this);
-        $this.closest('.js-modal-wrapper').find('.js-modal-success').show();
-        $this.closest('.js-modal-form').hide();
+
+    // Form validation before submitting to Google forms
+    $('.js-google-form').each(function(i) {
+        var formFrame = document.createElement('iframe');
+        formFrame.name = "form-target-"+i;
+        this.target = formFrame.name;
+        formFrame.style.display = 'none';
+        this.insertAdjacentElement('afterend', formFrame);
+
+        $(this).validate({
+            highlight: function(element, errorClass) {
+                $(element).closest('.js-field-wrap').addClass(errorClass);
+            },
+            unhighlight: function(element, errorClass) {
+                $(element).closest('.js-field-wrap').removeClass(errorClass);
+            },
+            submitHandler: function(form) {
+                $this = $(form);
+
+                form.submit();
+                form.reset();
+                $this.closest('.js-modal-wrapper').find('.js-modal-success').show();
+                $this.closest('.js-modal-form').hide();
+            },
+            errorPlacement: function($error, $element) {
+                var $errorBox = $element.closest('.js-field-wrap').find('.js-errors');
+                if($errorBox.length) {
+                    $error.appendTo($errorBox);
+                } else {
+                    $error.insertAfter($element);
+                }
+            }
+        });
     });
 
+    // Reset modal forms after close
+    $('.js-modal-wrapper').closest('.modal').on('hidden.bs.modal', function() {
+        var $modalWrapper = $(this).find('.js-modal-wrapper');
+
+        $modalWrapper.find('.js-google-form').validate().resetForm();
+        $modalWrapper.find('.js-field-wrap').removeClass('error');
+
+        $modalWrapper.find('.js-modal-success').hide();
+        $modalWrapper.find('.js-modal-form').show();
+    });
+
+    // Init Clipboard copy feature
     var clipboard = new Clipboard('.js-copy');
     clipboard.on('success', function(e) {
         e.clearSelection();

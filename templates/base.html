@@ -3,15 +3,32 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="{{ contents.images['favicon.ico'].url }}">
-        <link rel="stylesheet" href="{{ contents['main.scss'].url }}">
-        <title>{{ page.title }}</title>
 
+        <link rel="shortcut icon" href="{{ contents['favicon.ico'].url }}">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="{{ contents.images.icons['apple-icon-57x57.png'].url }}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{{ contents.images.icons['apple-icon-60x60.png'].url }}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ contents.images.icons['apple-icon-72x72.png'].url }}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ contents.images.icons['apple-icon-76x76.png'].url }}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ contents.images.icons['apple-icon-114x114.png'].url }}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ contents.images.icons['apple-icon-120x120.png'].url }}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{{ contents.images.icons['apple-icon-144x144.png'].url }}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ contents.images.icons['apple-icon-152x152.png'].url }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ contents.images.icons['apple-icon-180x180.png'].url }}">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{{ contents.images.icons['android-icon-192x192.png'].url }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ contents.images.icons['favicon-32x32.png'].url }}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ contents.images.icons['favicon-96x96.png'].url }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ contents.images.icons['favicon-16x16.png'].url }}">
+        <meta name="theme-color" content="#00B8D9">
+
+        <title>{{ page.title }}</title>
         <meta property="og:title" content="{{ page.title }}" />
         <meta property="og:description" content="{{ page.metadata.description }}" />
         {% if page.metadata.thumbnail %}
             <meta property="og:image" content="{{ env.config.locals.url + contents.images[page.metadata.thumbnail].url }}" />
         {% endif %}
+
+        <link rel="stylesheet" href="{{ contents['main.scss'].url }}">
     </head>
     <body class="{{ page.metadata.rootClass }}">
         {% include 'includes/header.html' %}
@@ -23,6 +40,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
         <script type="text/javascript" src="{{ contents.scripts.libs['clipboard.min.js'].url }}"></script>
+        <script type="text/javascript" src="{{ contents.scripts.libs['jquery.validate.min.js'].url }}"></script>
 
         <script src="{{ contents.scripts['main.js'].url }}"></script>
 

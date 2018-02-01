@@ -111,6 +111,17 @@ input {
 }
 .form-group {
     margin-bottom: $px20;
+    &.error {
+        > input {
+            border-color: $error;
+            box-shadow: 0 0 0 0.2rem rgba($error, 0.25)
+        }
+        label.error {
+            font-size: $px14;
+            color: $error;
+            margin: 0;
+        }
+    }
     @include phone-styles {
         margin-bottom: $medium-px20;
     }
