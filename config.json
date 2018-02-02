@@ -9,6 +9,7 @@
     "wintersmith-nunjucks",
     "wintersmith-sassy"
   ],
+  "output": "./docs",
   "nunjucks": {
     "autoescape": true
   },
