@@ -280,23 +280,11 @@
             </div>
             <div class="feature-section -less-padding -no-right-padding" id="signatories">
                 <p class="heading -small -capital -graphik">In order of signing</p>
-                <h3 class="heading -large">15 signatories</h3>
+                <h3 class="heading -large">{{ contents['code-of-ethics']['signatories.json'].metadata.length }} signatories</h3>
                 <ol class="ordered-list -two-columns -condensed clearfix">
-                    <li><p>Jonathan Albright</p></li>
-                    <li><p>Gregory Piatetsky</p></li>
-                    <li><p>Matthew Laessig</p></li>
-                    <li><p>Leonard Fishman</p></li>
-                    <li><p>Andrew Duff</p></li>
-                    <li><p>Andrew Salesky</p></li>
-                    <li><p>Lexy Kassan</p></li>
-                    <li><p>James Gray</p></li>
-                    <li><p>Kirk Borne</p></li>
-                    <li><p>Tricia Wang</p></li>
-                    <li><p>Catherine Gicheru</p></li>
-                    <li><p>Pete Warden</p></li>
-                    <li><p>Tracy Teal</p></li>
-                    <li><p>Tim Smith</p></li>
-                    <li><p>Monica Rogati</p></li>
+                  {% for signatory in contents['code-of-ethics']['signatories.json'].metadata %}
+                    <li><p>{{ signatory.full_name }}</p></li>
+                  {% endfor %}
                 </ol>
                 <div class="section-action">
                     <button class="btn -filled" data-toggle="modal" data-target="#signInDataScience">SIGN</button>
