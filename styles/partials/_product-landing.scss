@@ -214,13 +214,16 @@
 }
 
 .feature-section {
-    padding: $px89 $px195 $px89 $px105;
+    padding: $px89 $px195 1vw $px105;
     > p {
         margin-bottom: $px29;
         &:not(.heading) {
             margin: $px12 0 $px28;
             b {
                 display: block;
+                font-size: 1vw;
+                line-height: 1.5vw;
+                font-weight: 500;
             }
             &:last-child {
                 margin-bottom: 0;
@@ -250,7 +253,7 @@
     @include phone-styles {
         padding: $medium-px65 $medium-px23;
         > .heading.-large {
-            font-size: $medium-px14;
+            font-size: 2.25vw;
             line-height: $medium-px27;
         }
     }
@@ -387,7 +390,7 @@
 
 .product-footer {
     background-color: $footer-background;
-    margin-top: $px24;
+    margin-top: 0;
     > .inner-container {
         padding: $px57 $px105;
     }
@@ -426,4 +429,3 @@
         color: $manifesto-color;
     }
 }
-

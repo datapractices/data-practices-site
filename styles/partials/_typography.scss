@@ -4,7 +4,7 @@
     font-weight: 600;
     margin: 0;
     &.-large {
-        font-size: $px32;
+        font-size: $px28;
         line-height: $px44;
         @include phone-styles {
             font-size: $medium-px24;
@@ -61,5 +61,8 @@ p {
             font-size: $medium-px12;
             line-height: $medium-px16;
         }
+    }
+    &.-vwhite {
+      color: #FFF !important;
     }
 }

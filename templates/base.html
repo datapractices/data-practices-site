@@ -43,7 +43,14 @@
         <script type="text/javascript" src="{{ contents.scripts.libs['jquery.validate.min.js'].url }}"></script>
 
         <script src="{{ contents.scripts['main.js'].url }}"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113597498-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
+          gtag('config', 'UA-113597498-1');
+        </script>
         {% block page_script %}{% endblock %}
     </body>
 </html>
