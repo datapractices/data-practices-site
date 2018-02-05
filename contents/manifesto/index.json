@@ -1,7 +1,7 @@
 {
     "template": "manifesto-landing.html",
     "title": "Manifesto for Data Practices",
-    "description": "Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  At vero eos et accusam et justo duo dolores et ea rebum.  Lorem ipsum dolor sit amet,  no sea takimata sanctus est Lorem ipsum dolor sit amet.  Stet clita kasd gubergren,  no sea takimata sanctus est Lorem ipsum dolor sit amet.  no sea takimata sanctus est Lorem ipsum dolor sit amet.  no sea takimata sanctus est Lorem ipsum dolor sit amet.  sed diam voluptua.",
+    "description": "These values and principles, taken together, describe the most effective, ethical, and modern approach to data teamwork.",
     "thumbnail": "socialshare-manifesto@2x.png",
     "enableBackButton": true,
     "rootClass": "manifesto-page"
