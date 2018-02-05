@@ -277,36 +277,36 @@ of the Community Principles on Ethical Data Sharing.
         <button class="btn -full-width -sign" data-toggle="modal" data-target="#signInDataScience">Sign</button>
     </div>
     <div class="floating-social-btns">
-        <div class="social-btns -vertical">
-            <a class="social-link js-copy" data-clipboard-text="{{ env.config.locals.url + contents['code-of-ethics']['index.json'].url }}">
-                <img
-                        alt="Copy Link"
-                        src="{{ contents.images['social-link@1x.png'].url }}"
-                        srcset="{{ contents.images['social-link@1x.png'].url }} 1x, {{ contents.images['social-link@2x.png'].url }} 2x, {{ contents.images['social-link@3x.png'].url }} 3x"
-                >
-            </a>
-            <a href="#" class="social-link">
-                <img
-                        alt="Share Facebook"
-                        src="{{ contents.images['social-facebook@1x.png'].url }}"
-                        srcset="{{ contents.images['social-facebook@1x.png'].url }} 1x, {{ contents.images['social-facebook@2x.png'].url }} 2x, {{ contents.images['social-facebook@3x.png'].url }} 3x"
-                >
-            </a>
-            <a href="#" class="social-link">
-                <img
-                        alt="Share Facebook"
-                        src="{{ contents.images['social-twitter@1x.png'].url }}"
-                        srcset="{{ contents.images['social-twitter@1x.png'].url }} 1x, {{ contents.images['social-twitter@2x.png'].url }} 2x, {{ contents.images['social-twitter@3x.png'].url }} 3x"
-                >
-            </a>
-            <a href="#" class="social-link">
-                <img
-                        alt="Share Facebook"
-                        src="{{ contents.images['social-linkedin@1x.png'].url }}"
-                        srcset="{{ contents.images['social-linkedin@1x.png'].url }} 1x, {{ contents.images['social-linkedin@2x.png'].url }} 2x, {{ contents.images['social-linkedin@3x.png'].url }} 3x"
-                >
-            </a>
-        </div>
+      <div class="social-btns -vertical">
+          <a class="social-link js-copy" data-placement="left" data-clipboard-text="{{ 'https://datapractices.org' + contents['manifesto']['index.json'].url }}">
+              <img
+                      alt="Copy"
+                      src="{{ contents.images['social-link@1x.png'].url }}"
+                      srcset="{{ contents.images['social-link@1x.png'].url }} 1x, {{ contents.images['social-link@2x.png'].url }} 2x, {{ contents.images['social-link@3x.png'].url }} 3x"
+              >
+          </a>
+          <a href="#" class="social-link facebook">
+              <img
+                      alt="Share Facebook"
+                      src="{{ contents.images['social-facebook@1x.png'].url }}"
+                      srcset="{{ contents.images['social-facebook@1x.png'].url }} 1x, {{ contents.images['social-facebook@2x.png'].url }} 2x, {{ contents.images['social-facebook@3x.png'].url }} 3x"
+              >
+          </a>
+          <a href="#" class="social-link twitter-ethics">
+              <img
+                      alt="Share Twitter"
+                      src="{{ contents.images['social-twitter@1x.png'].url }}"
+                      srcset="{{ contents.images['social-twitter@1x.png'].url }} 1x, {{ contents.images['social-twitter@2x.png'].url }} 2x, {{ contents.images['social-twitter@3x.png'].url }} 3x"
+              >
+          </a>
+          <a href="http://www.linkedin.com/shareArticle?mini=true&url=datapractices.org&title=CPEDS%20-%20Community%20Principles%20for%20Ethical%20Data%20Sharing&source=datapractices.org" target="_blank" class="social-link linkedin">
+              <img
+                      alt="Share LinkedIn"
+                      src="{{ contents.images['social-linkedin@1x.png'].url }}"
+                      srcset="{{ contents.images['social-linkedin@1x.png'].url }} 1x, {{ contents.images['social-linkedin@2x.png'].url }} 2x, {{ contents.images['social-linkedin@3x.png'].url }} 3x"
+              >
+          </a>
+      </div>
     </div>
 </div>
     <!-- Sign In Data Science for updates Modal -->
