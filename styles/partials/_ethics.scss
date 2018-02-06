@@ -8,6 +8,10 @@ $aqua-light: rgba(0, 184, 217, 0.5);
     background: $aqua-light;
     color: $white;
   }
+  .-alternate-background2 {
+    background-color: $manifesto-color;
+    color: $white;
+  }
   .section-action {
     .btn.-filled {
       background: $ethics-color;
