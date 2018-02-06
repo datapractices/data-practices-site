@@ -9,6 +9,7 @@
     "wintersmith-sassy": "^1.2.0"
   },
   "scripts": {
-    "updateSignatories": "node update-signatories.js"
+    "updateSignatories": "node update-signatories.js",
+		"build": "npm run updateSignatories && wintersmith build"
   }
 }
