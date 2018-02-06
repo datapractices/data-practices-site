@@ -1,6 +1,6 @@
 {
   "locals": {
-    "url": "http://localhost:8080",
+    "url": "https://datapractices.org",
     "name": "Data Dot World - Manifesto Site",
     "owner": "datadotworld",
     "description": "The site for the data practices manifesto"

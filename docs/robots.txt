@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Allow: /manifesto
-Allow: /code-of-ethics
+Allow: /community-principles-on-ethical-data-sharing

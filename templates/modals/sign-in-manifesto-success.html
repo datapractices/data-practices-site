@@ -3,26 +3,26 @@
 <p>We personally review all submissions to prevent spam and abuse. You will get an email when your name is added. In the meantime, you can help the Manifesto take root by inviting others to sign it.</p>
 <p>Share and invite others</p>
 <div class="social-icon-wrap">
-	<a class="js-copy" data-clipboard-text="http://manifesto-site.data.world">
+	<a class="social-link js-copy" data-clipboard-text="{{ 'https://datapractices.org' + contents['manifesto']['index.json'].url }}">
 		<img src="{{ contents.images['social-link@1x.png'].url }}" alt="data.world"
          srcset="{{ contents.images['social-link@1x.png'].url }} 1x, {{ contents.images['social-link@2x.png'].url }} 2x, {{ contents.images['social-link@3x.png'].url }} 3x" />
 	</a>
-	<a href="#">
+	<a href="#" class="social-link facebook-manifesto">
 		<img src="{{ contents.images['social-facebook@1x.png'].url }}" alt="data.world"
          srcset="{{ contents.images['social-facebook@1x.png'].url }} 1x, {{ contents.images['social-facebook@2x.png'].url }} 2x, {{ contents.images['social-facebook@3x.png'].url }} 3x" />
 	</a>
-	<a href="#">
+	<a href="#" class="social-link twitter-manifesto">
 		<img src="{{ contents.images['social-twitter@1x.png'].url }}" alt="data.world"
          srcset="{{ contents.images['social-twitter@1x.png'].url }} 1x, {{ contents.images['social-twitter@2x.png'].url }} 2x, {{ contents.images['social-twitter@3x.png'].url }} 3x" />
 	</a>
-	<a href="#">
+	<a href="{{ 'http://www.linkedin.com/shareArticle?mini=true&url=https://datapractices.org' + contents['manifesto']['index.json'].url + '&title=Data%20Practices%20Manifesto%20-%20the%20most%20effective,%20ethical,%20and%20modern%20approach%20to%20data%20teamwork.&source=datapractices.org' }}" target="_blank" class="social-link linkedin">
 		<img src="{{ contents.images['social-linkedin@1x.png'].url }}" alt="data.world"
          srcset="{{ contents.images['social-linkedin@1x.png'].url }} 1x, {{ contents.images['social-linkedin@2x.png'].url }} 2x, {{ contents.images['social-linkedin@3x.png'].url }} 3x" />
 	</a>
 </div>
-<div class="dw-wownload-btn">
-	<a href="#">Download the latest (PDF)</a>
-</div>
+<!--<div class="dw-wownload-btn">-->
+	<!--<a href="#">Download the latest (PDF)</a>-->
+<!--</div>-->
 <div class="dw-btn-wrap">
 	<button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Done</button>
 </div>

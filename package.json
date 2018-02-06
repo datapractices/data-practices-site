@@ -1,15 +1,16 @@
 {
   "dependencies": {
-    "csvjson": "^5.0.0"
+    "csvjson": "5.0.0"
   },
   "private": "true",
   "devDependencies": {
-    "axios": "^0.17.1",
-    "wintersmith-nunjucks": "^2.0.0",
-    "wintersmith-sassy": "^1.2.0"
+    "axios": "0.17.1",
+    "wintersmith": "2.4.1",
+    "wintersmith-nunjucks": "2.0.0",
+    "wintersmith-sassy": "1.2.0"
   },
   "scripts": {
     "updateSignatories": "node update-signatories.js",
-		"build": "npm run updateSignatories && wintersmith build"
+    "build": "npm run updateSignatories && wintersmith build"
   }
 }

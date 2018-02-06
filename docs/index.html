@@ -21,8 +21,8 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
         <meta name="theme-color" content="#00B8D9">
 
-        <title>Home</title>
-        <meta property="og:title" content="Home" />
+        <title>Data Practices</title>
+        <meta property="og:title" content="Data Practices" />
         <meta property="og:description" content="The home of both the Data Practices Manifesto and Community Principles for Ethical Data Sharing (CPEDS)." />
         
             <meta property="og:image" content="https://datapractices.org/images/socialshare-home@2x.png" />
@@ -72,7 +72,7 @@
 		<label class="custom-control custom-checkbox">
 			<input type="checkbox" class="custom-control-input" name="entry.574863021" value="Subscribe">
 			<span class="custom-control-label"></span>
-			<span class="custom-control-description">Updates for Data Scientist Code of Ethics</span>
+			<span class="custom-control-description">Updates for Community Principles</span>
 		</label>
 		<label class="custom-control custom-checkbox">
 			<input type="checkbox" class="custom-control-input" name="entry.1685198103" value="Subscribe">
@@ -89,20 +89,20 @@
 <h1>You’re subscribed.</h1>
 <p>Share and invite others</p>
 <div class="social-icon-wrap">
-	<a class="js-copy" data-clipboard-text="http://manifesto-site.data.world">
+	<a class="social-link js-copy" data-clipboard-text="https://datapractices.org">
 		<img src="/images/social-link@1x.png" alt="data.world"
          srcset="/images/social-link@1x.png 1x, /images/social-link@2x.png 2x, /images/social-link@3x.png 3x" />
 	</a>
-	<a href="#">
+	<a href="#" class="social-link facebook">
 		<img src="/images/social-facebook@1x.png" alt="data.world"
          srcset="/images/social-facebook@1x.png 1x, /images/social-facebook@2x.png 2x, /images/social-facebook@3x.png 3x" />
 	</a>
-	<a href="#">
+	<a href="#" class="social-link twitter">
 		<img src="/images/social-twitter@1x.png" alt="data.world"
          srcset="/images/social-twitter@1x.png 1x, /images/social-twitter@2x.png 2x, /images/social-twitter@3x.png 3x" />
 	</a>
-	<a href="#">
-		<img src="/images/social-linkedin@1x.png" alt="data.world"
+	<a href="http://www.linkedin.com/shareArticle?mini=true&url=https://datapractices.org&title=The%20Data%20Practices%20Manifesto%20and%20Community%20Principles%20for%20Ethical%20Data%20Sharing&source=datapractices.org" target="_blank" class="social-link linkedin">
+	<img src="/images/social-linkedin@1x.png" alt="data.world"
          srcset="/images/social-linkedin@1x.png 1x, /images/social-linkedin@2x.png 2x, /images/social-linkedin@3x.png 3x" />
 	</a>
 </div>
@@ -122,20 +122,25 @@
         
     <div class="homepage-wrap">
         <div class="home-col ethics-col">
-            <img
-                srcset="/images/ethics@1x.png 1x, /images/ethics@2x.png 2x"
-                src="/images/ethics@1x.png"
-                alt="Data Scientist Code of Ethics">
-            <h1 class="js-align-heading">Community Principles on Ethical Data Sharing</h1>
+            <a href="/community-principles-on-ethical-data-sharing/">
+                <img
+                    srcset="/images/ethics@1x.png 1x, /images/ethics@2x.png 2x"
+                    src="/images/ethics@1x.png"
+                    alt="Data Scientist Code of Ethics">
+                <h1 class="js-align-heading">Community Principles on Ethical Data Sharing</h1>
+            </a>
             <p class="js-align-paragraph">This code of ethics is created and proposed for adoption by the data science community to reflect the behaviors and principles for responsible data use and sharing.</p>
-            <a href="/code-of-ethics/" class="btn white-btn">Read and Sign</a>
+            <a href="/community-principles-on-ethical-data-sharing/" class="btn white-btn">Read and Sign</a>
         </div>
         <div class="home-col manifesto-col">
-            <img
-                srcset="/images/manifesto@1x.png 1x, /images/manifesto@2x.png 2x"
-                src="/images/ethics@1x.png"
-                alt="Manifesto for Data Practices">
-            <h1 class="js-align-heading">Manifesto for Data Practices</h1>
+            <a href="/manifesto/">
+                <img
+                    srcset="/images/manifesto@1x.png 1x, /images/manifesto@2x.png 2x"
+                    src="/images/ethics@1x.png"
+                    alt="Manifesto for Data Practices">
+                <h1 class="js-align-heading">Manifesto for Data Practices</h1>
+            </a>
+
             <p class="js-align-paragraph">These values and principles, taken together, describe the most effective, ethical, and modern approach to data teamwork.</p>
             <a href="/manifesto/" class="btn white-btn">Read and Sign</a>
         </div>
@@ -164,6 +169,7 @@
             alignItems('.js-align-paragraph, .js-align-heading');
         });
     </script>
+    <script src="/scripts/product-landing.js"></script>
 
     </body>
 </html>

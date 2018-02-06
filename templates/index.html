@@ -6,25 +6,31 @@
             alignItems('.js-align-paragraph, .js-align-heading');
         });
     </script>
+    <script src="{{ contents.scripts['product-landing.js'].url }}"></script>
 {% endblock %}
 
 {% block body_content %}
     <div class="homepage-wrap">
         <div class="home-col ethics-col">
-            <img
-                srcset="{{ contents.images['ethics@1x.png'].url }} 1x, {{ contents.images['ethics@2x.png'].url }} 2x"
-                src="{{ contents.images['ethics@1x.png'].url }}"
-                alt="Data Scientist Code of Ethics">
-            <h1 class="js-align-heading">Community Principles on Ethical Data Sharing</h1>
+            <a href="{{ contents['community-principles-on-ethical-data-sharing']['index.json'].url }}">
+                <img
+                    srcset="{{ contents.images['ethics@1x.png'].url }} 1x, {{ contents.images['ethics@2x.png'].url }} 2x"
+                    src="{{ contents.images['ethics@1x.png'].url }}"
+                    alt="Data Scientist Code of Ethics">
+                <h1 class="js-align-heading">Community Principles on Ethical Data Sharing</h1>
+            </a>
             <p class="js-align-paragraph">This code of ethics is created and proposed for adoption by the data science community to reflect the behaviors and principles for responsible data use and sharing.</p>
-            <a href="{{ contents['code-of-ethics']['index.json'].url }}" class="btn white-btn">Read and Sign</a>
+            <a href="{{ contents['community-principles-on-ethical-data-sharing']['index.json'].url }}" class="btn white-btn">Read and Sign</a>
         </div>
         <div class="home-col manifesto-col">
-            <img
-                srcset="{{ contents.images['manifesto@1x.png'].url }} 1x, {{ contents.images['manifesto@2x.png'].url }} 2x"
-                src="{{ contents.images['ethics@1x.png'].url }}"
-                alt="Manifesto for Data Practices">
-            <h1 class="js-align-heading">Manifesto for Data Practices</h1>
+            <a href="{{ contents.manifesto['index.json'].url }}">
+                <img
+                    srcset="{{ contents.images['manifesto@1x.png'].url }} 1x, {{ contents.images['manifesto@2x.png'].url }} 2x"
+                    src="{{ contents.images['ethics@1x.png'].url }}"
+                    alt="Manifesto for Data Practices">
+                <h1 class="js-align-heading">Manifesto for Data Practices</h1>
+            </a>
+
             <p class="js-align-paragraph">These values and principles, taken together, describe the most effective, ethical, and modern approach to data teamwork.</p>
             <a href="{{ contents.manifesto['index.json'].url }}" class="btn white-btn">Read and Sign</a>
         </div>

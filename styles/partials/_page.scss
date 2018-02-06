@@ -14,11 +14,15 @@
     padding: $px223 $px95 $px95;
     color: #ffffff;
     text-align: center;
-    > img {
+    > a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    > a img {
         width: $px140;
         height: $px140;
     }
-    > h1 {
+    > a h1 {
         font-size: $px32;
         line-height: $px42;
         font-weight: 600;

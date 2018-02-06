@@ -18,7 +18,7 @@ axios.get(codeOfEthicsSignatoriesQueryUrl).then(
   response => {
     // parse cs
     const codeOfEthicsSignatories = csvjson.toObject(response.data)
-    fs.writeFileSync('./contents/code-of-ethics/signatories.json', JSON.stringify(codeOfEthicsSignatories))
+    fs.writeFileSync('./contents/community-principles-on-ethical-data-sharing/signatories.json', JSON.stringify(codeOfEthicsSignatories))
   },
   error => console.error('Failed to write approved code of ethics signatories: ', error)
 )
