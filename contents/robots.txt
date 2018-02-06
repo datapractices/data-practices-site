@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 Allow: /manifesto
+Disallow: /manifesto/congratulations.html
+Disallow: /manifesto/signatories.html
 Allow: /community-principles-on-ethical-data-sharing
+Disallow: /community-principles-on-ethical-data-sharing/congratulations.html
+Disallow: /community-principles-on-ethical-data-sharing/signatories.html
