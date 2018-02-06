@@ -11,6 +11,8 @@
   },
   "scripts": {
     "updateSignatories": "node update-signatories.js",
-    "build": "npm run updateSignatories && wintersmith build"
+    "purgeCache": "node purge-cache.js",
+    "build": "npm run updateSignatories && wintersmith build",
+    "deploy": "git push && sleep 9 && npm run purgeCache"
   }
 }
