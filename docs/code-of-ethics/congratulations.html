@@ -24,15 +24,15 @@
         <title>Congratulations!</title>
         <meta property="og:title" content="Congratulations!" />
         <meta property="og:description" content="Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  At vero eos et accusam et justo duo dolores et ea rebum.  Lorem ipsum dolor sit amet,  no sea takimata sanctus est Lorem ipsum dolor sit amet.  Stet clita kasd gubergren,  no sea takimata sanctus est Lorem ipsum dolor sit amet.  no sea takimata sanctus est Lorem ipsum dolor sit amet.  no sea takimata sanctus est Lorem ipsum dolor sit amet.  sed diam voluptua." />
-        
+
             <meta property="og:image" content="http://localhost:8080/images/socialshare-codeofethics@2x.png" />
-        
+
 
         <link rel="stylesheet" href="/main.css">
     </head>
     <body class="ethics-bg">
         <header class="page-header js-header-translucent">
-    
+
         <a class="header-logo" href="/">
             <img
                 srcset="/images/header-logo.png 1x, /images/header-logo-2x.png 2x"
@@ -40,12 +40,12 @@
                 alt="DATAPRACTICES.ORG" />
             DATAPRACTICES.ORG
         </a>
-    
-    
+
+
         <div class="header-action-wrap "  data-toggle="modal" data-target="#subscribeModal">
             <button class="btn outline-btn">Subscribe</button>
         </div>
-    
+
 </header>
 
 
@@ -119,7 +119,7 @@
 
 
 
-        
+
     <div class="centered-content-wrap">
         <img
             srcset="/images/ethics-colored@1x.png 1x, /images/ethics-colored@2x.png 2x"
@@ -128,26 +128,39 @@
         <div class="share-and-download">
             <p>Share and invite others</p>
             <div class="social-icon-wrap">
-                <a class="js-copy" data-clipboard-text="http://manifesto-site.data.world">
-                    <img src="/images/social-link@1x.png" alt="data.world"
-                     srcset="/images/social-link@1x.png 1x, /images/social-link@2x.png 2x, /images/social-link@3x.png 3x" />
-                </a>
-                <a href="#">
-                    <img src="/images/social-facebook@1x.png" alt="data.world"
-                     srcset="/images/social-facebook@1x.png 1x, /images/social-facebook@2x.png 2x, /images/social-facebook@3x.png 3x" />
-                </a>
-                <a href="#">
-                    <img src="/images/social-twitter@1x.png" alt="data.world"
-                     srcset="/images/social-twitter@1x.png 1x, /images/social-twitter@2x.png 2x, /images/social-twitter@3x.png 3x" />
-                </a>
-                <a href="#">
-                    <img src="/images/social-linkedin@1x.png" alt="data.world"
-                     srcset="/images/social-linkedin@1x.png 1x, /images/social-linkedin@2x.png 2x, /images/social-linkedin@3x.png 3x" />
-                </a>
+              <a class="social-link js-copy" data-placement="left" data-clipboard-text="{{ 'https://datapractices.org' + contents['manifesto']['index.json'].url }}">
+                  <img
+                          alt="Copy"
+                          src="{{ contents.images['social-link@1x.png'].url }}"
+                          srcset="{{ contents.images['social-link@1x.png'].url }} 1x, {{ contents.images['social-link@2x.png'].url }} 2x, {{ contents.images['social-link@3x.png'].url }} 3x"
+                  >
+              </a>
+              <a href="#" class="social-link facebook">
+                  <img
+                          alt="Share Facebook"
+                          src="{{ contents.images['social-facebook@1x.png'].url }}"
+                          srcset="{{ contents.images['social-facebook@1x.png'].url }} 1x, {{ contents.images['social-facebook@2x.png'].url }} 2x, {{ contents.images['social-facebook@3x.png'].url }} 3x"
+                  >
+              </a>
+              <a href="#" class="social-link twitter-ethics">
+                  <img
+                          alt="Share Twitter"
+                          src="{{ contents.images['social-twitter@1x.png'].url }}"
+                          srcset="{{ contents.images['social-twitter@1x.png'].url }} 1x, {{ contents.images['social-twitter@2x.png'].url }} 2x, {{ contents.images['social-twitter@3x.png'].url }} 3x"
+                  >
+              </a>
+              <a href="http://www.linkedin.com/shareArticle?mini=true&url=datapractices.org&title=CPEDS%20-%20Community%20Principles%20for%20Ethical%20Data%20Sharing&source=datapractices.org" target="_blank" class="social-link linkedin">
+                  <img
+                          alt="Share LinkedIn"
+                          src="{{ contents.images['social-linkedin@1x.png'].url }}"
+                          srcset="{{ contents.images['social-linkedin@1x.png'].url }} 1x, {{ contents.images['social-linkedin@2x.png'].url }} 2x, {{ contents.images['social-linkedin@3x.png'].url }} 3x"
+                  >
+              </a>
+
             </div>
-            <div class="dw-wownload-btn">
+            <!-- <div class="dw-wownload-btn">
                 <a href="#">Download the latest (PDF)</a>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -168,7 +181,7 @@
 
           gtag('config', 'UA-113597498-1');
         </script>
-        
+
     <script type="text/javascript">
         document.getElementById("snum").innerText = Number(getQueryParameter("snum")) || 1;
     </script>
