@@ -1,2 +1,4 @@
 User-agent: *
-Disallow:
+Allow: /
+Allow: /manifesto
+Allow: /code-of-ethics
