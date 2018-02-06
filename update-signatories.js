@@ -2,7 +2,7 @@ const axios = require('axios')
 const csvjson = require('csvjson')
 const fs = require('fs')
 
-const manifestSignatoriesQueryUrl = 'https://query.data.world/s/HEA3KK8-GNmwdrU_R3Pj49viPf3Vko'
+const manifestSignatoriesQueryUrl = 'https://query.data.world/s/gIfPpOHbjhyryOsvO5MoLekbz6wioW'
 const codeOfEthicsSignatoriesQueryUrl = 'https://query.data.world/s/sPcUfUm_bl5Wr79YSvAQJO42rcwh5W'
 
 axios.get(manifestSignatoriesQueryUrl).then(
