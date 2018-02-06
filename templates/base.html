@@ -20,6 +20,7 @@
         <link rel="icon" type="image/png" sizes="96x96" href="{{ contents.images.icons['favicon-96x96.png'].url }}">
         <link rel="icon" type="image/png" sizes="16x16" href="{{ contents.images.icons['favicon-16x16.png'].url }}">
         <meta name="theme-color" content="#00B8D9">
+        {% block extra_meta %}{% endblock %}
 
         <title>{{ page.title }}</title>
         <meta property="og:title" content="{{ page.title }}" />
