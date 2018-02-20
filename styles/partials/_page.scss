@@ -169,3 +169,19 @@
         }
     }
 }
+
+.inline-svg-icon svg {
+  height: 24px;
+  width: 24px;
+  fill: #00B8D9;
+}
+
+p.signatory {
+  display: flex;
+  align-items: center;
+  font-size: 1.30625vw;
+}
+
+p.signatory a {
+  padding-left: 6px;
+}
