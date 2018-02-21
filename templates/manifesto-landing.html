@@ -182,9 +182,25 @@
                 <div class="feature-section -less-padding -no-right-padding" id="signatories">
                     <p class="heading -small -capital -graphik">In order of signing</p>
                     <h3 class="heading -large">{{ contents.manifesto['signatories.json'].metadata.length }} signatories</h3>
-                    <ol class="ordered-list -two-columns -condensed clearfix">
+                    <ol class="ordered-list -two-columns -condensed clearfix signatories">
                       {% for signatory in contents.manifesto['signatories.json'].metadata %}
-                        <li><p>{{ signatory.full_name }}</p></li>
+                        <li>
+                          <p class="signatory">{{ signatory.full_name }}
+                          {% if signatory.socialNetwork === 'linkedin' %}
+                            <a href="{{ signatory.social_url }}" target="_blank" class="linkedin">
+                              <img src="{{ contents.images['linkedin.svg'].url }}" />
+                            </a>
+                          {% elif signatory.socialNetwork === 'twitter' %}
+                          <a href="{{ signatory.social_url }}" target="_blank"  class="twitter-manifesto">
+                            <img src="{{ contents.images['twitter.svg'].url }}" />
+                          </a>
+                          {% elif signatory.socialNetwork === 'github' %}
+                            <a href="{{ signatory.social_url }}" target="_blank"  class="github-manifesto">
+                              <img src="{{ contents.images['github.svg'].url }}" />
+                            </a>
+                          {% endif %}
+                        </p>
+                        </li>
                       {% endfor %}
                     </ol>
                     <div class="section-action">

@@ -169,3 +169,29 @@
         }
     }
 }
+
+.inline-svg-icon svg {
+  height: 24px;
+  width: 24px;
+  fill: #00B8D9;
+}
+
+.signatory {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.30625vw;
+}
+
+ol.signatories {
+  list-style-position: inside;
+}
+
+p.signatory a {
+  padding-left: 6px;
+}
+
+p.signatory a img {
+  @include phone-styles {
+    width: 18px;
+  }
+}

@@ -53,6 +53,13 @@ p {
         font-weight: 500;
         line-height: $medium-px16;
     }
+    &.signatory {
+      @include phone-styles {
+          font-size: $medium-px12;
+          font-weight: 500;
+          line-height: $medium-px16;
+      }
+    }
     &.-graphik {
         font-family: 'Graphik';
         font-size: $px16;
