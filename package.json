@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "csvjson": "5.0.0"
+    "csvjson": "5.0.0",
+    "mandrill-api": "1.0.45"
   },
   "private": "true",
   "devDependencies": {
@@ -11,6 +12,7 @@
   },
   "scripts": {
     "updateSignatories": "node update-signatories.js",
+    "sendEmails": "node send-emails.js",
     "purgeCache": "node purge-cache.js",
     "build": "npm run updateSignatories && wintersmith build",
     "deploy": "git push && sleep 9 && npm run purgeCache"
