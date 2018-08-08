@@ -15,14 +15,14 @@ axios.get(manifestSignatoriesQueryUrl).then(
   error => console.error('Failed to write approved manifesto signatories: ', error)
 )
 
-axios.get(codeOfEthicsSignatoriesQueryUrl).then(
-  response => {
-    // parse cs
-    const codeOfEthicsSignatories = decorateWithSocialNetwork(csvjson.toObject(response.data))
-    fs.writeFileSync('./contents/community-principles-on-ethical-data-sharing/signatories.json', JSON.stringify(codeOfEthicsSignatories))
-  },
-  error => console.error('Failed to write approved code of ethics signatories: ', error)
-)
+// axios.get(codeOfEthicsSignatoriesQueryUrl).then(
+//   response => {
+//     // parse cs
+//     const codeOfEthicsSignatories = decorateWithSocialNetwork(csvjson.toObject(response.data))
+//     fs.writeFileSync('./contents/community-principles-on-ethical-data-sharing/signatories.json', JSON.stringify(codeOfEthicsSignatories))
+//   },
+//   error => console.error('Failed to write approved code of ethics signatories: ', error)
+// )
 
 function decorateWithSocialNetwork (list) {
   return list.map(signatory => {
