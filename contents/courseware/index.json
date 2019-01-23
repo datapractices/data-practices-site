@@ -1,0 +1,8 @@
+{
+    "template": "courseware-landing.html",
+    "title": "Data Practices Courseware",
+    "description": "Consume and collaborate on free and open courses designed to help everyone from the novice to the expert data practitioner.",
+    "thumbnail": "socialshare-manifesto@2x.png",
+    "enableBackButton": true,
+    "rootClass": "courseware-page"
+}

@@ -1,0 +1,404 @@
+{% extends 'base.html' %}
+
+{% block page_script %}
+    <script src="{{ contents.scripts['product-landing.js'].url }}"></script>
+{% endblock %}
+
+{% extends 'base.html' %}
+
+{% block body_content %}
+<div class="fluid-container product-landing ethics-color">
+    <div class="navigation" id="navigation">
+        <div class="inner-container">
+            <div class="branding-image">
+                <img alt="Data Scientist Code of Ethics"
+                      srcset="{{ contents.images['ethics@1x.png'].url }} 1x, {{ contents.images['ethics@2x.png'].url }} 2x"
+                      src="{{ contents.images['ethics@1x.png'].url }}" />
+            </div>
+            <h3 class="nav-title heading -graphik -large -white">Community Principles on Ethical Data Practices</h3>
+            <nav class="nav navigation-links">
+                <a href="#overview" class="nav-anchor nav-link">Overview</a>
+                <a href="#background" class="nav-anchor nav-link">Background</a>
+                <a href="#values" class="nav-anchor nav-link">Values</a>
+                <a href="#principles" class="nav-anchor nav-link">Principles</a>
+                <a href="#authors" class="nav-anchor nav-link">Authors</a>
+                <a href="#signatories" class="nav-anchor nav-link">Signatories</a>
+            </nav>
+            <div class="navigation-buttons-wrap">
+                <button class="btn -sign" data-toggle="modal" data-target="#signInDataScience">SIGN</button>
+                <a class="btn -sign" href="https://d4d.typeform.com/to/qQMVMr" target="_blank">JOIN</a>
+                <!-- <a href="#" class="btn -download -white-ouline-btn">DOWNLOAD (PDF)</a> -->
+            </div>
+        </div>
+    </div>
+    <div class="product-content">
+        <div class="inner-container">
+            <div id="overview">
+                <div class="branding-container">
+                    <div class="branding-image">
+                        <img class="hide-medium" alt="Data Scienctist Code of Ethics"
+                              srcset="{{ contents.images['ethics@1x.png'].url }} 1x, {{ contents.images['ethics@2x.png'].url }} 2x"
+                              src="{{ contents.images['ethics@1x.png'].url }}" />
+                        <img class="show-medium" alt="Data Scienctist Code of Ethics"
+                              srcset="{{ contents.images['ethics-colored@1x.png'].url }} 1x, {{ contents.images['ethics-colored@2x.png'].url }} 2x"
+                              src="{{ contents.images['ethics-colored@1x.png'].url }}" />
+                    </div>
+                    <h3 class="nav-title heading -graphik -large -black">Data Scientist Code of Ethics</h3>
+                </div>
+                <div class="content-header">
+                    <h3 class="heading -mediumx">
+                      This code of ethics for data sharing is created and proposed for adoption by the data science community to reflect the behaviors and principles for the responsible and ethical use and sharing of data by data scientists.
+<br />
+<br />
+As a community-driven crowdsourced effort, you can join the the discussion and contribute to the next version of the Community Principles on Ethical Data Sharing. </h3>
+                </div>
+                <div class="feature-section">
+                    <p class="heading -small -capital -graphik">Overview</p>
+                    <p>
+                      The Community Principles on Ethical Data Practices are being developed by people from the data science community in conjunction with data science organizations. These principles focus on defining ethical and responsible behaviors for sourcing, sharing and implementing data in a manner that will cause no harm and maximize positive impact. The goal of this initiative is to develop a community-driven code of ethics for data collection, sharing and utilization that provides people in the data science community a standard set of easily digestible, recognizable principles for guiding their behaviors.
+                    </p>
+
+                      <p>This code is not intended to be all encompassing. Rather, these principles will provide academia, industry, and individual data scientists a common set of guidelines for driving the development of standards, curriculums, and best practices for the ethical use and sharing of data, ultimately advancing the responsible and ethical use of data as a collective force for good.
+                      </p>
+                </div>
+                <div class="feature-section" id="background">
+                    <p class="heading -small -capital -graphik">Background</p>
+                    <p>
+                      Since launching in September 2017 at <a target="_blank" href="http://www.bloomberg.com/d4gx">Bloomberg’s Data for Good Exchange</a> (D4GX) conference in New York City, the data science community formed several working groups, led by Data For Democracy, to conduct literature reviews and draft principles for consideration.
+                    </p>
+                    <p>
+                      As a living document, the principles will be reviewed regularly and D4GX will serve as a convener for voting and updating the Community Principles on Ethical Data Sharing. As a community-driven crowdsourced effort, you can also join the ongoing discussion and contribute to the next version of CPEDS Code of Ethics by <a href="https://d4d.typeform.com/to/qQMVMr" target="_blank">signing up here</a>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="overview">
+                <div class="inner-container">
+                    <div id="values">
+                        <div class="branding-container">
+                            <div class="branding-image">
+                                <img class="hide-medium" alt="Code of Ethics" srcset="{{ contents.images['ethics@1x.png'].url }} 1x, {{ contents.images['ethics@2x.png'].url }} 2x" src="{{ contents.images['ethics@1x.png'].url }}" />
+                                <img class="show-medium" alt="Code of Ethics" srcset="{{ contents.images['ethics-colored@1x.png'].url }} 1x, {{ contents.images['ethics-colored@2x.png'].url }} 2x" src="{{ contents.images['ethics-colored@1x.png'].url }}" />
+                            </div>
+                            <h3 class="nav-title heading -graphik -large -black">Community Principles on Ethical Data Practices</h3>
+                        </div>
+                        <div class="feature-section">
+                            <p class="heading -small -capital -graphik">Values</p>
+                            <ul class="image-content-list">
+                                <li class="image-content-item">
+                                    <!-- <div class="item-image">
+                                        <img src="{{ contents.images['inclusion@1x.png'].url }}" alt="Manifesto Inclusion"
+                                             srcset="{{ contents.images['inclusion@1x.png'].url }} 1x, {{ contents.images['inclusion@2x.png'].url }} 2x,
+                                    {{ contents.images['inclusion@3x.png'].url }} 3x">
+                                    </div> -->
+                                    <div class="item-content">
+                                        <h5 class="heading -large">Fairness</h5>
+                                        <p>Understand, mitigate and communicate the presence of bias in both data practice and consumption.</p>
+                                    </div>
+                                </li>
+                                <li class="image-content-item">
+                                    <!-- <div class="item-image">
+                                        <img src="{{ contents.images['experimentation@1x.png'].url }}" alt="Manifesto Experimentation"
+                                             srcset="{{ contents.images['experimentation@1x.png'].url }} 1x, {{ contents.images['experimentation@2x.png'].url }} 2x,
+                                    {{ contents.images['experimentation@3x.png'].url }} 3x">
+                                    </div> -->
+                                    <div class="item-content">
+                                        <h5 class="heading -large">Benefit</h5>
+                                        <p>Set people before data and be responsible for maximizing social benefit and minimizing harm.</p>
+                                    </div>
+                                </li>
+                                <li class="image-content-item">
+                                    <!-- <div class="item-image">
+                                        <img src="{{ contents.images['accountability@1x.png'].url }}" alt="Manifesto Accountability"
+                                             srcset="{{ contents.images['accountability@1x.png'].url }} 1x, {{ contents.images['accountability@2x.png'].url }} 2x,
+                                    {{ contents.images['accountability@3x.png'].url }} 3x">
+                                    </div> -->
+                                    <div class="item-content">
+                                        <h5 class="heading -large">Openness</h5>
+                                        <p>Practice humility and openness. Transparent practices, community engagement, and responsible communications are an integral part of data ethics.</p>
+                                    </div>
+                                </li>
+                                <li class="image-content-item">
+                                    <!-- <div class="item-image">
+                                        <img src="{{ contents.images['impact@1x.png'].url }}" alt="Manifesto Impact"
+                                             srcset="{{ contents.images['impact@1x.png'].url }} 1x, {{ contents.images['impact@2x.png'].url }} 2x,
+                                    {{ contents.images['impact@3x.png'].url }} 3x">
+                                    </div> -->
+                                    <div class="item-content">
+                                        <h5 class="heading -large">Reliability</h5>
+                                        <p>Ensure that every effort is made to glean a complete understanding of what is contained within data, where it came from, and how it was created. Extend this effort for future users of all data and derivative data.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-section -alternate-background" id="principles">
+                        <p class="heading -small -capital -graphik -white">Principles</p>
+                        <h3 class="heading -large -white">As data practitioners and data consumers, we aim to...</h3>
+                        <ol class="ordered-list -light">
+                            <li><p>Consider  (if not collect) informed and purposeful <b>consent</b> of data subjects for all projects, and discard resulting data when that consent expires. </p></li>
+
+                            <li><p>Make best effort to guarantee the <b>security</b> of data, subjects, and algorithms to prevent unauthorized access, policy violations, tampering, or other harm or actions outside the data subjects’ consent.</p></li>
+
+                            <li><p>Make best effort to protect <b>anonymous</b> data subjects, and any associated data, against any attempts to reverse-engineer, de-anonymize, or otherwise expose confidential information.
+                              <ul><li>This includes all intermediate results, working with individuals or companies to help them maintain the anonymity of all data and parties involved, and supporting the rights to explanation, recourse, and rectification for any data subjects impacted by data work.</li></ul>
+</p></li>
+
+                            <li><p>Practice responsible <b>transparency</b> as the default where possible, throughout the entire data lifecycle.
+                              <ul><li>This includes providing enough context and documentation to enable other trained practitioners to understand and evaluate the use of data.</li></ul>
+</p></li>
+
+                            <li><p>Foster <b>diversity</b> by making efforts to ensure  inclusion of participants, representation of viewpoints and communities, and openness. The data community should be open to, welcoming of, and inclusive of people from diverse backgrounds.
+                              <ul><li>This can be achieved by: being conscious of, and owning the results of actions, regardless of intent; promoting the voices of marginalized groups; acknowledging and self-checking privilege; accepting checks of privilege by others in good faith, and using privilege to advocate for equity.</li>
+                              <li>The data community will not remain silent when witnessing others behaving in a manner that is not accessible, open, welcoming and inclusive.</li></ul>
+</p></li>
+
+                            <li><p>Acknowledge and mitigate unfair <b>bias</b> throughout all aspects of data work.
+                              <ul><li>This includes but is not limited to providing details and methodologies around data collection, processing and storage, and actively working to identify and disclose bias in algorithms, training data, and test data.</li></ul>
+</p></li>
+
+                            <li><p>Hold up datasets with clearly established <b>provenance</b> as the expected norm, rather than the exception.
+                              <ul><li>As a data collector, be responsible for recording provenance; as a data publisher, be responsible for propagating provenance; as a data scientist, be responsible for  reviewing, considering, and declaring what is known about data provenance.</li>
+                              <li>Provenance is a living part of data work and can evolve with the project and all reasonable efforts should be made to understand and pass on provenance work.</li></ul>
+</p></li>
+
+                            <li><p>Respect relevant <b>tensions</b> of all stakeholders as it relates to privacy and data ownership.</p></li>
+
+                            <li><p>Take great care to <b>communicate responsibly</b> and accessibly.
+                              <ul><li>This includes: acknowledging and disclosing caveats and limitations to the process and outputs; considering and providing clear opportunities for feedback from all stakeholders; considering and discussing whether something should be done (not just if it can be done); and clearly communicating who may be impacted, and how they are impacted, in order to minimize any potential harm from data work.</li></ul>
+</p></li>
+
+                            <li><p>Ensure that all data practitioners take <b>responsibility</b> for exercising ethical imagination in their work, including considering the implication of what came before and what may come after, and actively working to increase benefit and prevent harm to others.</p></li>
+
+                        </ol>
+                    </div>
+
+
+
+
+            <div id="working-groups">
+              <div class="feature-section -alternate-background2 -medium-padding -white">
+                  <p class="heading -small -capital -graphik -white">View the D4GX Recording</p>
+                  <p class='-white -vwhite'>
+                    You can view the <a href="https://vimeo.com/254516318" target="_blank">recording of the livestream</a> of the event on Vimeo, and participate in the ongoing discussion on <a href="https://d4d.typeform.com/to/qQMVMr" target="_blank">Slack</a>.
+                  </p>
+                  <p class=' -white -vwhite'>
+The initial version of the Community Principles on Ethical Data Sharing will be made available here for signing and/or further comments in the near future. Subscribe to updates using the button above.
+                  </p>
+                  <div class="section-action">
+                      <a class="btn white-btn" href="https://vimeo.com/254516318" target="_blank" role="button">View Recording</a>
+                  </div>
+              </div>
+                <div class="feature-section -medium-padding" id="authors">
+                    <p class="heading -large -capital -graphik">Working Group Authors</p>
+
+                </div>
+                <div class="feature-section -medium-padding -grey-background">
+                    <h3 class="heading -large">Thought Diversity</h3>
+                    <p class="-graphik">
+                      <b>Bethany Patrick, Code for America, Civic Data Alliance, Code Louisville</b>
+                      <b>Maria Filippelli, DataKind </b>
+                      <b>Carl Marcelus, Bloomberg</b>
+                      <b>Becki Hyde, Humana, Code for America, Civic Data Alliance</b>
+                      <b>Maya Sabatello</b>
+                      <b>Lisa Green, Domino Data Lab</b>
+                      <b>Joshua Cohen, University of California, Berkeley, Apple University, Boston Review</b>
+                      <b>Susan McGregor, Columbia University Graduate School of Journalism</b>
+                      <b>Sharon Sputz, Data Science Institute at Columbia University</b>
+                      <b>Marlon Harris</b>
+                      <b>Nicolas Le Roux</b>
+                      <b>Rachael Riley, Two Sigma</b>
+                      <b>Shawn Janzen, American University</b>
+                      <b>Gil Appel, USC Marshall School of Business</b>
+                      <b>Margeaux Spring, Atria Senior Living, Code for America, Civic Data Alliance, Code Louisville</b>
+                    </p>
+                </div>
+                <div class="feature-section -medium-padding -alternate-background">
+                    <h3 class="heading -large">Bias</h3>
+
+                    <p class="-graphik">
+                      <b>Dan Gould, Tinder</b>
+                      <b>Catie Bialick, Arnold Foundation</b>
+                      <b>Marie-Apolline Barbara, Cornell Tech</b>
+                      <b>Juan LaVista, Microsoft</b>
+                      <b>Jake Metcalf, Data &amp; Society</b>
+                      <b>Julia Stoyanovich, Drexel university</b>
+                      <b>Brittny Saunders, NYC</b>
+                      <b>Ben Wellington, Two Sigma</b>
+                      <b>Clay Eltzroth, Bloomberg</b>
+                      <b>Maria Filippelli (Moderator)</b>
+                      <b>Joe Blankenship</b>
+                      <b>Jose Luis Delgado Davara</b>
+                    </p>
+                </div>
+                <div class="feature-section -medium-padding -grey-background">
+                    <h3 class="heading -large">Privacy and Security</h3>
+
+                    <p class="-graphik">
+                      <b>Matt Gee, BrightHive</b>
+                      <b>Lutz Finger, Cornell University</b>
+                      <b>Jeannette Wing, Columbia University's Data Science Institute</b>
+                      <b>Shamus Khan, Columbia University</b>
+                      <b>Susan McGregor, Tow Center for Digital Journalism / Columbia Journalism School</b>
+                      <b>Bruce Kogut, Sanford C. Bernstein Center for Leadership and Ethics at Columbia Business School</b>
+                      <b>Arnaud Sahuguet, Cornell Tech</b>
+                      <b>Juan LaVista, Microsoft</b>
+                      <b>Gabrielle Berman, UNICEF</b>
+                      <b>Stefaan Verlhurt, The GovLab</b>
+                      <b>Samantha Grassle, NYC CTO</b>
+                      <b>Erin Stein, Overdeck</b>
+                      <b>Amanda Stent, Bloomberg</b>
+                    </p>
+                </div>
+                <div class="feature-section -medium-padding">
+                    <h3 class="heading -large">Responsible Communication</h3>
+
+                    <p class="-graphik">
+                      <b>Maureen (Mo) Johnson, Unpredict | Double Union (writing/research lead)</b>
+                      <b>Bernease Herman, University of Washington’s eScience Institute  (writing/research lead)</b>
+                      <b>Emily Grimes (writing/research lead)</b>
+                      <b>Craig Fryar, Data and Analytics executive; data.world Advisor  (writing/research lead)</b>
+                      <b>Megan Risdal, Kaggle</b>
+                      <b>Meghan O'Connell, Kaggle</b>
+                      <b>Susan McGregor, Tow Center for Digital Journalism / Columbia Journalism School</b>
+                      <b>Catie Bialick, Arnold Foundation</b>
+                      <b>Lisa Green, Domino Data Lab</b>
+                      <b>Andrew Means, BrightHive</b>
+                      <b>Amanda Stent</b>
+
+                    </p>
+                </div>
+
+                <div class="feature-section -medium-padding -alternate-background">
+                    <h3 class="heading -large">Provenance and Ownership</h3>
+
+                    <p class="-graphik">
+                      <b>David Morar, George Mason University</b>
+                      <b>Bill Howe, University of Washington’s eScience Institute</b>
+                      <b>Julia Stoyanovich, Drexel University</b>
+                      <b>H.V. Jagadish, University of Michigan</b>
+                      <b>Laura Noren, NYU</b>
+                      <b>Patrick McGarry, data.world</b>
+                      <b>Matt Gee, University of Chicago</b>
+                      <b>Ilana Lichtenstein, USyd grad, Australia</b>
+                      <b>Anne Washington, NYU</b>
+                      <b>Bryon Jacob, data.world</b>
+                      <b>Stefaan Verhult, The GovLab</b>
+                      <b>Samantha Grassle, NYC CTO Office</b>
+                    </p>
+                </div>
+                <div class="feature-section -medium-padding -grey-background">
+                    <h3 class="heading -large">Transparency and Openness</h3>
+
+                    <p class="-graphik">
+                      <b>Abhijeet Chavan (Moderator)</b>
+                      <b>Alondra Nelson, Social Science Research Council and Columbia University</b>
+                      <b>Bernease Herman, University of Washington’s eScience Institute</b>
+                      <b>Catie Bialick, Arnold Foundation</b>
+                      <b>Carl Marcelus, Bloomberg</b>
+                      <b>Christine Chung, Meetup</b>
+                      <b>H.V. Jagadish, University of Michigan </b>
+                      <b>Holly Taylor, Johns Hopkins Bloomberg School of Public Health</b>
+                      <b>Julia Stoyanovich, Drexel University</b>
+                      <b>Lisa Green, Domino Data Lab</b>
+                      <b>Margeaux Spring, Civic Data Alliance</b>
+                      <b>Mehdi Jamei, Bayes Impact</b>
+                      <b>Mo Johnson, Unpredict | Double Union</b>
+                    </p>
+                </div>
+                <div class="feature-section -medium-padding">
+                    <h3 class="heading -large">Questions and Answers</h3>
+
+                    <p class="-graphik">
+                      <b>Lilian Huang, Data for Democracy (Moderator)</b>
+                      <b>Gil Appel, University of Southern California</b>
+                      <b>Craig Fryar, data.world Advisor</b>
+                      <b>Dan Gould, Tinder</b>
+                      <b>Lisa Green, Domino Data Lab</b>
+                      <b>Christine Henry, DataKind UK</b>
+                    </p>
+                </div>
+            <div class="feature-section -alternate-background2 -medium-padding">
+                <p class="heading -small -capital -graphik -white">be part of this</p>
+                <h3 class="heading -large -white">Join the the ongoing discussion
+and contribute to the next version
+of the Community Principles on Ethical Data Sharing.
+</h3>
+                <div class="section-action">
+                    <button class="btn white-btn" data-toggle="modal" data-target="#signInDataScience">SIGN</button>
+                    <a class="btn white-btn -sign" href="https://d4d.typeform.com/to/qQMVMr" target="_blank">JOIN</a>
+                </div>
+            </div>
+            <div class="feature-section -less-padding -no-right-padding" id="signatories">
+                <p class="heading -small -capital -graphik">In order of signing</p>
+                <h3 class="heading -large">{{ contents['community-principles-on-ethical-data-sharing']['signatories.json'].metadata.length }} signatories</h3>
+                <ol class="ordered-list -two-columns -condensed clearfix">
+                  {% for signatory in contents['community-principles-on-ethical-data-sharing']['signatories.json'].metadata %}
+                    <li><p>{{ signatory.full_name }}</p></li>
+                  {% endfor %}
+                </ol>
+                <div class="section-action">
+                    <button class="btn -filled" data-toggle="modal" data-target="#signInDataScience">SIGN</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-footer">
+            <div class="inner-container">
+                <div class="made-with-love">
+                    <p>
+                        This site was made with love by <a href="https://data.world">data.world</a>, a platform for modern data teamwork.
+                    </p>
+                    <p>
+                        Contact us: <a href="mailto:ian@data.world">ian@data.world</a>
+                    </p>
+                </div>
+                <div class="footer-brand">
+                        <span class="logo">
+                          <a href="https://data.world/" target="_blank">
+                            <img src="{{ contents.images['dw-logo@1x.png'].url }}" alt="data.world"
+                                 srcset="{{ contents.images['dw-logo@1x.png'].url }} 1x, {{ contents.images['dw-logo@2x.png'].url }} 2x, {{ contents.images['dw-logo@3x.png'].url }} 3x" />
+                          </a>
+                        </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-floating-actions">
+        <a class="btn -full-width -sign" role="button" href="https://d4d.typeform.com/to/qQMVMr" target="_blank">Join</a>
+    </div>
+    <div class="floating-social-btns">
+      <div class="social-btns -vertical">
+          <a class="social-link js-copy" data-placement="left" data-clipboard-text="{{ 'https://datapractices.org' + contents['community-principles-on-ethical-data-sharing']['index.json'].url }}">
+              <img
+                      alt="Copy"
+                      src="{{ contents.images['social-link@1x.png'].url }}"
+                      srcset="{{ contents.images['social-link@1x.png'].url }} 1x, {{ contents.images['social-link@2x.png'].url }} 2x, {{ contents.images['social-link@3x.png'].url }} 3x"
+              >
+          </a>
+          <a href="#" class="social-link facebook-ethics">
+              <img
+                      alt="Share Facebook"
+                      src="{{ contents.images['social-facebook@1x.png'].url }}"
+                      srcset="{{ contents.images['social-facebook@1x.png'].url }} 1x, {{ contents.images['social-facebook@2x.png'].url }} 2x, {{ contents.images['social-facebook@3x.png'].url }} 3x"
+              >
+          </a>
+          <a href="#" class="social-link twitter-ethics">
+              <img
+                      alt="Share Twitter"
+                      src="{{ contents.images['social-twitter@1x.png'].url }}"
+                      srcset="{{ contents.images['social-twitter@1x.png'].url }} 1x, {{ contents.images['social-twitter@2x.png'].url }} 2x, {{ contents.images['social-twitter@3x.png'].url }} 3x"
+              >
+          </a>
+          <a href="{{ 'http://www.linkedin.com/shareArticle?mini=true&url=https://datapractices.org' + contents['community-principles-on-ethical-data-sharing']['index.json'].url + '&title=CPEDS%20-%20Community%20Principles%20for%20Ethical%20Data%20Sharing&source=datapractices.org' }}" target="_blank" class="social-link linkedin">
+              <img
+                      alt="Share LinkedIn"
+                      src="{{ contents.images['social-linkedin@1x.png'].url }}"
+                      srcset="{{ contents.images['social-linkedin@1x.png'].url }} 1x, {{ contents.images['social-linkedin@2x.png'].url }} 2x, {{ contents.images['social-linkedin@3x.png'].url }} 3x"
+              >
+          </a>
+      </div>
+    </div>
+</div>
+    <!-- Sign In Data Science for updates Modal -->
+    {% include "modals/sign-in-data-science.html" %}
+{% endblock %}

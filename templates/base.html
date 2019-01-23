@@ -28,8 +28,9 @@
         {% if page.metadata.thumbnail %}
             <meta property="og:image" content="{{ 'https://datapractices.org' + contents.images[page.metadata.thumbnail].url }}" />
         {% endif %}
-
+        <link rel="stylesheet" href="{{ contents.reveal['reveal.css'].url }}">
         <link rel="stylesheet" href="{{ contents['main.scss'].url }}">
+
     </head>
     <body class="{{ page.metadata.rootClass }}">
         {% include 'includes/header.html' %}
