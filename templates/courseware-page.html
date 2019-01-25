@@ -17,23 +17,9 @@
 {% endblock %}
 
 {% block body_content %}
-  <div class="reveal">
-    <div class="slides">
-        <section>
-          {{ page.html | safe }}
-        </section>
-        <section>
-            <p>just something here</p>
-        </section>
-        <section>
-            <p>just something and here</p>
-        </section>
-        <section>
-            <p>just something and h</p>
-        </section>
-        <section>
-            <p>just something and here again</p>
-        </section>
-    </div>
+<div class="reveal">
+  <div class="slides">
+    {{ page.html | safe }}
+  </div>
 </div>
 {% endblock %}

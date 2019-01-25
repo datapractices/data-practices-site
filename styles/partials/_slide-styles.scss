@@ -1,0 +1,193 @@
+$font-color: darken($manifesto-color, 50%);
+
+body.slideware {
+  .header-action-wrap {
+    display: none;
+  }
+  .reveal {
+    font-family: 'Graphik';
+    .slides {
+      .full,
+      .half,
+      .one-third,
+      .one-fourth,
+      .two-thirds {
+        float: left;
+        padding: 10px;
+      }
+      .full {
+        width: 100%;
+        &.text-align-left {
+          text-align: left;
+        }
+        &.text-align-right {
+          text-align: right;
+        }
+      }
+      .two-thirds {
+        width: 67%;
+        &.text-align-left {
+          text-align: left;
+        }
+        &.text-align-right {
+          text-align: right;
+        }
+      }
+      .half {
+        width: 50%;
+        &.text-align-left {
+          text-align: left;
+        }
+        &.text-align-right {
+          text-align: right;
+        }
+      }
+      .one-third {
+        width: 33%;
+        &.text-align-left {
+          text-align: left;
+        }
+        &.text-align-right {
+          text-align: right;
+        }
+      }
+      .one-fourth {
+        width: 25%;
+        &.text-align-left {
+          text-align: left;
+        }
+        &.text-align-right {
+          text-align: right;
+        }
+      }
+      img {
+        max-width: 100%;
+        border: none;
+        border-radius: 4px;
+        &.half-img-size {
+          width: 50% !important;
+        }
+        &.one-third-img-size {
+          width: 33%;
+        }
+        &.one-quarter-image-size {
+          width: 33%;
+        }
+      }
+      h1 {
+        color: $font-color;
+        &.lowercase {
+          text-transform: none;
+        }
+        &.uppercase {
+          text-transform: uppercase;
+        }
+      }
+      h2 {
+        font-size: x-large;
+        color: $font-color;
+        &.smaller {
+          font-size: large;
+        }
+        &.larger {
+          font-size: xx-large;
+        }
+        &.lowercase {
+          text-transform: none;
+        }
+        &.uppercase {
+          text-transform: uppercase;
+        }
+      }
+      h3 {
+        font-size: large;
+        color: $font-color;
+        &.smaller {
+          font-size: medium;
+        }
+        &.larger {
+          font-size: x-large;
+        }
+        &.lowercase {
+          text-transform: none;
+        }
+        &.uppercase {
+          text-transform: uppercase;
+        }
+      }
+      h4 {
+        font-size: medium;
+        color: $font-color;
+        &.smaller {
+          font-size: small;
+        }
+        &.larger {
+          font-size: large;
+        }
+        &.lowercase {
+          text-transform: none;
+        }
+        &.uppercase {
+          text-transform: uppercase;
+        }
+      }
+      h5 {
+        font-size: small;
+        color: $font-color;
+        &.smaller {
+          font-size: x-small;
+        }
+        &.larger {
+          font-size: medium;
+        }
+        &.lowercase {
+          text-transform: none;
+        }
+        &.uppercase {
+          text-transform: uppercase;
+        }
+      }
+      h6 {
+        font-size: x-small;
+        color: $font-color;
+        &.smaller {
+          font-size: xx-small;
+        }
+        &.larger {
+          font-size: small;
+        }
+        &.lowercase {
+          text-transform: none;
+        }
+        &.uppercase {
+          text-transform: uppercase;
+        }
+      }
+      p {
+        font-size: medium;
+        color: $font-color;
+        &.smaller {
+          font-size: small;
+        }
+        &.large {
+          font-size: large;
+        }
+        &.lowercase {
+          text-transform: none;
+        }
+        &.uppercase {
+          text-transform: uppercase;
+        }
+      }
+      .bold {
+        font-weight: bold;
+      }
+      .italic {
+        font-style: italic;
+      }
+      .light {
+        color: lighten($font-color, 50%) ;
+      }
+    }
+  }
+}
