@@ -3,6 +3,16 @@
   <link rel="stylesheet" href="{{ contents.reveal['reveal.css'].url }}">
   <link rel="stylesheet" href="{{ contents.reveal.theme['white.css'].url }}">
 {% endblock %}
+
+
+{% block body_content %}
+<div class="reveal">
+  <div class="slides">
+    {{ page.html | safe }}
+  </div>
+</div>
+{% endblock %}
+
 {% block page_script %}
     <script src="{{ contents.scripts['reveal.js'].url }}"></script>
   <!-- Printing and PDF exports -->
@@ -14,12 +24,4 @@
     document.getElementsByTagName( 'head' )[0].appendChild( link );
     Reveal.initialize();
   </script>
-{% endblock %}
-
-{% block body_content %}
-<div class="reveal">
-  <div class="slides">
-    {{ page.html | safe }}
-  </div>
-</div>
 {% endblock %}
