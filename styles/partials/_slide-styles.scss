@@ -4,8 +4,21 @@ body.slideware {
   .header-action-wrap {
     display: none;
   }
+  .color-white {
+    color: white !important;
+  }
   .reveal {
     font-family: 'Graphik';
+    [hidden] {
+      display: inherit !important;
+    }
+    section {
+      &.align-middle {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+    }
     .slides {
       .full,
       .half,
