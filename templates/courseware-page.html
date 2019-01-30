@@ -6,15 +6,21 @@
 
 
 {% block body_content %}
-<div class="reveal">
-  <div class="slides">
-    {{ page.html | safe }}
-  </div>
-</div>
+  {% if page.metadata.published %}
+    <div class="reveal">
+      <div class="slides">
+        {{ page.html | safe }}
+      </div>
+    </div>
+  {% else %}
+    <div class="draft">
+      {{ page.html | safe }}
+    </div>
+  {% endif %}
 {% endblock %}
 
 {% block page_script %}
-    <script src="{{ contents.scripts['reveal.js'].url }}"></script>
+  <script src="{{ contents.scripts['reveal.js'].url }}"></script>
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
