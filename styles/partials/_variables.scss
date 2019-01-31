@@ -1,13 +1,15 @@
 // Color Variables
 $manifesto-color: #00B8D9;
-$ethics-color: #0747A6;
+$courseware-color: #0747A6;
+$ethics-color: #173753;
+
 
 $white: #FFF;
 $text-dark: #323D48;
 $text-gray-ccc: #ccc;
 $border-color: #AEB9C7;
 $field-bg-color: #E9EDF1;
-$footer-background: #323D48;
+$footer-background: $ethics-color;
 $error: #DE350A;
 
 $header-height: 64px;

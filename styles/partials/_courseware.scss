@@ -1,0 +1,57 @@
+$aqua-light: rgba(0, 184, 217, 0.5);
+
+.courseware-color {
+  .navigation {
+    background-color: $courseware-color;
+  }
+  .-alternate-background {
+    background: $aqua-light;
+    color: $white;
+  }
+  .-alternate-background2 {
+    background-color: $ethics-color;
+    color: $white;
+  }
+  .section-action {
+    .btn.-filled {
+      background: $courseware-color;
+      color: $white;
+    }
+  }
+  .navigation-buttons-wrap {
+    .btn.-sign {
+      background: $courseware-color;
+      color: $white;
+    }
+  }
+  .content-header {
+    &:after {
+      border-color: $courseware-color;
+      background-color: $courseware-color;
+    }
+  }
+  .bottom-floating-actions {
+    .btn.-sign {
+      background-color: $courseware-color;
+      color: $white;
+    }
+  }
+  .nav-anchor {
+    color: lighten($ethics-color, 40%);
+    &.active {
+      color: $white;
+    }
+    &:hover {
+      text-decoration: none;
+      opacity: 0.8;
+      color: $white;
+    }
+    &:active, &:focus {
+      color: $ethics-color;
+      opacity: 1;
+      &.active {
+        color: $white;
+      }
+    }
+  }
+}

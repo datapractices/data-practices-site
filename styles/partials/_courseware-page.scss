@@ -65,7 +65,7 @@
 @media only screen and (max-width: 767px) {
   .courseware-page {
     .page-header {
-      background-color: $ethics-color;
+      background-color: $courseware-color;
     }
   	.menu {
   		display: none !important;
@@ -80,7 +80,7 @@
     }
     .toggle {
   		display: block;
-  		background-color: $manifesto-color;
+  		background-color: $ethics-color;
   		padding:14px 20px;
   		color:#FFF;
   		font-size:17px;
@@ -91,7 +91,95 @@
     }
     .toggle:hover,
     .toggle:visited  {
-		  background-color: darken($manifesto-color, 1%);
+		  background-color: darken($ethics-color, 1%);
+	  }
+    .navigation {
+      position: relative;
+      .navigation-links {
+        text-align: left;
+        .nav-title {
+          display: block;
+          font-size: 18px;
+        }
+        .nav-anchor {
+          display: block;
+          float: none;
+          text-align: left;
+          line-height: 1.5em;
+        }
+      }
+    }
+    .product-content > .inner-container {
+      padding-top: 20px;
+    }
+    .branding-container {
+      margin-bottom: 40px;
+    }
+    .heading.-xlarge {
+      font-size: 18px;
+    }
+    .feature-section {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      .heading.-large {
+        font-size: 16px;
+      }
+      p:not(.heading) {
+        font-size: 14px;
+        line-height: 1.5em;
+        padding-bottom: 20px;
+      }
+    }
+    ol li,
+    ul li {
+      font-size: 14px;
+    }
+    .section-action {
+      margin-top: 30px;
+    }
+    h4 {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .bottom-floating-actions {
+      display: none;
+    }
+    .product-landing {
+      padding-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .courseware-page {
+    .page-header {
+      background-color: $courseware-color;
+    }
+  	.menu {
+  		display: none !important;
+      height: 0;
+      opacity: 0;
+      transition-duration: 0.5s;
+  	}
+    [id^=drop]:checked + .menu {
+      display: block !important;
+      height: 800px !important;
+      opacity: 1;
+    }
+    .toggle {
+  		display: block;
+  		background-color: $ethics-color;
+  		padding:14px 20px;
+  		color:#FFF;
+  		font-size:17px;
+  		text-decoration:none;
+  		border:none;
+      text-align: center;
+      margin-top: 115px;
+    }
+    .toggle:hover,
+    .toggle:visited  {
+		  background-color: darken($ethics-color, 1%);
 	  }
     .navigation {
       position: relative;

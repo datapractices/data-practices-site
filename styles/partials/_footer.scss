@@ -1,8 +1,33 @@
 .page-footer {
-  height: 50px;
+  height: 5vh;
   background-color: $footer-background;
   text-align: center;
+  font-family: Graphik;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
   p {
     color: white;
+    font-family: Graphik;
+    font-size: 18px;
+    width:100%;
+    display: inline-block;
+    height:70%;
+    position: absolute;
+    top: 0;
+    bottom:0%;
+    margin: auto;
+  }
+  h4 {
+    color: white;
+    font-family: Graphik;
+    font-size: 22px;
+  }
+  a {
+    color: white;
+    text-decoration: underline;
+    font-size: 16px;
   }
 }

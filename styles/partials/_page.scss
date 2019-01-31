@@ -1,6 +1,6 @@
 .homepage-wrap {
     @include flexbox();
-    min-height: 100vh;
+    min-height: 95vh;
     @include phone-styles {
         display: block;
     }
@@ -11,7 +11,7 @@
     @include flexbox();
     @include flex-direction(column);
     @include align-items(center);
-    padding: $px223 $px95 $px95;
+    padding: 11% $px95 $px95;
     color: #ffffff;
     text-align: center;
     > a {
@@ -80,6 +80,10 @@
     background: $manifesto-color;
 }
 
+.courseware-col {
+    background: $courseware-color;
+}
+
 .floating-social-btns {
     position: fixed;
     bottom: $px20;
@@ -120,6 +124,10 @@
 
 .manifesto-bg {
     background: $manifesto-color;
+}
+
+.courseware-bg {
+  background: $courseware-color;
 }
 
 .centered-content-wrap {

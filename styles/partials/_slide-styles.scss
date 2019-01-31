@@ -1,4 +1,4 @@
-$font-color: darken($manifesto-color, 50%);
+$font-color: darken($courseware-color, 50%);
 
 body.slideware {
   .header-action-wrap {
@@ -273,20 +273,20 @@ body.slideware {
       }
       .highlight {
         &.blue {
-          background-color: lighten($ethics-color, 50%);
-          color: $ethics-color;
+          background-color: lighten($courseware-color, 50%);
+          color: $courseware-color;
           border-radius: 4px;
         }
       }
       .badge {
         padding: 10px;
         display: inline;
-        background-color: lighten($ethics-color, 50%);
-        color: $ethics-color;
+        background-color: lighten($courseware-color, 50%);
+        color: $courseware-color;
         border-radius: 4px;
       }
       .dark-background {
-        background-color: lighten($ethics-color, 50%);
+        background-color: lighten($courseware-color, 50%);
         border-radius: 4px;
       }
       .white-background {
