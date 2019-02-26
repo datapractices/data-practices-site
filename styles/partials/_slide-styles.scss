@@ -155,14 +155,14 @@ body.slideware {
       }
       h2 {
         text-transform: none;
-        font-size: x-large;
+        font-size: xx-large;
         color: $font-color;
         font-weight: bold;
         &.smaller {
           font-size: large;
         }
         &.larger {
-          font-size: xx-large;
+          font-size: 1.5em;
         }
         &.lowercase {
           text-transform: none;
