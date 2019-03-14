@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="116px" viewBox="0 0 128 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Auto_ML_Hex 128px@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Auto_ML_Hex-128px" fill-rule="nonzero">
+            <g id="BASE" fill="#4285F4">
+                <path d="M126.47,52.12 L100.17,6.38 C98.1575606,2.81119396 94.4064352,0.574214465 90.31,0.5 L37.7,0.5 C33.6029889,0.572194784 29.8509362,2.80972722 27.84,6.38 L1.53,52 C-0.505344201,55.5417451 -0.505344201,59.8982549 1.53,63.44 L27.83,109.44 C29.8203239,113.059541 33.5623947,115.37082 37.69,115.53 L90.3,115.53 C94.4273864,115.388325 98.1761765,113.086636 100.17,109.47 L126.47,63.73 C128.519489,60.1313439 128.519489,55.7186561 126.47,52.12 Z" id="Shape"></path>
+            </g>
+            <g id="shadow" transform="translate(40.000000, 30.000000)" fill="#000000" opacity="0.07">
+                <path d="M38.64,0 L37.78,8 L33.55,11.6 L22,0 L0.09,32.2 L0.16,40 L10.06,49.9 L9.36,56 L38.87,85.5 L50.3,85.5 C54.4273864,85.358325 58.1761765,83.0566363 60.17,79.44 L81.31,42.67 L38.64,0 Z" id="Shape"></path>
+            </g>
+            <g id="art" transform="translate(33.000000, 30.000000)" fill="#FFFFFF">
+                <polygon id="Shape" points="45.34 13.34 49.19 6.67 45.34 0 37 0 40.85 6.67 37 13.34"></polygon>
+                <polygon id="Shape" points="29.3 0 15.61 0 0 27.03 7.51 40.03 22.91 13.34 29.3 13.34 33.15 6.67"></polygon>
+                <polygon id="Shape" points="16.85 43 13 49.67 16.85 56.35 25.19 56.35 21.34 49.67 25.19 43"></polygon>
+                <polygon id="Shape" points="54.64 16 39.24 42.69 32.85 42.69 29 49.36 32.85 56.04 46.55 56.04 62.15 29"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
