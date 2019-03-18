@@ -7,7 +7,7 @@ const fs = require('fs')
 const client = new mandrill.Mandrill(process.env['DATA_PRACTICES_MANDRILL_KEY'])
 
 const lastManifestoEmail = JSON.parse(fs.readFileSync('./contents/manifesto/last-email-sent'))['last-email']
-const manifestoSignatories = JSON.parse(fs.readFileSync('./contents/manifesto/signatories.json'))
+const manifestoSignatories = JSON.parse(fs.readFileSync('./contents/manifesto/signatories2.json'))
 const newManifestoSignatories = manifestoSignatories.filter(
     (s) => {
         return parseInt(s.number) > lastManifestoEmail
