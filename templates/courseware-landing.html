@@ -1,0 +1,482 @@
+{% extends 'base.html' %}
+
+{% block page_script %}
+    <script src="{{ contents.scripts['product-landing.js'].url }}"></script>
+{% endblock %}
+
+{% extends 'base.html' %}
+
+{% block body_content %}
+  <div class="fluid-container product-landing courseware-color">
+    <label for="drop" class="toggle">Menu</label>
+    <input type="checkbox" id="drop" />
+    <div class="navigation menu" id="navigation">
+        <div class="inner-container">
+            <div class="branding-image">
+                <img alt="Data Scientist Code of Ethics"
+                      srcset="{{ contents.images['courseware@1x.png'].url }} 1x, {{ contents.images['courseware@2x.png'].url }} 2x"
+                      src="{{ contents.images['courseware@1x.png'].url }}" />
+            </div>
+            <h2 class="nav-title heading -graphik -large -white">Data Practices Courseware</h2>
+            <br/>
+            <nav class="nav navigation-links">
+                <h3 class="nav-title heading -graphik -medium -white">1. Project Lifecycle Curriculum</h3>
+                <a href="#kickoff" class="nav-anchor nav-link">1.1 Kicking off a data project</a>
+                <a href="#sourcing" class="nav-anchor nav-link">1.2 Sourcing Data</a>
+                <a href="#profile" class="nav-anchor nav-link">1.3 Profile and Prepare</a>
+                <a href="#explore" class="nav-anchor nav-link">1.4 Data Exploration</a>
+                <a href="#report" class="nav-anchor nav-link">1.5 Analyze and Report</a>
+                <a href="#post" class="nav-anchor nav-link">1.6 Data Project Post-Mortem</a>
+                <h3 class="nav-title heading -graphik -medium -white">2. Culture / Practice Curriculum</h3>
+                <a href="#build" class="nav-anchor nav-link">2.1 How to build a data-driven culture</a>
+                <a href="#survey" class="nav-anchor nav-link">2.2 A survey of data viz</a>
+                <a href="#datascience" class="nav-anchor nav-link">2.3 Moving from computer science to data science</a>
+                <a href="#nocode" class="nav-anchor nav-link">2.4 Data science for people who don’t code</a>
+                <a href="#viz" class="nav-anchor nav-link">2.5 Data visualization best practices</a>
+                <a href="#ethics" class="nav-anchor nav-link">2.6 Data Ethics 101 -- [GDEP]</a>
+                <br/><br/>
+                <h3 class="nav-title heading -graphik -medium -white">About</h3>
+                <a href="#history" class="nav-anchor nav-link">History</a>
+                <a href="#coc" class="nav-anchor nav-link">Code of Conduct</a>
+                <!-- <a href="#contributors" class="nav-anchor nav-link">Contributors</a> -->
+            </nav>
+        </div>
+    </div>
+    <div class="product-content">
+      <div class="inner-container">
+        <div class="branding-container">
+          <div class="branding-image">
+            <img class="hide-medium" alt="Data Practices Courseware" srcset="{{ contents.images['ethics@1x.png'].url }} 1x, {{ contents.images['ethics@2x.png'].url }} 2x" src="{{ contents.images['ethics@1x.png'].url }}" />
+            <img class="show-medium" alt="Data Scienctist Code of Ethics" srcset="{{ contents.images['ethics-colored@1x.png'].url }} 1x, {{ contents.images['ethics-colored@2x.png'].url }} 2x" src="{{ contents.images['ethics-colored@1x.png'].url }}" />
+          </div>
+          <h3 class="nav-title heading -graphik -large -black">Data Practices Courseware</h3>
+        </div>
+        
+        <!-- section -->
+        <div class="content-header" id="welcome">
+          <h2 class="heading -xlarge">
+            Welcome!
+          </h2>
+          <br/>
+          <p>This content is a collection of knowledge from many experts and practitioners across the data ecosystem. We invite you to explore the content below freely and share, present, or incorporate this work into your own content or commercial enterprises (all content is licensed with <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.ast">CC-BY-4.0</a>).</p>
+          <br/>
+          <p><b>Experts:</b> We welcome any contributions, refinements, or additions to this body of work. Our aim is to improve the general level of data literacy for any who are interested. Feel free to submit changes via our <a target="_blank" href="https://github.com/datadotworld/manifesto-site">Github repository</a>, or <a href="mailto:community@data.world">contact us</a> directly for other options.
+        </div>
+
+        <!-- section -->
+        <div class="content-header" id="kickoff">
+          <h2 class="heading -xlarge">
+            1. Project Lifecycle Curriculum
+          </h2>
+        </div>
+        <!-- end section -->
+
+        <!-- section -->
+        <div class="feature-section">
+          <p class="heading -graphik -large">1.1 Kicking off a data project</p>
+          <p>
+            Effective data collaboration takes more than giving everyone access. Inclusion, flexibility, setting, and prioritization are also keys to fruitful data work.
+          </p>
+          <p>
+            This workshop will help you to understand the <a href="https://datapractices.org/manifesto">Data Practices Values and Principles</a>, which describes the most effective, ethical, and modern approach to data teamwork, and how to best kick off a modern data project. Signed by some of the brightest minds in data, these points can create positive change wherever data collaboration occurs.
+          </p>
+          <p>
+            Topics covered:
+          </p>
+          <ol class="ordered-list -dark">
+            <li>History of data practices movement</li>
+            <li>Break down objectives</li>
+            <li>Consider stakeholders</li>
+            <li>Refining questions</li>
+            <li>Planning for output / solution</li>
+          </ol>
+          <div class="section-action">
+            <a href="/courseware/1_1.html" class="btn -filled">View course</a>
+          </div>
+        </div>
+        <!-- end section -->
+<hr/>
+        <!-- section -->
+        <div class="feature-section" id="sourcing">
+          <p class="heading -graphik -large">1.2 Sourcing data</p>
+          <p>
+            Once you have planned out a data project it’s time to gather your resources. There are many things to consider, including where data, documentation, and additional team members can be sourced.
+          </p>
+          <p>
+            This workshop will help you to understand how to evaluate data project resources including how to aggregate your existing data, the benefits of open data (both using and generating), the pros and cons of purchased data, and how to ensure that your data project can avoid costly pitfalls caused by problems around data provenance, data prep, or anything else.
+          </p>
+          <p>Topics covered:</p>
+          <ul class="ordered-list -dark">
+            <li>Defining constraints for questions</li>
+            <li>Importance of the "right" data</li>
+            <li>Spectrum of Open vs closed</li>
+            <li>Finding Data</li>
+            <li>What to do About Dark Data</li>
+            <li>Data Purchasing or Bartering</li>
+            <li>Other Things to consider</li>
+          </ul>
+          <div class="section-action">
+            <a href="/courseware/1_2.html" class="btn -filled">View course</a>
+          </div>
+        </div>
+        <!-- end section -->
+<hr/>
+        <!-- section -->
+        <div class="feature-section" id="profile">
+          <p class="heading -graphik -large">1.3 "Profile and Prepare"</p>
+          <p>
+            Once you have all of your data, team, documentation, and other resources in place, it’s time to dig in and go to work.
+          </p>
+          <p>
+            This workshop will help users to understand how to effectively evaluate and define their data. Understanding the shape of your data, what features and limitations may be inherent in the data, what data might be missing or improperly formatted, and many other things can help a data team to get the most out of their data.
+          </p>
+          <p>After profiling your data you’ll need to clean and prepare your data for actual use. This workshop will help you understand some of the common methods of cleaning data and how both technical and non-technical team members can assist with this process.</p>
+          <p>Topics covered:</p>
+          <h4>Profile</h4>
+          <ul>
+          	<li>Data Joining / Normalization</li>
+            <li>Profiling Data
+            <ul>
+              <li>Characteristics of Data</li>
+              <li>Defining Your Data</li>
+              <li>Discover Content</li>
+              <li>Discover Relationships</li>
+            </ul></li>
+          </ul>
+          <h4>Prepare</h4>
+          <ul>
+            <li>Data Cleaning</li>
+            <li>Backflow and Automation</li>
+            <li>Data Wrangling</li>
+          </ul>
+          <div class="section-action">
+            <a href="/courseware/1_3.html" class="btn -filled">View course</a>
+          </div>
+        </div>
+        <!-- end section -->
+<hr/><hr/>
+        <!-- section -->
+        <div class="feature-section" id="explore">
+          <p class="heading -graphik -large">1.4 Data Exploration</p>
+          <p>
+            This workshop will help you develop a deeper understanding of your data through querying, visualizing, or other initial exploration techniques.
+          </p>
+          <p>Topics covered:</p>
+          <ul>
+          	<li>Establish / Refine Hypothesis</li>
+            <li>Queries for Everyone</li>
+            <li>Data Sampling</li>
+            <li>Analysis Methods</li>
+            <li>Exploratory Visualization</li>
+            <li>Beyond Statistics</li>
+            <li>The Art of Feature Engineering</li>
+          </ul>
+          <div class="section-action">
+            <a href="/courseware/1_4.html" class="btn -filled">View course</a>
+          </div>
+        </div>
+        <!-- end section -->
+<hr/>
+        <!-- section -->
+        <div class="feature-section" id="report">
+          <p class="heading -graphik -large">1.5 "Analyze and Report"</p>
+          <p>
+            This workshop will help you to understand how to build models and answer questions in a reproducible way and then deliver the results of that work to your target audience
+          </p>
+          <p>Topics covered:</p>
+          <h4>Ask</h4>
+          <ul>
+          	<li>Evolve Your Hypthesis</li>
+            <li>Hindsight VS Insight VS Foresight</li>
+            <li>Tools and Processes</li>
+          </ul>
+          <h4>Analyze</h4>
+          <ul>
+            <li>Types of Analysis</li>
+            <li>Governance</li>
+            <li>Introduction to Modeling</li>
+            <li>Notebooks and You!</li>
+          </ul>
+          <h4>Report</h4>
+          <ul>
+            <li>Data Storytelling</li>
+            <li>Matching Reporting to Your Audience</li>
+            <li>Building Diversity of Outputs</li>
+            <li>Data Visualization</li>
+          </ul>
+          <div class="section-action">
+            <a href="/courseware/1_5.html" class="btn -filled">View course</a>
+          </div>
+        </div>
+        <!-- end section -->
+<hr/>
+        <!-- section -->
+        <div class="feature-section" id="post">
+          <p class="heading -graphik -large">1.6 "Data Project Post-Mortem"</p>
+          <p>
+            This workshop will help you to understand how to build models and answer questions in a reproducible way and then deliver the results of that work to your target audience
+          </p>
+          <p>Topics covered:</p>
+          <ul>
+            <li>Writing a Data Project Questionnaire</li>
+            <li>Qualitative vs Quantitative</li>
+            <li>Things to Evaluate</li>
+            <li>Data Process</li>
+            <li>Example Questionnaires</li>
+            <li>Action Items</li>
+          </ul>
+
+          <div class="section-action">
+            <a href="/courseware/1_6.html" class="btn -filled">View course</a>
+          </div>
+        </div>
+        <!-- end section -->
+
+        <div class="content-header" id="kickoff">
+          <h2 class="heading -xlarge">
+            2. Culture / Practice Curriculum
+          </h2>
+        </div>
+
+        <!-- section -->
+        <div class="feature-section" id="build">
+          <p class="heading -graphik -large">2.1 How to build a data-driven culture</p>
+          <p>
+            The world of modern data teamwork isn’t one that can be created by software and business process alone. Individuals will need to alter their behavior, which is the hardest part about change.
+          </p>
+          <p>
+            This workshop will show you not only how to help your team evolve, but the reasons that will make it clear as to why they should.
+          </p>
+          <p>Topics covered:</p>
+          <ul>
+          	<li>Framing the Problem</li>
+            <li>Pillars of a data-driven company</li>
+            <li>Data driven leadership</li>
+            <li>Decision making</li>
+            <li>Treat data like an asset! (operationalized!)</li>
+            <li>Data governance isn't a dirty word</li>
+            <li>Break down silos</li>
+            <li>Ask Questions</li>
+            <li>"Culture Tweaks"</li>
+          </ul>
+          <div class="section-action">
+            <a href="/courseware/2_1.html" class="btn -filled">View course</a>
+          </div>
+        </div>
+        <!-- end section -->
+<hr/>
+        <!-- section -->
+        <div class="feature-section" id="survey">
+          <p class="heading -graphik -large">2.2 A survey of data viz (Coming Soon!)</p>
+          <p>
+            When it comes to data visualization there are many options available. This workshop will compare and contrast many of the popular data visualization tools and why different tools might make sense for different use cases.
+          </p>
+          <p>Resources:</p>
+          <ul>
+            <li><a href="https://data.world/tableauhelp/tableau-desktop-101-step-into-the-shoes-of-a-data-analyst">Tableau Desktop 101: Step into the Shoes of a Data Analyst</a></li>
+            <li><a href="https://www.tutorialspoint.com/power_bi/power_bi_introduction.htm">Power BI - Introduction</a></li>
+            <li><a href="https://docs.microsoft.com/en-us/power-bi/guided-learning/">Microsoft Power BI Guided Learning</a></li>
+            <li><a href="https://www.distilled.net/resources/google-data-studio-the-beginners-tutorial/">Google Data Studio: The Beginner’s Tutorial</a></li>
+            <li><a href="https://support.google.com/datastudio/answer/6283323?hl=en">Welcome to Data Studio!</a></li>
+            <li><a href="https://vega.github.io/vega-lite/tutorials/getting_started.html">Introduction to Vega-Lite</a></li>
+            <li><a href="https://www.tableau.com/learn/tutorials/on-demand/introductory-training-introduction-tableau">Tableau Introduction</a></li>
+
+          <div class="section-action">
+            <a href="/courseware/coming-soon.html" class="btn -filled">View course</a>
+          </div>
+        </div>
+        <!-- end section -->
+<hr/>
+        <!-- section -->
+        <div class="feature-section" id="datascience">
+          <p class="heading -graphik -large">2.3 Moving from Computer Science to Data Science (Coming Soon!)</p>
+          <p>
+            Data Scientist is the hottest new job title, and people with many different backgrounds are choosing to pivot their careers to become data practitioners. This workshop will help those coming from a developer background to understand the similarities and differences between computer science / software development and data science.
+          </p>
+          <p>Topics covered:</p>
+          <ul>
+            <li>Statistics</li>
+            <li>Data processing using code and notebooks</li>
+            <li>Reproducibility</li>
+            <li>Provenance</li>
+          </ul>
+          <div class="section-action">
+            <a href="/courseware/coming-soon.html" class="btn -filled">View course</a>
+          </div>
+        </div>
+        <!-- end section -->
+<hr/>
+        <!-- section -->
+        <div class="feature-section" id="nocode">
+          <p class="heading -graphik -large">2.4 Data Science for People Who Don't Code (Coming Soon!)</p>
+          <p>
+            Too often, many data practitioners dismiss their role in the data ecosystem because they aren’t writing code. Talented spreadsheet users, database admins, database admins, and a host of others all have the ability to contribute heavily to the data work within an organization.
+          </p>
+          <p>
+            This workshop will cover how to be as impactful as possible, even if you aren’t a technical user.
+          </p>
+          <p>Topics covered:</p>
+          <ul>
+            <li>Introduction to queries</li>
+            <li>Formulas and calculations</li>
+            <li>How to deliver/share your data and insights with a team</li>
+          </ul>
+          <div class="section-action">
+            <a href="/courseware/coming-soon.html" class="btn -filled">View course</a>
+          </div>
+        </div>
+        <!-- end section -->
+<hr/>
+        <!-- section -->
+        <div class="feature-section" id="viz">
+          <p class="heading -graphik -large">2.5 Data Visualization Best Practices (Coming Soon!)</p>
+          <p>
+            Too often, when we discuss data visualization it is to cover the tactical nature of how to perform a task within a specific piece of software (ex: “how to make a bar chart”). Rarely do we discuss the correct time to use different types of viz, and how to build them using established best practices for the greatest impact.
+          </p>
+          <p>
+            This workshop will cover the technology-agnostic best practices for visualization design.
+          </p>
+          <p>Topics covered:</p>
+          <ul>
+            <li>Types of visualizations</li>
+            <li>When to use different families of viz</li>
+            <li>Data as art</li>
+            <li>How to avoid visual clutter</li>
+            <li>Data viz pitfalls</li>
+          </ul>
+          <div class="section-action">
+            <a href="/courseware/coming-soon.html" class="btn -filled">View course</a>
+          </div>
+        </div>
+        <!-- end section -->
+<hr/>
+        <!-- section -->
+        <div class="feature-section" id="ethics">
+          <p class="heading -graphik -large">2.6 Data Ethics 101 (Coming Soon!)</p>
+          <p>
+            The pervasiveness of data, especially in business decisions, is exploding. Unfortunately many of those who are new to the data ecosystem don’t always stop to think about whether just because they can do something doesn’t necessarily mean they should. This course will examine the FORTS (Fairness, Openness, Reliability, Trust, and Social Behavior) framework along with establishing the principles for good ethical data work. This work is based on the Global Data Ethics Pledge from Data for Democracy.
+          </p>
+          <p>
+            This workshop will cover the technology-agnostic best practices for visualization design.
+          </p>
+          <p>Topics covered:</p>
+          <ul>
+            <li>FORTS Framework</li>
+            <li>Ethical Principles</li>
+            <li>Ethical best practices</li>
+          </ul>
+          <div class="section-action">
+            <a href="/courseware/coming-soon.html" class="btn -filled">View course</a>
+          </div>
+        </div>
+        <!-- end section -->
+<hr/>
+        <!-- section -->
+        <div class="content-header" id="about">
+          <h2 class="heading -xlarge">
+            About the Data Practices Community
+          </h2>
+        </div>
+
+        <div class="feature-section" id="history">
+          <p class="heading -graphik -large">History</p>
+          <p>
+            The Data Practices movement originated at the <a target="_blank" href="https://data.world/scuttlemonkey/2017-open-data-science-leadership-summit">2017 Open Data Science Leadership Summit</a> hosted in San Francisco. This event gathered together leaders in data science, semantics, open source, visualization, and industry to discuss the current state of the data community. It was discovered that there were many similarities between the then current challenges around data, and the previous difficulties felt in software development that were addressed by Agile. 
+          </p>
+          <p>
+            The goal of the Data Practices movement was to start a similar "Agile for Data" movement that could help offer direction and improved data literacy across the ecosystem. While the first step was the "Manifesto for Data Practices" the intent was always to move past that and apply the values and principles to a series of free and open courseware that could benefit anyone who was interested.
+        </div>
+        <!-- end section -->
+<hr/>
+
+		<div class="feature-section" id="coc">
+          <p class="heading -graphik -large">Code of Conduct</p>
+          <p>
+            Any time you gather a large group of people together there is the potential for conflict. We believe that having a set of guidelines to help put people in the right frame of mind is helpful and can avoid problems down the line. Take a look at our code of conduct for a basis for behavior in this community.
+          </p>
+          <div class="section-action">
+          	<a href="/courseware/coc.html" class="btn -filled">View Code of Conduct</a>
+          </div>            
+        </div>
+        
+        <!-- section -->
+        <!--
+        <div class="feature-section" id="contributors">
+          <p class="heading -graphik -large">Contributors</p>
+          <p>
+            See who has contributed to the Data Practices Courseware.
+          </p>
+          <div class="section-action">
+            <a href="/courseware/contributors.html" class="btn -filled">View contributors</a>
+          </div>
+        </div>
+        -->
+        
+        <br/>
+        <br/>
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="fluid-container product-landing">
+    <div class="product-content">
+      <div class="product-footer">
+        <div class="inner-container">
+          <div class="made-with-love">
+            <p>
+                This site was made with love by <a href="https://data.world">data.world</a>, a platform for modern data teamwork.
+            </p>
+            <p>
+                Contact us: <a href="mailto:community@data.world">community@data.world</a>
+            </p>
+          </div>
+          <div class="footer-brand">
+            <span class="logo">
+              <a href="https://data.world/" target="_blank">
+                <img src="{{ contents.images['dw-logo@1x.png'].url }}" alt="data.world"
+                     srcset="{{ contents.images['dw-logo@1x.png'].url }} 1x, {{ contents.images['dw-logo@2x.png'].url }} 2x, {{ contents.images['dw-logo@3x.png'].url }} 3x" />
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-floating-actions">
+      <button class="btn -full-width -sign" data-toggle="modal" data-target="#signInManifesto">Sign</button>
+  </div>
+  <div class="floating-social-btns">
+    <div class="social-btns -vertical">
+      <a class="social-link js-copy" data-placement="left" data-clipboard-text="{{ 'https://datapractices.org' + contents['manifesto']['index.json'].url }}">
+        <img
+          alt="Copy"
+          src="{{ contents.images['social-link@1x.png'].url }}"
+          srcset="{{ contents.images['social-link@1x.png'].url }} 1x, {{ contents.images['social-link@2x.png'].url }} 2x, {{ contents.images['social-link@3x.png'].url }} 3x"
+        >
+      </a>
+      <a href="#" class="social-link facebook-manifesto">
+        <img
+          alt="Share Facebook"
+          src="{{ contents.images['social-facebook@1x.png'].url }}"
+          srcset="{{ contents.images['social-facebook@1x.png'].url }} 1x, {{ contents.images['social-facebook@2x.png'].url }} 2x, {{ contents.images['social-facebook@3x.png'].url }} 3x"
+        >
+      </a>
+      <a href="#" class="social-link twitter-manifesto">
+        <img
+          alt="Share Twitter"
+          src="{{ contents.images['social-twitter@1x.png'].url }}"
+          srcset="{{ contents.images['social-twitter@1x.png'].url }} 1x, {{ contents.images['social-twitter@2x.png'].url }} 2x, {{ contents.images['social-twitter@3x.png'].url }} 3x"
+        >
+      </a>
+      <a href="{{ 'http://www.linkedin.com/shareArticle?mini=true&url=https://datapractices.org' + contents['manifesto']['index.json'].url + '&title=Data%20Practices%20Manifesto%20-%20the%20most%20effective,%20ethical,%20and%20modern%20approach%20to%20data%20teamwork.&source=datapractices.org' }}" target="_blank" class="social-link linkedin">
+        <img alt="Share LinkedIn" src="{{ contents.images['social-linkedin@1x.png'].url }}" srcset="{{ contents.images['social-linkedin@1x.png'].url }} 1x, {{ contents.images['social-linkedin@2x.png'].url }} 2x, {{ contents.images['social-linkedin@3x.png'].url }} 3x">
+      </a>
+    </div>
+
+  </div>
+{% endblock %}

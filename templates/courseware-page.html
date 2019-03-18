@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block page_styles %}
+  <link rel="stylesheet" href="{{ contents.reveal['reveal.css'].url }}">
+  <link rel="stylesheet" href="{{ contents.reveal.theme['white.css'].url }}">
+{% endblock %}
+
+
+{% block body_content %}
+  {% if page.metadata.published %}
+    <div class="reveal">
+      <div class="slides">
+        {{ page.html | safe }}
+      </div>
+    </div>
+  {% else %}
+    <div class="draft">
+      {{ page.html | safe }}
+    </div>
+  {% endif %}
+{% endblock %}
+
+{% block page_script %}
+  <script src="{{ contents.scripts['reveal.js'].url }}"></script>
+  <script src="{{ contents.scripts.libs['head.js'].url }}"></script>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? "{{contents.reveal.print['pdf.css'].url}}" : "{{contents.reveal.print['paper.css'].url}}";
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+    
+    Reveal.initialize({
+      dependencies: [
+        { src: "{{ contents.reveal.plugin.notes['notes.js'].url }}", async: true }
+      ]
+    });
+    Reveal.configure({ slideNumber: true });
+  </script>
+{% endblock %}

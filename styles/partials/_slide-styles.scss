@@ -1,0 +1,306 @@
+$font-color: darken($courseware-color, 50%);
+
+body.slideware {
+  .header-action-wrap {
+    display: none;
+  }
+  .color-white {
+    color: white !important;
+  }
+  .reveal {
+    font-family: 'Graphik';
+    [hidden] {
+      display: inherit !important;
+    }
+    section {
+      &.align-middle {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+    }
+    .slides {
+      .full,
+      .half,
+      .one-third,
+      .one-fourth,
+      .two-thirds,
+      .one-fifth,
+      .one-sixth,
+      .one-seventh,
+      .one-eighth {
+        float: left;
+        padding: 10px;
+      }
+      .full {
+        width: 100%;
+        &.text-align-left {
+          text-align: left;
+        }
+        &.text-align-right {
+          text-align: right;
+        }
+      }
+      .two-thirds {
+        width: 67%;
+        &.text-align-left {
+          text-align: left;
+        }
+        &.text-align-right {
+          text-align: right;
+        }
+      }
+      .half {
+        width: 50%;
+        &.text-align-left {
+          text-align: left;
+        }
+        &.text-align-right {
+          text-align: right;
+        }
+      }
+      .one-third {
+        width: 33%;
+        &.text-align-left {
+          text-align: left;
+        }
+        &.text-align-right {
+          text-align: right;
+        }
+      }
+      .one-fourth {
+        width: 25%;
+        &.text-align-left {
+          text-align: left;
+        }
+        &.text-align-right {
+          text-align: right;
+        }
+      }
+      .one-fifth {
+        width: 20%;
+        &.text-align-left {
+          text-align: left;
+        }
+        &.text-align-right {
+          text-align: right;
+        }
+      }
+      .one-sixth {
+        width: 16.6%;
+        &.text-align-left {
+          text-align: left;
+        }
+        &.text-align-right {
+          text-align: right;
+        }
+      }
+      .one-seventh {
+        width: 14.2%;
+        &.text-align-left {
+          text-align: left;
+        }
+        &.text-align-right {
+          text-align: right;
+        }
+      }
+      .one-eighth {
+        width: 12.5%;
+        &.text-align-left {
+          text-align: left;
+        }
+        &.text-align-right {
+          text-align: right;
+        }
+      }
+      img {
+        max-width: 100%;
+        border: none;
+        border-radius: 4px;
+        &.half-img-size {
+          width: 50%;
+        }
+        &.one-third-img-size {
+          width: 33%;
+        }
+        &.one-quarter-image-size {
+          width: 33%;
+        }
+        &.no-shadow {
+          box-shadow: none;
+        }
+      }
+      .muted {
+        opacity: .25 !important;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        letter-spacing: -.03em;
+      }
+      h1 {
+        color: $font-color;
+        text-transform: none;
+        font-weight: bold;
+        &.lowercase {
+          text-transform: lowercase;
+        }
+        &.uppercase {
+          text-transform: uppercase;
+        }
+        &.smaller {
+          font-size: 1.75em;
+        }
+        &.larger {
+          font-size: 3.5em;
+        }
+      }
+      h2 {
+        text-transform: none;
+        font-size: xx-large;
+        color: $font-color;
+        font-weight: bold;
+        &.smaller {
+          font-size: large;
+        }
+        &.larger {
+          font-size: 1.5em;
+        }
+        &.lowercase {
+          text-transform: none;
+        }
+        &.uppercase {
+          text-transform: uppercase;
+        }
+      }
+      h3 {
+        font-size: large;
+        font-weight: bold;
+        color: $font-color;
+        &.smaller {
+          font-size: medium;
+        }
+        &.larger {
+          font-size: x-large;
+        }
+        &.lowercase {
+          text-transform: none;
+        }
+        &.uppercase {
+          text-transform: uppercase;
+        }
+      }
+      h4 {
+        font-weight: bold;
+        font-size: medium;
+        color: $font-color;
+        &.smaller {
+          font-size: small;
+        }
+        &.larger {
+          font-size: large;
+        }
+        &.lowercase {
+          text-transform: none;
+        }
+        &.uppercase {
+          text-transform: uppercase;
+        }
+      }
+      h5 {
+        font-weight: bold;
+        font-size: small;
+        color: $font-color;
+        &.smaller {
+          font-size: x-small;
+        }
+        &.larger {
+          font-size: medium;
+        }
+        &.lowercase {
+          text-transform: none;
+        }
+        &.uppercase {
+          text-transform: uppercase;
+        }
+      }
+      h6 {
+        font-weight: bold;
+        font-size: x-small;
+        color: $font-color;
+        &.smaller {
+          font-size: xx-small;
+        }
+        &.larger {
+          font-size: small;
+        }
+        &.lowercase {
+          text-transform: none;
+        }
+        &.uppercase {
+          text-transform: uppercase;
+        }
+      }
+      p, li, pre {
+        font-size: medium;
+        color: $font-color;
+        &.smaller {
+          font-size: small;
+        }
+        &.larger {
+          font-size: large;
+        }
+        &.lowercase {
+          text-transform: none;
+        }
+        &.uppercase {
+          text-transform: uppercase;
+        }
+      }
+      li {
+        margin-bottom: 20px;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      .thin {
+        font-weight: 400;
+      }
+      .italic {
+        font-style: italic;
+      }
+      .light {
+        color: lighten($font-color, 50%) ;
+      }
+      .highlight {
+        &.blue {
+          background-color: lighten($courseware-color, 50%);
+          color: $courseware-color;
+          border-radius: 4px;
+        }
+      }
+      .badge {
+        padding: 10px;
+        display: inline;
+        background-color: lighten($courseware-color, 50%);
+        color: $courseware-color;
+        border-radius: 4px;
+      }
+      .dark-background {
+        background-color: lighten($courseware-color, 50%);
+        border-radius: 4px;
+      }
+      .white-background {
+        background-color: white;
+        border-radius: 4px;
+      }
+      .box-shadow {
+        box-shadow: 0 0 40px rgba(0,0,0,.10);
+      }
+      .large-padding {
+        padding: 20px;
+      }
+      .xlarge-padding {
+        padding: 40px;
+      }
+    }
+  }
+}

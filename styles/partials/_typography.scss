@@ -1,6 +1,6 @@
 .heading {
     font-family: 'Publico Text';
-	color: $text-dark;
+    color: $text-dark;
     font-weight: 600;
     margin: 0;
     &.-large {
@@ -10,6 +10,10 @@
             font-size: $medium-px24;
             line-height: $medium-px33;
         }
+    }
+    &.-xlarge {
+        font-size: $px32;
+        line-height: $px34;
     }
     &.-small {
         font-size: $px14;
