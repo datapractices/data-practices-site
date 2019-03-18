@@ -1,0 +1,608 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="/favicon.ico">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="theme-color" content="#00B8D9">
+        
+
+        <title>1.4 Data Exploration</title>
+        <meta property="og:title" content="1.4 Data Exploration" />
+        <meta property="og:description" content="This workshop will help you develop a deeper understanding of your data through querying, visualizing, or other initial exploration techniques." />
+        
+        
+  <link rel="stylesheet" href="/reveal/reveal.css">
+  <link rel="stylesheet" href="/reveal/theme/white.css">
+
+        <link rel="stylesheet" href="/main.css">
+
+    </head>
+    <body class="slideware">
+        <header class="page-header ">
+    
+        
+          <a href="/courseware" class="back-link">
+              <img
+                  srcset="/images/back@1x.png 1x, /images/back@2x.png 2x, /images/back@3x.png 3x"
+                  src="/images/back@1x.png"
+                  alt="Go Back" />
+              Back to courseware
+          </a>
+        
+    
+    
+        <div class="header-action-wrap js-header-translucent"  data-toggle="modal" data-target="#subscribeModal">
+            <button class="btn outline-btn">Subscribe</button>
+        </div>
+    
+</header>
+
+
+    <!-- Subscribe for updates Modal -->
+    <!-- Subscribe for updates Modal -->
+<div class="modal fade dw-modal" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<div class="js-modal-wrapper">
+					<div class="js-modal-form">
+						<h1>Subscribe for updates</h1>
+<form class="js-google-form" action="https://docs.google.com/a/data.world/forms/d/1wVn1Yr66ltPypBR2lPcOqYMFLUbKTzd9LMyWj3xW0xs/formResponse">
+	<div class="form-group js-field-wrap">
+		<input type="text" class="form-control" id="name" name="entry.1962848789" placeholder="Full name (required)" required>
+	</div>
+	<div class="form-group js-field-wrap">
+		<input type="email" class="form-control" id="email" name="entry.1993039649" placeholder="Email address (required)" required>
+	</div>
+	<div class="custom-checkbox-wrap">
+		<label class="custom-control custom-checkbox">
+			<input type="checkbox" class="custom-control-input" name="entry.574863021" value="Subscribe">
+			<span class="custom-control-label"></span>
+			<span class="custom-control-description">Updates for Community Principles</span>
+		</label>
+		<label class="custom-control custom-checkbox">
+			<input type="checkbox" class="custom-control-input" name="entry.1685198103" value="Subscribe">
+			<span class="custom-control-label"></span>
+			<span class="custom-control-description">Updates for Manifesto for Data Practices</span>
+		</label>
+	</div>
+	<button type="submit" class="btn btn-primary js-modal-submit">Subscribe</button>
+</form>
+
+					</div>
+					<div class="js-modal-success" style="display:none">
+						<!-- Subscribe success for updates Modal -->
+<h1>You’re subscribed.</h1>
+<p>Share and invite others</p>
+<div class="social-icon-wrap">
+	<a class="social-link js-copy" data-clipboard-text="https://datapractices.org">
+		<img src="/images/social-link@1x.png" alt="data.world"
+         srcset="/images/social-link@1x.png 1x, /images/social-link@2x.png 2x, /images/social-link@3x.png 3x" />
+	</a>
+	<a href="#" class="social-link facebook">
+		<img src="/images/social-facebook@1x.png" alt="data.world"
+         srcset="/images/social-facebook@1x.png 1x, /images/social-facebook@2x.png 2x, /images/social-facebook@3x.png 3x" />
+	</a>
+	<a href="#" class="social-link twitter">
+		<img src="/images/social-twitter@1x.png" alt="data.world"
+         srcset="/images/social-twitter@1x.png 1x, /images/social-twitter@2x.png 2x, /images/social-twitter@3x.png 3x" />
+	</a>
+	<a href="http://www.linkedin.com/shareArticle?mini=true&url=https://datapractices.org&title=The%20Data%20Practices%20Manifesto%20and%20Community%20Principles%20for%20Ethical%20Data%20Sharing&source=datapractices.org" target="_blank" class="social-link linkedin">
+	<img src="/images/social-linkedin@1x.png" alt="data.world"
+         srcset="/images/social-linkedin@1x.png 1x, /images/social-linkedin@2x.png 2x, /images/social-linkedin@3x.png 3x" />
+	</a>
+</div>
+<div class="dw-btn-wrap">
+	<button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Done</button>
+</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+        
+  
+    <div class="reveal">
+      <div class="slides">
+        <section data-background="#0747A6">
+  <div class="full">
+    <p><h1 class="color-white larger">Data Practices:</h1></p>
+    <p><h1 class="color-white smaller">1.4 Data Exploration</h1></p>
+  </div>
+  <div class="full">
+      <p class="color-white">[Use arrow keys to navigate, "s" to show speaker notes, and "f" for fullscreen.]</p>
+      <p class="color-white badge"><a href="?print-pdf">PDF Print</a></p> <p class="color-white badge"><a href="?print-pdf&showNotes=true">With Notes</a></p>
+  </div>
+  <aside class="notes">
+  Notes
+  </aside>
+</section>
+
+<section>
+    <div class="half">
+        <h1>Topics Covered</h1>
+    </div>
+    <div class="half white-background">
+        <ol>
+            <li>Establish / Refine Hypothesis</li>
+            <li>Queries for everyone</li>
+            <li>Data Sampling</li>
+            <li>Analysis Methods</li>
+            <li>Exploratory Visualization</li>
+            <li>Beyond Statistics</li>
+            <li>The are of feature engineering</li>
+        </ol>
+    </div>
+</section>
+
+<section>
+    <div class="full">
+        <h2>Establish / Refine Hypothesis</h2>
+        <ul>
+            <li>Your questions, and profiling should give you a good feel for the data</li>
+            <li>Now it's time to create a hypothesis to test (if you haven't already)</li>
+            <li>Don't be afraid to make bold claims, your hypothesis can (and almost certainly will) change</li>
+            <li>As you explore the data, be open to it creating new hypotheses</li>
+            <li>Feel free to test using informal (ex: data visualization) or formal (statistical tests/models) techniques to (in)validate and evolve quickly</li>
+        </ul>
+    </div>
+    <aside class="notes">
+    Data exploration also leads to the generation of new hypotheses. 
+    <br><br>
+    New hypotheses generated during exploratory data analysis may be tested using informal (data visualization) or formal (statistical tests or models) techniques.
+    </aside>
+</section>
+
+<section>
+  <div class="full">
+    <img class="no-shadow" src="/images/courses/1_1/techniques.png">
+    <h1>Queries for Everyone</h1>
+    <p>(Yes, even you "non-technical" folks in the back)</p>
+  </div>
+  <aside class="notes">
+  Notes
+  </aside>
+</section>
+
+<section>
+    <div class="full text-align-left">
+        <h2>What is a query?</h2>
+        <p>Just like it sounds, it is a question that you are asking your data source that returns (if you asked nicely enough) the data that you want, without all the rest of the clutter.</p>    
+        <p>If you are a beginner, we'll be starting with SQL. This Structured Query Language is the standard language for relational databases. So naturally there are a ton of variants and subtle differences to trip you up.</p>
+        <p>If SQL is old hat for you, you can try your hand at SPARQL as we go. This query language is for knowledge graphs and the semantic web. Welcome to the future! (wooshing sound)</p>
+    </div>
+    <aside class="notes">
+    Notes
+    </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>The Anatomy of a Query</h2>
+    </div>
+    <div class="half text-align-left">
+        <h4>SQL</h4>
+        <p>Dear Database, please give me all the <b>names</b> of people in my <b>address book</b>.</p>
+        <pre>SELECT <b>names</b> FROM <b>address_book;</b></pre>
+        <p>In alphabetical order?</p>
+        <pre>SELECT <b>names</b> FROM <b>address_book</b> <u>ORDER BY</u> names ASCENDING;</pre>
+        <p>How many are there?</p>
+        <pre>SELECT COUNT(<b>names</b>) FROM <b>address_book</b>;</pre>
+    </div>
+    <div class="half text-align-left">
+        <h4>SPARQL</h4>
+        <p>Dear Semantic Web, please give me all the <b>names</b> of people in my <b>address_book</b>.</p>
+        <pre>SELECT ?names FROM ?address_book</pre>
+        <p>In alphabetical order?</p>
+        <pre>SELECT ?names FROM ?address_book ORDER BY ASC(?names)</pre>
+        <p>How many are there?</p>
+        <pre>SELECT (count(distinct ?names) as ?count) 
+        FROM ?address_book</pre>
+    </div>
+    <aside class="notes">
+    Notes
+    </aside>
+</section>
+
+<section data-background="#0747A6">
+    <div class="half text-align-left">
+        <h2 class="color-white">Exercise 1: Playing with Queries</h2>
+        <ol>
+            <li class="color-white"><a target="_blank" style="color:yellow" href="https://data.world/shad/cookies">https://data.world/shad/cookies</a></li>
+            <li class="color-white">"Add to Project"</li>
+            <li class="color-white">"Create New Project" (Call it 'Data Exploration')</li>
+            <li class="color-white">Beginner/Intermediate: "+Add" -> SQL Query</li>
+            <li class="color-white">Advanced: "+Add" -> SPARQL Query</li>
+            <li class="color-white">Try:
+            <ul>
+                <li class="color-white">All data (SELECT * FROM cookies)</li>
+                <li class="color-white">First 5 responses <br/>(SELECT * FROM cookies ORDER BY timestamp LIMIT 5)</li>
+                <li class="color-white">How many rows are there?</li>
+                <li class="color-white">How many different kinds of cookies are there?</li>
+                <li class="color-white">How long was the survey open?</li>
+            </ul></li>
+            <li class="color-white"><a target="_blank" style="color:yellow" href="https://docs.data.world/documentation/sql/concepts/basic/intro.html">https://docs.data.world/documentation/sql/concepts/basic/intro.html</a></li>
+        </ol>
+    </div>
+    <div class="half">
+        <img class="no-shadow" src="/images/courses/1_4/exercise.png">
+    </div>
+    <aside class="notes">
+    Notes
+    </aside>
+</section>
+
+<section>
+  <div class="full">
+    <img class="no-shadow" src="/images/courses/1_1/techniques.png">
+    <h1>Data Sampling</h1>
+  </div>
+  <aside class="notes">
+  Notes
+  </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>What is Sampling</h2>
+        <p>A broad term applied to statistical analysis techniques used to capture a representative <b>subset</b> ("sample") of data points to identify patterns and allow study of the larger dataset ("population") without the overhead of oppressive amounts of data.</p>
+    </div>
+</section>
+
+<section>
+    <div class="full">
+        <h2>Types of Sampling</h2>
+    </div>
+    <div class="one-fifth">
+        <h4>Random</h4>
+        <img class="no-shadow" style="padding-top:20;padding-bottom:20" src="/images/courses/1_4/random-sampling.png">
+        <p>"Drawing Names from a Hat"</p>
+    </div>
+    <div class="one-fifth">
+        <h4>Systemic</h4>
+        <img class="no-shadow" style="padding-top:45;padding-bottom:45" src="/images/courses/1_4/systemic-sampling.png">
+        <p>"Count Off"</p>
+        <p>(list 1,2,3,4,1,2,3,4)</p>
+        <p>Select "all the 4s"</p>
+    </div>
+    <div class="one-fifth">
+        <h4>Convenience</h4>
+        <img class="no-shadow" src="/images/courses/1_4/question.png">
+        <p>"Take the first data I encounter"</p>
+        <p>Easiest and Worst</p>
+    </div>
+    <div class="one-fifth">
+        <h4>Cluster</h4>
+        <img class="no-shadow" style="padding-top:20;padding-bottom:20" src="/images/courses/1_4/cluster-sampling.png">
+        <p>"Group populations together" (often by geo)</p>
+        <p>Select some of these complete groups</p>
+    </div>
+    <div class="one-fifth">
+        <h4>Stratified</h4>
+        <img class="no-shadow" style="padding-top:15;padding-bottom:15" src="/images/courses/1_4/stratified-sampling.png">
+        <p>"Combining methods"</p>
+        <p>Divides population into groups ("strata") by some characteristic (ex: sex, race, etc)</p>
+        <p>A sample is taken from each group using Random, Systemic, or Convenience</p>
+    </div>
+</section>
+
+<section>
+  <div class="full">
+    <img class="no-shadow" src="/images/courses/1_1/techniques.png">
+    <h1>Analysis Methods</h1>
+  </div>
+  <aside class="notes">
+  Notes
+  </aside>
+</section>
+
+<section>
+    <div class="half text-align-left">
+        <h2>Univariate</h2>
+        <ul>
+            <li>Examines variables one at a time</li>
+            <li>Good for finding:
+            <ul>
+                <li>Counts</li>
+                <li>Distribution</li>
+                <li>Other simple analysis</li>
+            </ul></li>
+        </ul>
+    </div>
+    <div class="half">
+        <img class="no-shadow" src="/images/courses/1_4/univariate.png">
+    </div>
+    <aside class="notes">
+    Notes
+    </aside>
+</section>
+
+<section>
+    <div class="half">
+        <img class="no-shadow" src="/images/courses/1_4/bivariate.png">
+    </div>
+    <div class="half text-align-left">
+        <h2>Bivariate</h2>
+        <ul>
+            <li>Find the relationship between two variables</li>
+            <li>Look for relationship (or lack thereof) between variables</li>
+            <li>Numerical & Numerical
+            <ul>
+                <li>Visual -- Scatter plot</li>
+                <li>Math class! -- Linear correlation</li>
+            </ul></li>
+               <li>Categorical & Categorical
+            <ul>
+                <li>Visual -- Stacked Column / Combination  Charts</li>
+                <li>Math Class! -- Chi-square Test</li>
+            </ul></li>
+            <li>Categorical & Numerical
+            <ul>
+                <li>Visual -- Line Chat w/ Error Bars / Combination Chart</li>
+                <li>Math Class! -- Z-test / t-test / Analysis of Varience (ANOVA)</li>
+            </ul></li>
+        </ul>
+    </div>
+    <aside class="notes">
+    Notes
+    </aside>
+</section>
+
+<section>
+    <div class="half text-align-left">
+        <h2>Outliers and you!</h2>
+        <ul>
+            <li><h4>Detecting</h4>
+            <ul>
+                <li>Box plot</li>
+                <li>Histogram</li>
+                <li>Scatter plot</li>
+            </ul></li>
+            <li><h4>Removing</h4>
+            <ul>
+                <li>Deleting</li>
+                <li>Transforming / binning</li>
+                <li>Imputing</li>
+                <li>Separating</li>
+            </ul></li>
+        </ul>
+    </div>
+    <div class="half">
+        <img class="no-shadow" src="/images/courses/1_4/question.png">
+    </div>
+    <aside class="notes">
+    Notes
+    </aside>
+</section>
+
+<section>
+  <div class="full">
+    <img class="no-shadow" src="/images/courses/1_1/techniques.png">
+    <h1>Exploratory Visualization</h1>
+  </div>
+  <aside class="notes">
+  Notes
+  </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>What is Exploratory Viz?</h2>
+        <p><b>Exploratory visualization</b> is when a user has no set goal or outcome in mind. You use this technique when you don't know what is in the data and are seeking to understand the data better and uncover patterns in the overall data.</p>
+        <p>This is contrasted with <b>explanatory visualization</b> where you already know what is in the data and are seeking to tell that story to a specific audience. While the exploratory viz is done during this exploration phase, explanatory viz is done during the reporting phase and should be designed to highlight the specific story that you wish to tell.</p>
+    </div>
+    <aside class="notes">
+    Notes
+    </aside>
+</section>
+
+<section>
+    <div class="half text-align-left">
+        <h2>Exploratory Viz (High Level)</h2>
+        <ul>
+        <li><b>Process</b>
+        <ul>
+            <li>High level overview</li>
+            <li>Zoom and tweak</li>
+            <li>Extract detail</li>
+        </ul></li>
+        </ul>
+        <ul>
+        <li><b>Popular Techniques</b>
+        <ul>
+            <li>Bar / Line Graph</li>
+            <li>Scatter plot</li>
+            <li>Bubble chart</li>
+        </ul></li>
+        </ul>
+    </div>
+    <div class="half">
+        <img class="no-shadow" src="/images/courses/1_4/context.png">
+    </div>
+    <aside class="notes">
+    Notes
+    </aside>
+</section>
+
+<section data-background="#0747A6">
+    <div class="half text-align-left">
+        <h2 class="color-white">Exercise 2: Pretty Pictures!</h2>
+        <ol>
+            <li class="color-white">Create new dataset on data.world (Pretty Pictures!)</li>
+            <li class="color-white">Data: <a target="_blank" style="color:yellow" href="https://goo.gl/4yBGZz">https://goo.gl/4yBGZz</a></li>
+            <li class="color-white">"Download" button -> "Save to dataset or project"</li>
+            <li class="color-white">Search for "Pretty Pictures" dataset you created</li>
+            <li class="color-white">"Save" and "Open in a new tab"</li>
+            <li class="color-white">Using top right dropdown open in a visualization tool
+            <ul>
+                <li class="color-white">Chart Builder (included)</li>
+                <li class="color-white">Tableau Public (free download at https://public.tableau.com/en-us/s/ )</li>
+                <li class="color-white">Excel</li>
+            </ul></li>
+            <li class="color-white">Tell a story with the data!</li>
+        </ol>
+    </div>
+    <div class="half">
+        <img class="no-shadow" src="/images/courses/1_4/exercise.png">
+    </div>
+    <aside class="notes">
+    Notes
+    </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>Beyond Statistics</h2>
+        <p><i>"<b>Sta-tis-tics:</b> the only science that enables different experts using the same figures to draw different conclusions."</i></p>  
+        <p>--Evan Esar, prolific epigramologist</p>
+        <ul>
+            <li>Why summary stats shouldn't be the only thing you look at
+            <ul>
+                <li>Understand the progression of the data</li>
+                <li>Provenance is important!</li>
+                <li>The more you learn about stats, the more you can make them do your bidding (and trust them less)</li>
+            </ul></li>
+            <li>Do I really need rigorous statistical examination?
+            <ul>
+                <li>In a word, "no"</li>
+                <li>Most are capable of far deeper analysis that then give themselves credit for</li>
+                <li>Example: Pivot Tables</li>
+            </ul></li>
+        </ul>
+    </div>
+    <aside class="notes">
+    Notes
+    </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>Feature Engineering</h2>
+        <p><i>"Feature engineering is the science (and art) of extracting more information from existing data. You are not adding any new data here, but you are actually making the data you already have more useful.</i></p>
+        <p><i>For example, let's say you are trying to predict foot fall in a shopping mall based on dates. If you try and use the dates directly, you may not be able to extract meaningful insights from the data. This is because the foot fall is less affected by the day of the month than it is by the day of the week. Now this information about day of week is implicit in your data. You need to bring it out to make your model better."</i></p>
+        <p>(<a href="https://www.analyticsvidhya.com/blog/2016/01/guide-data-exploration/#four">https://www.analyticsvidhya.com/blog/2016/01/guide-data-exploration/#four</a>)</p>
+    </div>
+    <aside class="notes">
+    Notes
+    </aside>
+</section>
+
+<section data-background="#0747A6">
+    <div class="half text-align-left">
+        <h2 class="color-white">Exercise 3: Semantic Expansion</h2>
+        <p class="color-white">Dataset: <br/><a target="_blank" style="color:yellow" href="https://data.world/jryan/try-it-out-data-matching-sample-data">https://data.world/jryan/try-it-out-data-matching-sample-data</a></p>
+        <ol>
+            <li class="color-white">Click "add to project" button</li>
+            <li class="color-white">Create a new data project</li>
+            <li class="color-white">Notice that zip_code is already "matched"</li>
+            <li class="color-white">Click the dropdown on 'county_name' (green triangle indicates matchability)</li>
+            <li class="color-white">Select "Match this column"</li>
+            <li class="color-white">Add the matched semantic column</li>
+            <li class="color-white">Add additional columns that can be inferred from this semantic knowledge</li>
+            <li class="color-white"><b>Extra credit:</b> upload your own data and try it out. You can match on things like:
+            <ul>
+                <li class="color-white">Geo (ex: zip, coutry, county, province, state)</li>
+                <li class="color-white">ICD10 codes</li>
+                <li class="color-white">NAICS (North American Industry Classification System)</li>
+            </ul></li>
+        </ol>
+    </div>
+    <div class="half">
+        <img class="no-shadow" src="/images/courses/1_4/exercise.png">
+    </div>
+    <aside class="notes">
+    Notes
+    </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>Establish / Refine Hypothesis (redux)</h2>
+        <ul>
+            <li>Your questions, and profiling should give you a good feel for the data</li>
+            <li>Now it's time to create a hypothesis to test (if you haven't already)</li>
+            <li>Don't be afraid to make bold claims, your hypothesis can (and almost certainly will) change</li>
+            <li>As you explore the data, be open to it creating new hypotheses</li>
+            <li>Feel free to test using informal (ex: data visualization) or formal (statistical tests/models) techniques to (in)validate and evolve quickly</li>
+            <li>Once you cycle through some exploration it should naturally transition to full-blown analysis</li>
+        </ul>
+    </div>
+    <aside class="notes">
+    Notes
+    </aside>
+</section>
+
+<section data-background="#0747A6">
+  <div class="full">
+    <h2 class="larger color-white">Want to run a workshop like this at your company?</h2>
+    <p><a class="color-white" href="mailto:community@data.world"><u>community@data.world</u></a></p>
+    <br><br>
+    <h4 class="color-white">Don't forget to sign the values and principles! <a style="color: #cc0000" href="/manifesto">https://datapractices.org/manifesto</a></h4>
+  </div>
+</section>
+      </div>
+    </div>
+  
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="/scripts/libs/clipboard.min.js"></script>
+        <script type="text/javascript" src="/scripts/libs/jquery.validate.min.js"></script>
+
+        <script src="/scripts/main.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113597498-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-113597498-1');
+        </script>
+        
+  <script src="/scripts/reveal.js"></script>
+  <script src="/scripts/libs/head.js"></script>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? "/reveal/print/pdf.css" : "/reveal/print/paper.css";
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+    
+    Reveal.initialize({
+      dependencies: [
+        { src: "/reveal/plugin/notes/notes.js", async: true }
+      ]
+    });
+    Reveal.configure({ slideNumber: true });
+  </script>
+
+    </body>
+</html>

@@ -1,0 +1,949 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="/favicon.ico">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="theme-color" content="#00B8D9">
+        
+
+        <title>1.1 Kicking off a data project</title>
+        <meta property="og:title" content="1.1 Kicking off a data project" />
+        <meta property="og:description" content="Effective data collaboration takes more than giving everyone access. Inclusion, flexibility, setting, and prioritization are also keys to fruitful data work." />
+        
+        
+  <link rel="stylesheet" href="/reveal/reveal.css">
+  <link rel="stylesheet" href="/reveal/theme/white.css">
+
+        <link rel="stylesheet" href="/main.css">
+
+    </head>
+    <body class="slideware">
+        <header class="page-header ">
+    
+        
+          <a href="/courseware" class="back-link">
+              <img
+                  srcset="/images/back@1x.png 1x, /images/back@2x.png 2x, /images/back@3x.png 3x"
+                  src="/images/back@1x.png"
+                  alt="Go Back" />
+              Back to courseware
+          </a>
+        
+    
+    
+        <div class="header-action-wrap js-header-translucent"  data-toggle="modal" data-target="#subscribeModal">
+            <button class="btn outline-btn">Subscribe</button>
+        </div>
+    
+</header>
+
+
+    <!-- Subscribe for updates Modal -->
+    <!-- Subscribe for updates Modal -->
+<div class="modal fade dw-modal" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<div class="js-modal-wrapper">
+					<div class="js-modal-form">
+						<h1>Subscribe for updates</h1>
+<form class="js-google-form" action="https://docs.google.com/a/data.world/forms/d/1wVn1Yr66ltPypBR2lPcOqYMFLUbKTzd9LMyWj3xW0xs/formResponse">
+	<div class="form-group js-field-wrap">
+		<input type="text" class="form-control" id="name" name="entry.1962848789" placeholder="Full name (required)" required>
+	</div>
+	<div class="form-group js-field-wrap">
+		<input type="email" class="form-control" id="email" name="entry.1993039649" placeholder="Email address (required)" required>
+	</div>
+	<div class="custom-checkbox-wrap">
+		<label class="custom-control custom-checkbox">
+			<input type="checkbox" class="custom-control-input" name="entry.574863021" value="Subscribe">
+			<span class="custom-control-label"></span>
+			<span class="custom-control-description">Updates for Community Principles</span>
+		</label>
+		<label class="custom-control custom-checkbox">
+			<input type="checkbox" class="custom-control-input" name="entry.1685198103" value="Subscribe">
+			<span class="custom-control-label"></span>
+			<span class="custom-control-description">Updates for Manifesto for Data Practices</span>
+		</label>
+	</div>
+	<button type="submit" class="btn btn-primary js-modal-submit">Subscribe</button>
+</form>
+
+					</div>
+					<div class="js-modal-success" style="display:none">
+						<!-- Subscribe success for updates Modal -->
+<h1>You’re subscribed.</h1>
+<p>Share and invite others</p>
+<div class="social-icon-wrap">
+	<a class="social-link js-copy" data-clipboard-text="https://datapractices.org">
+		<img src="/images/social-link@1x.png" alt="data.world"
+         srcset="/images/social-link@1x.png 1x, /images/social-link@2x.png 2x, /images/social-link@3x.png 3x" />
+	</a>
+	<a href="#" class="social-link facebook">
+		<img src="/images/social-facebook@1x.png" alt="data.world"
+         srcset="/images/social-facebook@1x.png 1x, /images/social-facebook@2x.png 2x, /images/social-facebook@3x.png 3x" />
+	</a>
+	<a href="#" class="social-link twitter">
+		<img src="/images/social-twitter@1x.png" alt="data.world"
+         srcset="/images/social-twitter@1x.png 1x, /images/social-twitter@2x.png 2x, /images/social-twitter@3x.png 3x" />
+	</a>
+	<a href="http://www.linkedin.com/shareArticle?mini=true&url=https://datapractices.org&title=The%20Data%20Practices%20Manifesto%20and%20Community%20Principles%20for%20Ethical%20Data%20Sharing&source=datapractices.org" target="_blank" class="social-link linkedin">
+	<img src="/images/social-linkedin@1x.png" alt="data.world"
+         srcset="/images/social-linkedin@1x.png 1x, /images/social-linkedin@2x.png 2x, /images/social-linkedin@3x.png 3x" />
+	</a>
+</div>
+<div class="dw-btn-wrap">
+	<button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Done</button>
+</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+        
+  
+    <div class="reveal">
+      <div class="slides">
+        <section data-background="#0747A6">
+  <div class="full">
+    <p><h1 class="color-white">Data Practices:</h1></p>
+    <p><h2 class="color-white">1.1 Kicking off a data project</h1></p>
+  </div>
+  <div class="full">
+      <p class="color-white">[Use arrow keys to navigate, "s" to show speaker notes, and "f" for fullscreen.]</p>
+      <p class="color-white badge"><a href="?print-pdf">PDF Print</a></p> <p class="color-white badge"><a href="?print-pdf&showNotes=true">With Notes</a></p>
+  </div>
+  <aside class="notes">
+        Notes
+    </aside>
+</section>
+
+<section>
+  <div class="one-fourth">
+    <img src="/images/courses/1_1/christine.png"/>
+    <p class="bold">Christine Doig</p>
+    <p>Data scientist</p>
+    <p>Netflix</p>
+  </div>
+  <div class="one-fourth">
+    <img src="/images/courses/1_1/ian.png"/>
+    <p class="bold">Ian Greenleigh</p>
+    <p>Marketer</p>
+    <p>data.world</p>
+  </div>
+  <div class="one-fourth">
+    <img src="/images/courses/1_1/sharon.png"/>
+    <p class="bold">Sharon Brener</p>
+    <p>Product designer</p>
+    <p>data.world</p>
+  </div>
+  <div class="one-fourth">
+    <img src="/images/courses/1_1/patrick.png"/>
+    <p class="bold">Patrick McGarry</p>
+    <p>Community builder</p>
+    <p>data.world</p>
+  </div>
+  <div class="full">
+    <p class="smaller light">Special thanks to Alexander Egorenkov. Author of “How to ask questions data science can solve” medium.com/@codefluently</p>
+  </div>
+</section>
+
+<section>
+    <div class="one-third">
+      <img class="no-shadow" src="/images/courses/1_1/guiding.png"/>
+      <h2>Guiding Vision</h4>
+      <p>Manifesto for Data Practices</p>
+    </div>
+    <div class="one-third">
+      <img class="no-shadow" src="/images/courses/1_1/techniques.png"/>
+      <h2>Techniques</h4>
+      <p>Data Teamwork Exercises</p>
+    </div>
+    <div class="one-third">
+      <img class="no-shadow" src="/images/courses/1_1/tools.png"/>
+      <h2>Tools</h4>
+      <p>Your data toolchain + data.world </p>
+    </div>
+</section>
+
+<section>
+  <div class="full">
+    <img class="no-shadow one-quarter-image-size" src="/images/courses/1_1/guiding.png"/>
+    <h2 class="larger">Values and Princples for Data Practices</h2>
+    <p>What set of values and principles describes the most effective, ethical, and modern approach to data teamwork?</p>
+  </div>
+</section>
+
+<section class="align-middle">
+    <div class="half background-color-dark">
+      <img src="/images/courses/1_1/manifesto-browser.png"/>
+    </div>
+    <div class="half text-align-left">
+      <h2>4 core values</h2>
+      <h2>12 principles</h2>
+      <h2>39 authors</h2>
+      <h2>1400+ signatories</h2>
+      <h2><a href="http://datapractices.org/manifesto">datapractices.org/manifesto</a></h2>
+    </div>
+</section>
+
+<section>
+  <div class="full">
+    <h2 class="larger">Four core values</h2>
+    <p><a href="http://datapractices.org/manifesto">datapractices.org/manifesto</a></p>
+  </div>
+
+  <div class="one-fourth">
+    <img class="no-shadow one-quarter-image-size" src="/images/courses/1_1/heart-hand.png"/>
+    <p class="larger bold">Inclusion</p>
+    <p class="smaller">Maximize diversity, connectivity, and accessibility, amoung data sources, colaboration, and outputs.</p>
+  </div>
+
+  <div class="one-fourth">
+    <img class="one-quarter-image-size no-shadow" src="/images/courses/1_1/beaker-icon.png"/>
+    <p class="larger bold">Experimentation</p>
+    <p class="smaller">Ephasise continuously iterative testing and data analysis.</p>
+  </div>
+
+  <div class="one-fourth">
+    <img class="one-quarter-image-size no-shadow" src="/images/courses/1_1/clipboard-icon.png"/>
+    <p class="larger bold">Experimentation</p>
+    <p class="smaller">Ephasise continuously iterative testing and data analysis.</p>
+  </div>
+
+  <div class="one-fourth">
+    <img class="one-quarter-image-size no-shadow" src="/images/courses/1_1/graph-icon.png"/>
+    <p class="larger bold">Experimentation</p>
+    <p class="smaller">Ephasise continuously iterative testing and data analysis.</p>
+  </div>
+</section>
+
+<section>
+  <div class="full">
+    <h2 class="larger">Supported by leaders of the data community</h2>
+  </div>
+  <div class="half text-align-left">
+    <p class="bold">39 authors, including:</p>
+    <ul>
+      <li><b>Eric Colson</b>, Chief Algorithms Officer, StitchFix</li>
+      <li><b>Amy Gershkoff</b>, former Chief Data Scientist, Ancestry.com</li>
+      <li><b>Fernando Perez</b>, creator of iPython, Assistant Professor, Statistics, UC Berkeley</li>
+      <li><b>Andrew Therriault</b>, Chief Data Officer, City of Boston </li>
+      <li><b>Therese Couture</b>, Human Trafficking Data Analyst, Polaris</li>
+      <li><b>Wes McKinney</b>, BDFL, Pandas</li>
+    </ul>
+  </div>
+  <div class="half text-align-left">
+    <p class="bold">1,300+ signatories, including:</p>
+    <ul>
+      <li><b>DJ Patil</b>, former Chief Data Scientist of the United States</li>
+      <li><b>Monica Rogati</b>, former VP of Data Science, Jawbone</li>
+      <li><b>Kirk Borne</b>, Principal Data Scientist, Booz Allen Hamilton</li>
+      <li><b>Tricia Wang</b>, Fellow, Harvard Berkman Center </li>
+      <li><b>Jonathan Albright</b>, Research Director, Tow Center for Digital Journalism</li>
+      <li><b>Gregory Piatetsky</b>, founder, KDnuggets.com</li>
+    </ul>
+  </div>
+  <aside class="notes">
+    Highlights...
+    Data science tool creators, like Wes McKinney of Pandas fame and Fernando Perez, the creator of Jupyter Notebooks
+    Industry leaders like StitchFix, Ancestry.com
+    Civic leaders like Boston’s CDO and DJ Patil
+    </aside>
+</section>
+
+<section>
+  <div class="full">
+    <img class="no-shadow" src="/images/courses/1_1/browsers.png"/>
+  </div>
+  <div class="full">
+    <h2 class="larger">Now what?</h2>
+  </div>
+  <aside class="notes">
+    Values, principles, manifestos, signatures, tweets, press coverage--these are all helpful and great. 
+    If you sign it, feel good about it for few hours, share it, and never think about it again, that’s not what we want. 
+    </aside>
+</section>
+
+<section>
+    <div class="one-third muted">
+      <img class="no-shadow" src="/images/courses/1_1/guiding.png"/>
+      <h2>Guiding Vision</h4>
+      <p>Manifesto for Data Practices</p>
+    </div>
+    <div class="one-third">
+      <img class="no-shadow" src="/images/courses/1_1/techniques.png"/>
+      <h2>Techniques</h4>
+      <p>Data Teamwork Exercises</p>
+    </div>
+    <div class="one-third muted">
+      <img class="no-shadow" src="/images/courses/1_1/tools.png"/>
+      <h2>Tools</h4>
+      <p>Your data toolchain + data.world </p>
+    </div>
+    <aside class="notes">
+    Every time that happens it’s a missed opportunity. We know that in order for the manifesto to change anything, we need to provide practical tools for people to internalize it within their organizations. We need to help you live the manifesto.
+    </aside>
+</section>
+
+<section>
+  <div class="full">
+    <img class="no-shadow one-quarter-image-size" src="/images/courses/1_1/techniques.png"/>
+    <h2 class="larger">Data Teamwork Exercises</h2>
+    <p>How can we bring Design Thinking to data teams?</p>
+    <p>How can cross-functional teams work together to create better data projects and practices?</p>
+  </div>
+  <aside class="notes">
+  Our main focus today is the exercises, or techniques that make the values and principles in the Manifesto tangible and applicable to day-to-day data teamwork.
+  </aside>
+</section>
+
+<section class="align-middle">
+  <div class="one-fifth">
+    <img class="no-shadow" src="/images/courses/1_1/brain-cloud.png"/>
+    <h2>Design thinking dicipline</h2>
+  </div>
+  <div class="one-fifth">
+    <h1 class="larger bold">+</h1>
+  </div>
+  <div class="one-fifth">
+    <img class="no-shadow" src="/images/courses/1_1/tools-icon.png"/>
+    <h2>Data project workflow</h2>
+  </div>
+  <div class="one-fifth">
+    <h1 class="larger bold">=</h1>
+  </div>
+  <div class="one-fifth">
+    <img class="no-shadow" src="/images/courses/1_1/trophy-icon.png"/>
+    <h2>Better data teamwork <span class="thin">(profit)</span></h2>
+  </div>
+  <aside class="notes">
+  At a high level, these exercises are a combination of traditional design thinking techniques and learnings from studying how people collaborate on data projects. 
+  We believe there’s a lot to be gained by bringing cross-functional teams together.
+  </aside>
+</section>
+
+<section>
+  <div class="one-third">
+    <img class="no-shadow" src="/images/courses/1_1/timer.png"/>
+    <h2>Design Sprints</h2>
+    <p>How can we bring Design Thinking to data teams?</p>
+    <p><a href="http://gv.com/sprint">gv.com/sprint</a></p>
+  </div>
+  <div class="one-third">
+    <img class="no-shadow" src="/images/courses/1_1/field-guide.png"/>
+    <h2>IBM Design Thinking Field Guide</h2>
+    <p>How can we bring Design Thinking to data teams?</p>
+    <p><a href="http://ibm.com/design/thinking">ibm.com/design/thinking</a></p>
+  </div>
+  <div class="one-third">
+    <img class="no-shadow" src="/images/courses/1_1/design-cards.png"/>
+    <h2>IDEO Method Cards</h2>
+    <p>How can we bring Design Thinking to data teams?</p>
+    <p><a href="http://ideo.com/post/method-cards">ideo.com/post/method-cards</a></p>
+  </div>
+  <aside class="notes">
+  The set of exercises we’re looking at today was inspired by the design world. Great design has a tradition of organized thinking, stakeholder empathy, and cross-functional collaboration. 
+  We were inspired by these frameworks and others.
+  </aside>
+</section>
+
+<section data-transition="fade-out">
+  <div class="full">
+    <h2 class="larger">Data project workflow</h2>
+    <h3>based on data.world user research</h3>
+    <img class="no-shadow" src="/images/courses/1_1/project-timeline-2.png"/>
+  </div>
+  <div class="one-seventh text-align-left">
+    <p class="bold smaller uppercase">Kickoff</p>
+    <p class="smaller">Start a new project with a question, problem, or dataset.</p>
+  </div>
+  <div class="one-seventh text-align-left">
+    <p class="bold smaller uppercase">Source</p>
+    <p class="smaller">Gather data sources, documentation, research, and team.</p>
+  </div>
+  <div class="one-seventh text-align-left">
+    <p class="bold smaller uppercase">Profile</p>
+    <p class="smaller">Define the data’s shape, features, and any limitations.</p>
+  </div>
+  <div class="one-seventh text-align-left">
+    <p class="bold smaller uppercase">Prepare</p>
+    <p class="smaller">Clean, munge, and wrangle the data into a usable form.</p>
+  </div>
+  <div class="one-seventh text-align-left">
+    <p class="bold smaller uppercase">Explore</p>
+    <p class="smaller">Develop a deeper understanding by querying, visualizing.</p>
+  </div>
+  <div class="one-seventh text-align-left">
+    <p class="bold smaller uppercase">Analyze</p>
+    <p class="smaller">Answer questions and build models in a reproducible way.</p>
+  </div>
+  <div class="one-seventh text-align-left">
+    <p class="bold smaller uppercase">Deliver</p>
+    <p class="smaller">Share output with stakeholders, report discoveries.</p>
+  </div>
+  <aside class="notes">
+  The second piece of the puzzle is a framework we’ve developed internally at data.world after speaking to dozens of data practitioners, from novices to experts. 
+  Through our research, we’ve learned that there data projects can take many forms, but they almost always go through all of these steps (even if just briefly).
+  </aside>
+</section>
+
+<section data-transition="fade-in">
+  <div class="full">
+    <h2 class="larger">Data project workflow</h2>
+    <h3>based on data.world user research</h3>
+    <img class="no-shadow" src="/images/courses/1_1/project-timeline-2.png"/>
+  </div>
+  <div class="one-seventh text-align-left highlight blue">
+    <p class="bold smaller uppercase">Kickoff</p>
+    <p class="smaller">Start a new project with a question, problem, or dataset.</p>
+  </div>
+  <div class="one-seventh text-align-left">
+    <p class="bold smaller uppercase">Source</p>
+    <p class="smaller">Gather data sources, documentation, research, and team.</p>
+  </div>
+  <div class="one-seventh text-align-left">
+    <p class="bold smaller uppercase">Profile</p>
+    <p class="smaller">Define the data’s shape, features, and any limitations.</p>
+  </div>
+  <div class="one-seventh text-align-left">
+    <p class="bold smaller uppercase">Prepare</p>
+    <p class="smaller">Clean, munge, and wrangle the data into a usable form.</p>
+  </div>
+  <div class="one-seventh text-align-left">
+    <p class="bold smaller uppercase">Explore</p>
+    <p class="smaller">Develop a deeper understanding by querying, visualizing.</p>
+  </div>
+  <div class="one-seventh text-align-left">
+    <p class="bold smaller uppercase">Analyze</p>
+    <p class="smaller">Answer questions and build models in a reproducible way.</p>
+  </div>
+  <div class="one-seventh text-align-left">
+    <p class="bold smaller uppercase">Deliver</p>
+    <p class="smaller">Share output with stakeholders, report discoveries.</p>
+  </div>
+  <aside class="notes">
+    Today’s exercises only touch on the kickoff stage.
+    While that’s only 1 out of the 7 stages, it’s arguably the most critical. Every other stage is strengthened when you kick off the project with the right stakeholders, and the right questions and goals. 
+    This is also the stage that makes the most sense for design to get involved in.
+    Disclaimer that in real life, you want your data team to be in the kickoff with you from the start so the process is collaborative from the start instead of a throw-it-over-the-fence situation. 
+    </aside>
+</section>
+
+<section>
+  <div class="full">
+    <h2 class="larger">Kickoff exercises</h2>
+    <p>Start a project with a good question.</p>
+    <p>Consider stakeholders’ points of view.</p>
+  </div>
+
+  <div class="one-fourth">
+    <img class="no-shadow one-quarter-image-size" src="/images/courses/1_1/heart-hand.png"/>
+    <p class="larger bold">Inclusion</p>
+    <p class="smaller">Maximize diversity, connectivity, and accessibility, amoung data sources, colaboration, and outputs.</p>
+  </div>
+
+  <div class="one-fourth muted">
+    <img class="one-quarter-image-size no-shadow" src="/images/courses/1_1/beaker-icon.png"/>
+    <p class="larger bold">Experimentation</p>
+    <p class="smaller">Ephasise continuously iterative testing and data analysis.</p>
+  </div>
+
+  <div class="one-fourth muted">
+    <img class="one-quarter-image-size no-shadow" src="/images/courses/1_1/clipboard-icon.png"/>
+    <p class="larger bold">Experimentation</p>
+    <p class="smaller">Ephasise continuously iterative testing and data analysis.</p>
+  </div>
+
+  <div class="one-fourth">
+    <img class="one-quarter-image-size no-shadow" src="/images/courses/1_1/graph-icon.png"/>
+    <p class="larger bold">Experimentation</p>
+    <p class="smaller">Ephasise continuously iterative testing and data analysis.</p>
+  </div>
+  <aside class="notes">
+    A callback to the manifesto, where it all started:
+    The kickoff stage draws from the values of Inclusion and Impact, in particular. In these exercises you’ll be considering other stakeholders to clarify your questions and objectives and identify approaches to meet their needs. 
+  </aside>
+</section>
+
+<section data-background="#0747A6">
+  <div class="full">
+    <h3 class="color-white muted uppercase larger">Exercise</h3>
+    <h1 class="color-white smaller">Divide up into teams of 5.</h1>
+    <p class="color-white">Nominate a team lead.</p>
+    <p class="color-white">Think about each exercise through a particular point of view (data analyst, sales/marketing lead, product owner, etc.)</p>
+  </div>
+  <aside class="notes">
+    Team lead: 
+    Make sure everyone gets a chance to speak
+    You’ll be presenting at the end.
+    You are the team’s time cop.
+    --
+    This is inclusion in action.
+    When you do this at your own company with a real team working on a real thing, you want to make sure a diverse set of actual stakeholders are involved (not make up roles to play).
+    </aside>
+</section>
+
+<section data-background="#0747A6">
+  <div style="background-color:purple" class="half box-shadow xlarge-padding">
+    <h2 class="larger color-white">Diverge</h2>
+    <p class="color-white">Create options by brainstorming individually</p>
+  </div>
+  <div style="background-color:green" class="half box-shadow xlarge-padding">
+    <h2 class="larger color-white">Converge</h2>
+    <p class="color-white">Make decisions by discussing as a group</p>
+  </div>
+  <aside class="notes">
+      These exercises are empowered by divergent thinking and convergent thinking. 
+    --
+    In these exercises, you’ll use divergent thinking during the individual sections.
+    Divergence helps you create choices. 
+    --
+    You’ll use convergent thinking in the group sections.
+    Convergence helps you actually make choices.  
+    --
+    Let’s break up into groups. 
+    </aside>
+</section>
+
+<section data-background="#0747A6">
+  <div class="full">
+    <h2 class="larger color-white">You work for a one year old startup that has built an on-demand childcare services platform.</h2>
+    <p class="color-white">The board has asked your team to <u>double revenue</u> in the next 12 months.</p>
+    <p class="color-white">Where do you start?</p>
+  </div>
+</section>
+
+<section data-background="#0747A6">
+  <div class="full">
+    <h2 class="larger color-white">Exercise 1: Break down your objective.</h2>
+    <p class="color-white">Write down ideas and questions that, if explored or answered, could help you meet your objective.</p>
+    <p class="color-white">Frame questions as:“How might we…[achieve this goal]?”</p>
+  </div>
+</section>
+
+<section>
+  <div class="full">
+    <h2 class="">How might we double revenue in the next 12 months?</h2>
+    <p>Write down as many sub-questions as you can, one per post-it.</p>
+    <img class="no-shadow" src="/images/courses/1_1/stickies.png"/>
+    <p style="background-color:purple" class="badge color-white">5 minute exercise</p>
+  </div>
+    <aside class="notes">
+    Starting on your own, write down as many questions as you can in 5 minutes, one per post-it note. 
+    --
+    We’re encouraging quantity here because these are just starting points. It’s better to have many choices to refine and select from than a small number that fail to cover a wide enough range of possibilities. 
+    --
+    Try to frame questions as “how might we…” but don’t let it constrain you too much.
+    </aside>
+</section>
+
+<section>
+  <div class="full">
+    <h2 class="">Draw a horizontal line. Label the ends (low, high) and the midpoint.Place your post-its according to their impact level, clustering as you go.</h2>
+    <p>Write down as many sub-questions as you can, one per post-it.</p>
+    <img class="no-shadow" src="/images/courses/1_1/stickies-impact.png"/>
+    <p style="background-color:green" class="badge color-white">10 minute exercise</p>
+  </div>
+  <aside class="notes">
+    As a group, you’ll decide how high or low impact each idea is – how much will it move the needle on doubling revenue?
+    --
+    Draw a line, label it.
+    --
+    As a group, share your questions and decide on their impact level. 
+    You may have overlapping ideas, just cluster them together for now.
+    --
+    In this example, we placed “How might we get more reviews in the app store” in the LOW IMPACT section because the path from “more reviews” to “doubling revenue in the next 12 months” is much less direct and reliable than the other questions.
+    </aside>
+</section>
+
+<section data-background="#0747A6">
+  <div class="full">
+    <h2 class="larger color-white">Exercise 2: Consider your stakeholders.</h2>
+    <p class="color-white">Who will be affected by each question and motivated to act by its answer? Sales? Marketing? New users.</p>
+    <p class="color-white">ap only the highest <u>impact questions</u> to a <u>key stakeholder</u>.</p>
+  </div>
+</section>
+
+<section>
+  <div class="full">
+    <h2 class="">Map your <u>three</u> most impactful questions to their key stakeholder.</h2>
+    <p>Write down a few things each stakeholder cares about.</p>
+  </div>
+  <div class="half text-align-left">
+    <div class="half">
+      <h2>Marketing</h2>
+      <p>Cares about:</p>
+      <ul>
+        <li>Retention</li>
+        <li>Marketing mix</li>
+        <li>Proving value of efforts</li>
+      </ul>
+    </div>
+    <div class="half">
+      <img class="no-shadow" src="/images/courses/1_1/woman-icon.png"/>
+    </div>
+    <div class="full">
+      <img class="no-shadow half-img-size" src="/images/courses/1_1/stickies-how-might.png"/>
+    </div>
+  </div>
+  <div class="half text-align-left">
+    <div class="half">
+      <h2>Sales</h2>
+      <p>Cares about:</p>
+      <ul>
+        <li>Healthy sales pipeline</li>
+        <li>Increasing revenue</li>
+        <li>Number of touches to purchase</li>
+      </ul>
+    </div>
+    <div class="half">
+      <img class="no-shadow" src="/images/courses/1_1/man-glasses-icon.png"/>
+    </div>
+    <div class="full">
+      <img class="no-shadow one-third-img-size" src="/images/courses/1_1/avg-order-value.png"/>
+    </div>
+  </div>
+  <div class="full">
+      <p style="background-color:green" class="badge color-white">10 minute exercise</p>
+  </div>
+  <aside class="notes">
+    Discard your low impact questions and focus on the top [N, where N is the number of people in the group].
+    --
+    For this group exercise, list the stakeholders who would be impacted the most by pursuing those HIGH IMPACT ideas and questions. 
+    --
+    Multiple questions might fall under the same stakeholder, that’s fine.
+    </aside>
+</section>
+
+<section data-background="#0747A6">
+  <div class="full">
+    <h2 class="larger color-white">Exercise 3: Refine your questions.</h2>
+    <p class="color-white">With your primary stakeholder in mind, clarify any ambiguities in each high impact question.</p>
+  </div>
+  <aside class="notes">
+    Next, we’re going to break from the group and distill the HIGH IMPACT post-its as much as possible. This is important because having shared definitions and clear questions reduces friction and back-and-forth between stakeholders, increases the number of stakeholders who can benefit and contribute to the output, and aligns result to expectation. 
+    --
+    When we did this workshop at South By Southwest, Christine shared a story about working with a client who kept using the acronym SQL in a way that didn’t make sense to her. Turns out, she was thinking of the query language SQL, and the client was talking about Sales Qualified Leads. And a colleague of ours came from a company that had 7 competing definitions of the word “Enterprise;” this caused major problems for internal communication and in other areas. 
+    </aside>
+</section>
+
+<section>
+  <h2 class="">As a group, discuss your clarified questions and refine further.</h2>
+  <div class="one-third">
+    <h2>Original</h2>
+  </div>
+  <div class="one-third">
+    <h2>Refined</h2>
+  </div>
+  <div class="one-third">
+    <h2>Even clearer</h2>
+  </div>
+  <img class="no-shadow" src="/images/courses/1_1/more-stickies.png"/>
+  <div class="one-third text-align-left">
+    <p class="bold">Nebulous! perform in what sense?</p>
+  </div>
+  <div class="one-third">
+    <p class="bold">Clearer, but over what time period?</p>
+    <p>All-time data is not helpful</p>
+    <p class="smaller">CPA fluctuation</p>
+    <p class="smaller">Seasonality</p>
+    <p class="smaller">Format changes</p>
+  </div>
+  <div class="one-third">
+    <p class="bold uppercase">Winner</p>
+  </div>
+  <aside class="notes">
+   In this example, we start with the question “How might we determine which ad channels perform best?” “Perform” is nebulous. So we change it to Cost Per Acquisition, because it’s the primary way our fictional company measures ad performance and it’s calculated consistently. But even now we have an issue because it’s not really helpful to know what ad channels have the best CPAs for all time--things change. In the final version, we choose a timeframe that matches the time we have to meet our objective. We now have a question to which we can provide a useful, unambiguous answer, powered by readily available data.
+    --
+    As a group, review each question and see if you can refine even further.
+    Is there a way to combine into a single, even clearer version? Are there really two questions competing for attention? Remove as much ambiguity as possible for every question.
+    </aside>
+</section>
+
+<section>
+  <div class="half text-align-left">
+    <h2 class="larger">Refine your top 3 questions by asking as a group:</h2>
+    <p>Can I imagine any part of this idea or question being misinterpreted by another stakeholder? </p>
+    <p>Have I <u>defined</u> all ambiguous terms? </p>
+    <p>Am I being <u>concise?</u> </p>
+    <p>Is this question really <u>multiple questions?</u></p>
+    <p>Is the <u>intent</u> of my question clear?</p>
+    <p>Is this a question that can be <u>answered with available data</u>? </p>
+  </div>
+  <div class="half">
+    <img class="no-shadow" src="/images/courses/1_1/initial-question.png"/>
+  </div>
+  <div class="full">
+    <p style="background-color:green" class="badge color-white">10 minute exercise</p>
+  </div>
+  <aside class="notes">
+    Here are some prompts to guide your clarification. Imagine how it could be misinterpreted. Be militant about eliminating ambiguous language. Remove unnecessary words. Make sure your intent shines through. 
+    --
+    Spend 5 minutes doing this with one question, rewriting each progressively-clearer version on a new post-it. Stack clearer questions on top of the original.
+    </aside>
+</section>
+
+<section class="align-middle" data-background="#f2f2f2">
+  <div class="half text-align-left">
+    <h2 class="">You should have a stack of clear, high impact questions that are relevant to your key stakeholder and your overall objective.</h2>
+    <p>We’re almost ready to kick off a productive data project, we just need a vision of what our end result should look like.</p>
+  </div>
+  <div class="half white-background box-shadow xlarge-padding">
+    <h2 class="thin">How might we double revenue in the next 12 months?</h2>
+    <div class="half text-align-left">
+      <h2>Marketing</h2>
+      <p>Cares about:</p>
+      <ul>
+        <li>Retention</li>
+        <li>Marketing mix</li>
+        <li>Proving value of efforts</li>
+      </ul>
+    </div>
+    <div class="half">
+      <img class="no-shadow" src="/images/courses/1_1/woman-icon.png"/>
+    </div>
+    <div class="full">
+      <img class="no-shadow half-img-size" src="/images/courses/1_1/channel-stickies.png"/>
+    </div>
+  </div>
+  <aside class="notes">
+    You now have a stack of clear, high-impact questions that are both relevant to your key stakeholder and your overall objective, and that can hopefully be answered by available data.
+    --
+    We’re just about ready to source the data to answer our questions, but first we’re going to brainstorm the best ways to communicate new knowledge in useful ways. 
+    </aside>
+</section>
+
+<section data-background="#0747A6">
+  <div class="full">
+    <h2 class="larger color-white">Exercise 4: Draw the solution.</h2>
+    <p class="color-white">Now that you’ve refined your questions with your primary stakeholder in mind, what’s the best way to visualize* answers and output with them.</p>
+  </div>
+      <aside class="notes">
+      As designers, this should be a pretty easy exercise. Using what we know about our stakeholders and their goals, we’ll sketch different ways to represent the data individually and then share with our groups.
+    </aside>
+</section>
+
+<section>
+  <div class="full">
+    <h2 class="">Express results however you want.</h2>
+    <img class="no-shadow" src="/images/courses/1_1/quadrant.png"/>
+  </div>
+  <aside class="notes">
+    This part is individual. Divide a sheet of paper into four sections and draw a different solution in each quadrant. You’re not actually doing the analysis--just thinking about how to represent the answer to the question. 
+    --
+    Don’t spend more than 30 seconds on each square. Start a new page for each HIGH IMPACT idea or question, then move on to the next stakeholder. 
+    --
+    Example: 
+    --
+    From the previous exercise, we think this stakeholder really cares about retention. So we’re going to sketch or write out 4 different ways to convey how pursuing the ad spend idea will affect retention. 
+    --
+    So in one square you see a chart that projects churn rate over time, and in the top right I wrote out the predicted impact in a straightforward way. The two other squares are just placeholders since this is just an example.
+    </aside>
+</section>
+
+<section>
+  <div class="half text-align-left">
+    <h2 class="">Brainstorm how best to communicate the results.</h2>
+    <p>What’s the <u>best medium</u> for communicating with this audience?</p>
+    <p>Is the result best conveyed as a chart? A single number? A new process? A story? </p>
+    <p>What <u>level of detail</u> do they want/need? How <u>technical</u> is your audience? How busy?</p>
+    <p>What’s the single <u>most important metric</u>? How do we <u>define success</u> (and failure)?</p>
+    <p>What <u>comparisons</u> make sense?</p>
+    <p>Do you need to see changes <u>over time</u>?</p>
+  </div>
+  <div class="half">
+    <img class="no-shadow" src="/images/courses/1_1/quadrant-only.png"/>
+  </div>
+  <div class="full">
+    <p style="background-color:purple" class="badge color-white">5 minute exercise</p>
+  </div>
+  <aside class="notes">
+    This part is individual. Divide a sheet of paper into four sections and draw a different solution in each quadrant. You’re not actually doing the analysis--just thinking about how to represent the answer to the question. 
+    --
+    Don’t spend more than 30 seconds on each square. Start a new page for each HIGH IMPACT idea or question, then move on to the next stakeholder. 
+    --
+    Example: 
+    From the previous exercise, we think this stakeholder really cares about retention. So we’re going to sketch or write out 4 different ways to convey how pursuing the ad spend idea will affect retention. 
+    --
+    So in one square you see a chart that projects churn rate over time, and in the top right I wrote out the predicted impact in a straightforward way. The two other squares are just placeholders since this is just an example. 
+    </aside>
+</section>
+
+<section>
+  <div class="half text-align-left">
+    <h2 class="">Present and discuss solutions within your group.</h2>
+    <p>What <u>similarities</u> do you see?</p>
+    <p>What are the <u>strengths</u> of each representation? What are the <u>shortcomings</u>?</p>
+    <p>What additional <u>context</u> will the stakeholders need to understand the representations?</p>
+    <p>What do the stakeholders <u>expect?</u></p>
+    <p>What representations would be best for the <u>largest number</u> of stakeholders?</p>
+  </div>
+  <div class="half">
+    <img class="no-shadow" src="/images/courses/1_1/three-quadrants.png"/>
+  </div>
+  <div class="full">
+    <p style="background-color:green" class="badge color-white">10 minute exercise</p>
+  </div>
+  <aside class="notes">
+    Group up again. Go through all your ideas and choose which representation works best for idea or question for each stakeholder. 
+    --
+    You can guide the conversation with prompts like “What are the shortcomings of each representation?” “What do the stakeholders expect?” 
+    </aside>
+</section>
+
+<section data-background="#0747A6">
+  <div class="full">
+    <h2 class="larger color-white">Present one “solution stack” to the rest of the room.</h2>
+    <p class="color-white">Original question</p>
+    <p class="color-white">Key stakeholder + concerns</p>
+    <p class="color-white">Refined question</p>
+    <p class="color-white">Proposed representation</p>
+  </div>
+  <aside class="notes">
+    Each group, pick one example to talk through with the whole room from start to finish: 
+    Starting with the original question, why you think it’s high impact
+    Then, who the key stakeholder is and what their concerns are
+    Explain how you refined your question, which parts you made clearer
+    And last, a recommendation for representing final results to your stakeholder
+    </aside>
+</section>
+
+<section>
+  <div class="full">
+    <h2 class="larger">Data project workflow</h2>
+    <h3>based on data.world user research</h3>
+    <img class="no-shadow" src="/images/courses/1_1/project-timeline-2.png"/>
+  </div>
+  <div class="one-seventh text-align-left">
+    <p class="bold smaller uppercase">Kickoff</p>
+    <p class="smaller">Start a new project with a question, problem, or dataset.</p>
+  </div>
+  <div class="one-seventh text-align-left highlight blue">
+    <p class="bold smaller uppercase">Source</p>
+    <p class="smaller">Gather data sources, documentation, research, and team.</p>
+  </div>
+  <div class="one-seventh text-align-left">
+    <p class="bold smaller uppercase">Profile</p>
+    <p class="smaller">Define the data’s shape, features, and any limitations.</p>
+  </div>
+  <div class="one-seventh text-align-left">
+    <p class="bold smaller uppercase">Prepare</p>
+    <p class="smaller">Clean, munge, and wrangle the data into a usable form.</p>
+  </div>
+  <div class="one-seventh text-align-left">
+    <p class="bold smaller uppercase">Explore</p>
+    <p class="smaller">Develop a deeper understanding by querying, visualizing.</p>
+  </div>
+  <div class="one-seventh text-align-left">
+    <p class="bold smaller uppercase">Analyze</p>
+    <p class="smaller">Answer questions and build models in a reproducible way.</p>
+  </div>
+  <div class="one-seventh text-align-left">
+    <p class="bold smaller uppercase">Deliver</p>
+    <p class="smaller">Share output with stakeholders, report discoveries.</p>
+  </div>
+  <aside class="notes">
+      So, someone’s already thinking about what data could be used to answer questions, how they’d go about it, and whether your end representation is possible. The sourcing step is a deeper dive by the data team, but you’ll want to have a clear channel for feedback with the larger group involved in (or impacted by) the project. 
+    </aside>
+</section>
+
+<section>
+    <div class="one-third">
+      <img class="no-shadow" src="/images/courses/1_1/guiding.png"/>
+      <h2>Guiding Vision</h4>
+      <p>Read and share the Manifesto for Data Practices</p>
+      <p><a href="http://datapractices.org/manifesto">datapractices.org/manifesto</a></p>
+    </div>
+    <div class="one-third">
+      <img class="no-shadow" src="/images/courses/1_1/techniques.png"/>
+      <h2>Techniques</h4>
+      <p>Kick off a data project using these exercises</p>
+      <p><a href="mailto:community@data.world">community@data.world</a></p>
+    </div>
+    <div class="one-third">
+      <img class="no-shadow" src="/images/courses/1_1/tools.png"/>
+      <h2>Tools</h4>
+      <p>Collaborate with data team and document the process </p>
+      <p><a href="http://data.world">datapractices.org/data.world</a></p>
+    </div>
+    <aside class="notes">
+    Along with that input, please send us any other feedback. If you test these exercises, we want to know how it goes. And if you have ideas for additional exercises, especially for other stages of the data workflow, please share them. 
+    </aside>
+</section>
+
+<section data-background="#0747A6">
+  <div class="full">
+    <h2 class="larger color-white">Want to run a workshop like this at your company?</h2>
+    <p><a class="color-white" href="mailto:community@data.world"><u>community@data.world</u></a></p>
+    <br><br>
+    <h4 class="color-white">Don't forget to sign the values and principles! <a style="color: #cc0000" href="/manifesto">https://datapractices.org/manifesto</a></h4>  
+  </div>
+</section>
+
+      </div>
+    </div>
+  
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="/scripts/libs/clipboard.min.js"></script>
+        <script type="text/javascript" src="/scripts/libs/jquery.validate.min.js"></script>
+
+        <script src="/scripts/main.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113597498-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-113597498-1');
+        </script>
+        
+  <script src="/scripts/reveal.js"></script>
+  <script src="/scripts/libs/head.js"></script>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? "/reveal/print/pdf.css" : "/reveal/print/paper.css";
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+    
+    Reveal.initialize({
+      dependencies: [
+        { src: "/reveal/plugin/notes/notes.js", async: true }
+      ]
+    });
+    Reveal.configure({ slideNumber: true });
+  </script>
+
+    </body>
+</html>

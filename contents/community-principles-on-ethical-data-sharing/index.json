@@ -1,8 +1,0 @@
-{
-  "template": "ethics-landing.html",
-  "title": "Community Principles on Ethical Data Sharing",
-  "description": "These community principles on ethical data sharing are created and proposed for adoption by the data science community to reflect the behaviors and principles for the responsible and ethical use and sharing of data by data scientists. As a community-driven crowdsourced effort, you can join the the discussion and contribute to the next version of the Community Principles on Ethical Data Sharing.",
-  "thumbnail": "socialshare-codeofethics@2x.png",
-  "enableBackButton": true,
-  "rootClass": "ethics-page"
-}
