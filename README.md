@@ -1,6 +1,10 @@
 # data-practices-site
 The site for the data practices values and courseware
 
+To view the courseware specifically, view /contents/courseware/
+
+If you would like to add content, or a new course, please submit a pull request or contact community@data.world.
+
 ## Setup Instructions
 * Install Node (7.x.x)
 * Install Wintersmith globally on your node environment.
