@@ -2,7 +2,7 @@ const axios = require('axios')
 const csvjson = require('csvjson')
 const fs = require('fs')
 
-const manifestSignatoriesQueryUrl = 'https://download.data.world/s/zfislev3klsgk4vpf3fsmrovlegh2k'
+const manifestSignatoriesQueryUrl = 'https://download.data.world/s/ql6c3noiz6n44xrlolwnpzjbwsmrra'
 
 axios.get(manifestSignatoriesQueryUrl).then(
   response => {
