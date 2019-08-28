@@ -36,7 +36,11 @@
 //
 
 .table-borderless {
+	table,
+	th,
+	td {
 	border:none !important;
+	}
 }
 
 
