@@ -7,6 +7,7 @@
   max-width: 100%;
   margin-bottom: $spacer;
   background-color: $table-bg; // Reset for nesting within parents with `background-color`.
+  font-size: 15px;
 
   th,
   td {
@@ -34,7 +35,9 @@
 //
 
 .table-borderless {
+	table, tr, td {
 	border:none !important;
+	}
 }
 
 
@@ -60,14 +63,12 @@
   th,
   td {
     border: $table-border-width solid $table-border-color;
-    font-size: 15px;
   }
 
   thead {
     th,
     td {
       border-bottom-width: (2 * $table-border-width);
-      font-size: 18px;
     }
   }
 }
