@@ -52,13 +52,14 @@
   th,
   td {
     border: $table-border-width solid $table-border-color;
+    font-size: 15px;
   }
 
   thead {
     th,
     td {
       border-bottom-width: (2 * $table-border-width);
-      font-size: 7px;
+      font-size: 18px;
     }
   }
 }
