@@ -1,0 +1,621 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="/favicon.ico">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="theme-color" content="#00B8D9">
+        
+
+        <title>2.5 Data Visualization Best Practices</title>
+        <meta property="og:title" content="2.5 Data Visualization Best Practices" />
+        <meta property="og:description" content="This workshop will cover the technology-agnostic best practices for visualization design." />
+        
+        
+  <link rel="stylesheet" href="/reveal/reveal.css">
+  <link rel="stylesheet" href="/reveal/theme/white.css">
+
+        <link rel="stylesheet" href="/main.css">
+
+    </head>
+    <body class="slideware">
+        	<div id="lf-header" style="background:#252525;position:absolute;width:100%;z-index:11;padding:10px 10px 5px 0">
+		<div class="lf-container" style="padding-right:55px;padding-left:55px;">
+			<a href="https://www.linuxfoundation.org/projects" target="blank"><img style="width: 300px" src="https://cd.foundation/wp-content/themes/salient-child/images/logo_lf_projects_horizontal_2018.png"></a>
+		</div>
+	</div>
+	<br/>
+<header class="page-header ">
+    
+        
+          <a href="/courseware" class="back-link">
+              <img
+                  srcset="/images/back@1x.png 1x, /images/back@2x.png 2x, /images/back@3x.png 3x"
+                  src="/images/back@1x.png"
+                  alt="Go Back" />
+              Back to courseware
+          </a>
+        
+    
+    
+        <div class="header-action-wrap js-header-translucent"  data-toggle="modal" data-target="#subscribeModal">
+            <button class="btn outline-btn">Subscribe</button>
+        </div>
+    
+</header>
+
+
+    <!-- Subscribe for updates Modal -->
+    <!-- Subscribe for updates Modal -->
+<div class="modal fade dw-modal" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<div class="js-modal-wrapper">
+					<div class="js-modal-form">
+						<h1>Subscribe for updates</h1>
+<form class="js-google-form" action="https://docs.google.com/a/data.world/forms/d/1wVn1Yr66ltPypBR2lPcOqYMFLUbKTzd9LMyWj3xW0xs/formResponse">
+	<div class="form-group js-field-wrap">
+		<input type="text" class="form-control" id="name" name="entry.1962848789" placeholder="Full name (required)" required>
+	</div>
+	<div class="form-group js-field-wrap">
+		<input type="email" class="form-control" id="email" name="entry.1993039649" placeholder="Email address (required)" required>
+	</div>
+	<div class="custom-checkbox-wrap">
+		<label class="custom-control custom-checkbox">
+			<input type="checkbox" class="custom-control-input" name="entry.574863021" value="Subscribe">
+			<span class="custom-control-label"></span>
+			<span class="custom-control-description">Updates for Community Principles</span>
+		</label>
+		<label class="custom-control custom-checkbox">
+			<input type="checkbox" class="custom-control-input" name="entry.1685198103" value="Subscribe">
+			<span class="custom-control-label"></span>
+			<span class="custom-control-description">Data Practice Updates</span>
+		</label>
+	</div>
+	<button type="submit" class="btn btn-primary js-modal-submit">Subscribe</button>
+</form>
+
+					</div>
+					<div class="js-modal-success" style="display:none">
+						<!-- Subscribe success for updates Modal -->
+<h1>You’re subscribed.</h1>
+<p>Share and invite others</p>
+<div class="social-icon-wrap">
+	<a class="social-link js-copy" data-clipboard-text="https://datapractices.org">
+		<img src="/images/social-link@1x.png" alt="data.world"
+         srcset="/images/social-link@1x.png 1x, /images/social-link@2x.png 2x, /images/social-link@3x.png 3x" />
+	</a>
+	<a href="#" class="social-link facebook">
+		<img src="/images/social-facebook@1x.png" alt="data.world"
+         srcset="/images/social-facebook@1x.png 1x, /images/social-facebook@2x.png 2x, /images/social-facebook@3x.png 3x" />
+	</a>
+	<a href="#" class="social-link twitter">
+		<img src="/images/social-twitter@1x.png" alt="data.world"
+         srcset="/images/social-twitter@1x.png 1x, /images/social-twitter@2x.png 2x, /images/social-twitter@3x.png 3x" />
+	</a>
+	<a href="http://www.linkedin.com/shareArticle?mini=true&url=https://datapractices.org&title=The%20Data%20Practices%20Manifesto%20and%20Community%20Principles%20for%20Ethical%20Data%20Sharing&source=datapractices.org" target="_blank" class="social-link linkedin">
+	<img src="/images/social-linkedin@1x.png" alt="data.world"
+         srcset="/images/social-linkedin@1x.png 1x, /images/social-linkedin@2x.png 2x, /images/social-linkedin@3x.png 3x" />
+	</a>
+</div>
+<div class="dw-btn-wrap">
+	<button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Done</button>
+</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+        
+  
+    <div class="reveal">
+      <div class="slides">
+        <section data-background="#0747A6">
+  <div class="full">
+    <p><h1 class="color-white">Data Practices:</h1></p>
+    <p><h2 class="color-white">2.5 Data Visualization Best Practices</h1></p>
+  </div>
+  <div class="full">
+      <p class="color-white">[Use arrow keys to navigate, "s" to show speaker notes, and "f" for fullscreen.]</p>
+      <p class="color-white badge"><a href="?print-pdf">PDF Print</a></p> <p class="color-white badge"><a href="?print-pdf&showNotes=true">With Notes</a></p>
+  </div>
+  <aside class="notes">
+  Notes
+  </aside>
+</section>
+
+<section>
+    <div class="half">
+        <h1>Topics Covered</h1>
+    </div>
+    <div class="half white-background">
+        <ol>
+            <li><b>Why Visualize?</b></li>
+            <li><b>Best Practice Considerations</b></li>
+            <li><b>Types of Visualization</b></li>
+            <li><b>The Don'ts of Data Visualization</b></li>
+        </ol>
+    </div>
+    <aside class="notes">
+    Notes
+    </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>Why Visualize Data?</h2>
+    </div>
+    <div class="full">
+        <ul>
+            <li>Data can be vast</li>
+            <li>Need a way to quickly understand information</li>
+            <li>Decisions at-a-glance</li>
+            <li>Visualizations allow us to see trends, patterns, and outliers</li>
+            <li>Humans are extremely visual. We are drawn to images, colors, shapes, and patterns</li>
+        </ul>
+    </div>
+    <div class="half">
+        <h4>Raw Data</h4>
+        <img class="no-shadow half-img-size" src="/images/courses/2_5/raw-data.png">
+    </div>
+    <div class="half">
+        <h4>Visualization</h4>
+        <img class="no-shadow half-img-size" src="/images/courses/2_5/vis.png">
+    </div>
+    <aside class="notes">
+    Notes
+    </aside>
+</section>
+
+<section data-background="#0747A6">
+    <div class="half text-align-left">
+        <h2 class="color-white">Exercise 1: Test your graphical data design IQ</h2>
+        <h4>Brief IQ test developed through work done by Edward Tufte</h4><br/><br/>
+        <h5 class="color-white"><a target="_blank" href="http://perceptualedge.com/files/GraphDesignIQ.html">http://perceptualedge.com/files/GraphDesignIQ.html</a></h5>
+    </div>
+    <div class="half text-align-left">
+        <img class="no-shadow" src="/images/courses/2_5/exercise.png">
+    </div>
+    <aside class="notes">
+    Notes
+    </aside>
+</section>
+
+<section>
+  <div class="full">
+    <img class="no-shadow" src="/images/courses/2_5/techniques.png">
+    <h1>Best Practice Considerations</h1>
+  </div>
+  <aside class="notes">
+  Notes
+  </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>The Shaffer 4 C's of Data Visualization</h2>
+    </div>
+    <div class="half">
+        <ol>
+            <li><b>Clear - easily seen; sharply defined</b>
+            <ul>
+                <li>Who is the audience</li>
+                <li>What is the message</li>
+                <li>Clarity is more important than aesthetics</li>
+            </ul></li>
+            <li><b>Clean - thorough; complete; unadulterated</b>
+            <ul>
+                <li>Avoid over-labeling axis and data points</li>
+                <li>Avoid too many or too prominent grid lines</li>
+                <li>Use proper number formatting</li>
+                <li>Use the correct chart type for the message</li>
+                <li>Use optimal color choice</li>
+            </ul></li>
+            <li><b>Concise - brief but comprehensive</b>
+            <ul>
+                <li>Not minimalist but not verbose</li>
+            </ul></li>
+            <li><b>Captivating - attract and hold by beauty or excellence</b>
+            <ul>
+                <li>Does it capture attention?</li>
+                <li>Is it interesting?</li>
+                <li>Does it tell a story?</li>
+            </ul></li>
+        </ol>
+    </div>
+    <div class="half">
+        <img class="no-shadow" src="/images/courses/2_5/tree-map.png">
+        <h4>Tree map breaking all the rules.</h4>
+    </div>
+    <aside class="notes">
+      Notes
+      </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>Edward Tufte's Rules for Data Visualization</h2>
+    </div>
+    <div class="half">
+        <ol>
+            <li><b>Show Your Data</b> - Once data is gathered, the first step is to show it or determine how to show it based on the type of data, your audience, and your medium.</li>
+            <li><b>Use Graphics</b> - When you can’t communicate your message effectively through words, use pictures and graphics.</li>
+            <li><b>Avoid Chartjunk</b> - Chartjunk is a term coined by Tufte that advocates for the removal of unnecessary or confusing visual elements from charts and graphs.</li>
+            <li><b>Maximize Data-Ink Ratio</b> - Compare the ink on the page associated with the data vs. all of the ink on the page and erase redundant data-ink.</li>
+            <li><b>Use Labels</b> - Labels are informative guides and are essential in data design. Effective labels focus on clarity, readability, and differentiation. Labels should stand out from the data.</li>
+            <li><b>Utilize Micro/Macro</b> - The clarity of the macro is determined by the quality and quantity of the micro.</li>
+            <li><b>Separate Layers</b> - Create layers by adjust the tone, color, and/or weight of visual elements.</li>
+            <li><b>Multiples</b> - Use consistency in design to highlight differences or inconsistencies.</li>
+            <li><b>Color</b> - Choose colors wisely. Use color to create emphasis, draw attention. Poor color choice can lead to confusion and disruption.</li>
+            <li><b>Understand Narrative</b> - A proper narrative focuses on time and space to tell it’s story.</li>
+        </ol>
+        <h6>Obtained from <i><a target="_blank" href="https://www.amazon.com/Visual-Display-Quantitative-Information/dp/1930824130">The Visual Display of Quantitative Information</a></i> by Edward Tufte</h6>
+    </div>
+    <div class="half">
+        <img class="no-shadow" src="/images/courses/2_5/data-ink.png">
+    </div>
+    <aside class="notes">
+      Notes
+      </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>Gestalt Principles of Perception</h2>
+    </div>
+    <div class="half">
+        <ol>
+            <li><b>Similarity Principle</b> - Elements that share similar attributes, color, or shape, are perceived as a whole.</li>
+            <li><b>Proximity Principle</b> - Elements tend to be perceived as aggregated into groups if they are near or connected.</li>
+            <li><b>Common Fate Principle</b> - Elements that move together are perceived as a whole.</li>
+            <li><b>Enclosure Principle</b> - Objects that appear to have a boundary or a continuation around them are perceived as a whole.</li>
+            <li><b>Continuity Principle</b> - Elements, unites, or groups aligned with each other are perceived as a whole.</li>
+            <li><b>Closure Principle</b> - Open structures can be easily be perceived as closed/complete.</li>
+        </ol>
+    </div>
+    <div class="half">
+        <img class="no-shadow" src="/images/courses/2_5/gestalt-principles.png">
+    </div>
+    <aside class="notes">
+      Notes
+      </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>Color Theory and Application</h2>
+    </div>
+    <div class="half">
+        <h4>Color can be very subjective</h4>
+        <ul>
+            <li>Use of color in visualization can be essential for delivering a message , making a point, capturing attention, influencing feelings, and branding an image.</li>
+            <li>Reactions to individual colors can vary between people and culture. However, color theory is an advanced and evidence-based science that can help us make appropriate decisions about color choice in a visualization.</li>
+            <li>Here are some general color choice guidelines for visualizations:
+            <ul>
+                <li>Use similar colors for similar variables</li>
+                <li>Use legends to explain colors</li>
+                <li>Consider mixing greyscale with colors to create accents and highlights</li>
+                <li>Use high contrast ratios for legibility</li>
+                <li>Test how colors appear next to each other and adjust accordingly</li>
+                <li>Use intuitive colors and consider culture (reds vs. green, light vs. dark, converging vs. diverging, color-blind palettes.)</li>
+            </ul></li>
+        </ul>
+    </div>
+    <div class="half">
+        <img class="no-shadow" src="/images/courses/2_5/color-theory.png">
+    </div>
+    <aside class="notes">
+      Notes
+      </aside>
+</section>
+
+<section>
+  <div class="full">
+    <img class="no-shadow" src="/images/courses/2_5/techniques.png">
+    <h1>Types of Visualizations</h1>
+  </div>
+  <aside class="notes">
+  Notes
+  </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>Note:</h2>
+        <ul>
+            <li>Knowing when to use a certain type of visualization will depend on a number of factors like your audience, your message, and your data type (Categorical, Ordinal, Quantitative) as certain visuals are more effective at delivering certain types of information.</li>
+            <li>The following slides are meant to be a starting point for understanding data relationship and how to best convey your message visually, based on different categories of data and visualizations.</li>
+        </ul>
+        <h5>Sourced from: <a target="_blank" href="https://public.tableau.com/profile/andy.kriebel#!/vizhome/VisualVocabulary/VisualVocabulary">Andy Kriebel's Visual Vocabulary</a></h5>
+    </div>
+    <aside class="notes">
+      Notes
+      </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>Deviation</h2>
+        <h3>Emphasize variations (+/-) from a fixed reference point. Typically the reference point is zero but it can also be a target or a long-term average. Deviation can also be used to show positive/neutral/negative sentiment. Recommended Chart Types:</h3>
+    </div>
+    <div class="full">
+        <img class="no-shadow" src="/images/courses/2_5/diverging.png">
+        <h6>References: <a target="_blank" href="https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary">https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary</a>  ||  <a target="_blank" href="https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view">https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view</a></h6>
+    </div>
+    <aside class="notes">
+      Notes
+      </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>Correlation</h2>
+        <h3>Show you the relationship between two or more variables. Be mindful that, unless you tell them otherwise, many will assume the relationship you show them to be causal (i.e., one causes the other)</h3>
+    </div>
+    <div class="full">
+        <img class="no-shadow" style="height:60%" src="/images/courses/2_5/correlation.png">
+        <h6>References: <a target="_blank" href="https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary">https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary</a>  ||  <a target="_blank" href="https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view">https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view</a></h6>
+    </div>
+    <aside class="notes">
+      Notes
+      </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>Ranking</h2>
+    </div>
+    <div class="half">
+        <h4>Use where an item’s position in an ordered list is more important than its absolute or relative value. Don’t be afraid to highlight the points of interest.</h4>
+    </div>
+    <div class="half">
+        <img class="no-shadow" src="/images/courses/2_5/ranking.png">
+    </div>
+    <div class="full">
+        <h6>References: <a target="_blank" href="https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary">https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary</a>  ||  <a target="_blank" href="https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view">https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view</a></h6>
+    </div>
+    <aside class="notes">
+      Notes
+      </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>Distribution</h2>
+    </div>
+    <div class="half">
+        <h4>Show values in a dataset and how often they occur. The shape (or ‘skew’) of a distribution can be a memorable way of highlighting the lack of uniformity or equality in the data.</h2>
+    </div>
+    <div class="half">
+        <img class="no-shadow" src="/images/courses/2_5/distribution.png">
+    </div>
+    <div class="full">
+        <h6>References: <a target="_blank" href="https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary">https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary</a>  ||  <a target="_blank" href="https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view">https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view</a></h6>
+    </div>
+    <aside class="notes">
+      Notes
+      </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>Change Over Time</h2>
+    </div>
+    <div class="full">
+        <h4>Give emphasis to changing trends. These can be short (intra-day) movements or extended series traversing decades or centuries: Choosing the correct time period is important to provide suitable context for the viewer.</h4>
+        <img class="no-shadow" style="height:60%"  src="/images/courses/2_5/change-over-time.png">
+        <h6>References: <a target="_blank" href="https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary">https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary</a>  ||  <a target="_blank" href="https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view">https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view</a></h6>
+    </div>
+    <aside class="notes">
+      Notes
+      </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>Change Over Time (continued)</h2>
+        <img class="no-shadow" style="height:60%"  src="/images/courses/2_5/change-over-time2.png">
+        <h6>References: <a target="_blank" href="https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary">https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary</a>  ||  <a target="_blank" href="https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view">https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view</a></h6>
+    </div>
+    <aside class="notes">
+      Notes
+      </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>Magnitude</h2>
+        <h4>Show size comparison. These can be relative (just being able to see larger/bigger) or absolute (need to see fine differences). Usually these show a ‘counted’ number (for example, barrels, dollars, or people) rather than a calculated rate or percent.</h4>
+        <img class="no-shadow" style="height:60%"  src="/images/courses/2_5/magnitude.png">
+        <h6>References: <a target="_blank" href="https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary">https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary</a>  ||  <a target="_blank" href="https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view">https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view</a></h6>
+    </div>
+    <aside class="notes">
+      Notes
+      </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>Magnitude (continued)</h2>
+        <img class="no-shadow" style="height:60%"  src="/images/courses/2_5/magnitude2.png">
+        <h6>References: <a target="_blank" href="https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary">https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary</a>  ||  <a target="_blank" href="https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view">https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view</a></h6>
+    </div>
+    <aside class="notes">
+      Notes
+      </aside>
+</section>
+
+<section>
+    <div class="full">    
+        <h2>Part-to-Whole</h2>
+    </div>
+    <div class="half">
+        <h4>Show how a single entity can be broken down into its component elements. If the viewer is interested in solely the size of the components, consider a magnitude-type chart instead.</h4>
+    </div>
+    <div class="half">
+        <img class="no-shadow" src="/images/courses/2_5/part-to-whole.png">
+    </div>
+    <div class="full">
+        <h6>References: <a target="_blank" href="https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary">https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary</a>  ||  <a target="_blank" href="https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view">https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view</a></h6>
+    </div>
+    <aside class="notes">
+      Notes
+      </aside>
+</section>
+
+<section>
+    <div class="full">    
+        <h2>Spatial</h2>
+    </div>
+    <div class="half">
+        <h4>Aside from locator maps, only used when precise locations or geographical patterns in data are more important to the reader than anything else.</h4>
+    </div>
+    <div class="half">
+        <img class="no-shadow" src="/images/courses/2_5/spatial.png">
+    </div>
+    <div class="full">
+        <h6>References: <a target="_blank" href="https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary">https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary</a>  ||  <a target="_blank" href="https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view">https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view</a></h6>
+    </div>
+    <aside class="notes">
+      Notes
+      </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>Flow</h2>
+        <h4>Show the reader volumes or intensity of the movement between two or more states or conditions. These might be logical sequences or geographical locations.</h4>
+        <img class="no-shadow" style="height:60%"  src="/images/courses/2_5/flow.png">
+        <h6>References: <a target="_blank" href="https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary">https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary</a>  ||  <a target="_blank" href="https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view">https://drive.google.com/file/d/1NC9o6OhpsEAwpXT0fvxz7zvAbipbneMC/view</a></h6>
+    </div>
+    <aside class="notes">
+      Notes
+      </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>Data Model</h2>
+        <h3>We’ve discussed data type and visualization type. It is also worth noting that various types of visualizations will require a certain type of data model. In order to achieve certain types of visualizations, data needs to be structured in a way that will support such visualization. </h3>
+    </div>
+    <aside class="notes">
+      Notes
+      </aside>
+</section>
+
+<section>
+    <div class="full">
+        <h2>The Don'ts of Data Visualization</h2>
+        <h4>You can avoid many of the DONT’S by following the best practices you’ve seen already. There are a few additional points worth calling out:</h4>
+        <ul>
+            <li>When attempting to create a coherent set of visuals, avoid fragmentation or requiring viewers to scroll or move from one page to another in order to obtain a full picture of a visualization.</li>
+            <li>Keep it clean but not so minimal that viewers get confused by lack of context.
+                <ul><li>The opposite is also true, avoid excessive detail *See Tufte’s Data-Ink Ratio</li></ul></li>
+            <li>Avoid Useless variety. Don’t create a variety of visualizations to tell a story just because you want to. Display only what is necessary and don’t force viewers to work hard to understand what they are seeing.</li>
+            <li>Be cautious of misleading or misrepresentation of data. Don’t mislead viewers by using minimal context, inappropriate scales, etc.</li>
+            <li>Avoid clutter or Chartjunk. Remove distractions and decorations. Arrange visuals in a logical flow. Make more important data stand out and get noticed immediately. </li>
+            <li>Do not misuse or overuse color.</li>
+        </ul>
+    </div>
+    <aside class="notes">
+      Notes
+      </aside>
+</section>
+
+<section data-background="#0747A6">
+    <div class="half text-align-left">
+        <h2 class="color-white">Exercise 2: Apply Your Knowledge</h2>
+        <h4>Using the knowledge gained in the previous section, you have two options. You can:</h4>
+        <ul>
+            <li> Select one of the visualization types and find/create data that will allow you to use that method</li>
+            <h4>OR</h4>
+            <li> Select one of these linked datasets and attempt to figure out what method is best suited to visualizing it.
+            <ul>
+                <li><a target="_blank" href="https://data.world/hdx/383945db-762c-46e2-bec6-07adc41fbd16">DRC Ebola Data</a></li>
+                <li><a target="_blank" href="https://data.world/eia-wind/us-retail-gasoline-prices">US Gas Prices</a></li>
+                <li><a target="_blank" href="https://data.world/scuttlemonkey/coin-metrics">Cryptocurrency Prices</a></li>
+            </ul></li>
+        </ul>
+    </div>
+    <div class="half text-align-left">
+        <img class="no-shadow" src="/images/courses/2_5/exercise.png">
+    </div>
+    <aside class="notes">
+    Notes
+    </aside>
+</section>
+
+<section data-background="#0747A6">
+  <div class="full">
+    <h2 class="larger color-white">Want to run a workshop like this at your company?</h2>
+    <p><a class="color-white" href="mailto:community@data.world"><u>community@data.world</u></a></p>
+    <br><br>
+    <h4 class="color-white">Don't forget to sign the values and principles! <a style="color: #cc0000" href="/manifesto">https://datapractices.org/manifesto</a></h4>
+  </div>
+</section>    
+      </div>
+    </div>
+  
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="/scripts/libs/clipboard.min.js"></script>
+        <script type="text/javascript" src="/scripts/libs/jquery.validate.min.js"></script>
+
+        <script src="/scripts/main.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113597498-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-113597498-1');
+        </script>
+        
+  <script src="/scripts/reveal.js"></script>
+  <script src="/scripts/libs/head.js"></script>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? "/reveal/print/pdf.css" : "/reveal/print/paper.css";
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+    
+    Reveal.initialize({
+      dependencies: [
+        { src: "/reveal/plugin/notes/notes.js", async: true }
+      ]
+    });
+    Reveal.configure({ slideNumber: true });
+  </script>
+
+    </body>
+</html>
