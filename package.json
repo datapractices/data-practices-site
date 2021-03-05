@@ -5,8 +5,9 @@
   },
   "private": "true",
   "devDependencies": {
-    "axios": "0.17.1",
-    "wintersmith": "^2.5.0",
+    "axios": "^0.21.1",
+    "node": "^11.15.0",
+    "wintersmith": "^2.4.1",
     "wintersmith-nunjucks": "^2.0.0",
     "wintersmith-sassy": "^1.2.0"
   },
